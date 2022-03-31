@@ -1,13 +1,14 @@
+
 node_modules/
 
 # Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
-!storage/logs/.gitkeep
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -116,14 +117,16 @@ out
 .idea
 .vscode
 
-# dotenv environment variables file
+# Environment variables file
 .env
 .env.test
 .env.production
 
-# build files
+# Build files
 *.js
 *.d.ts
 dist
 build
-tests/Coverage
+
+# MacOS folder mapper file
+.DS_Store
