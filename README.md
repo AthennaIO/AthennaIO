@@ -1,4 +1,4 @@
-# Scaffold 🧠
+# Scaffold 🦴
 
 > The Athenna scaffold project used by 'athenna new project' command to create your project
 
