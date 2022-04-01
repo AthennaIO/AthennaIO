@@ -1,3 +1,4 @@
+import { Container } from 'providers/Container'
 import { getBranch, getCommitId } from '@secjs/utils'
 import { WelcomeServiceContract } from 'app/Contracts/WelcomeServiceContract'
 
@@ -6,9 +7,9 @@ export class WelcomeService implements WelcomeServiceContract {
    * Use the constructor to resolve any dependency of the Ioc container
    *
    * @param _container
-   * @type {(_container: any) => WelcomeController}
+   * @return WelcomeService
    */
-  constructor(_container) {}
+  constructor(_container: Container) {}
 
   async findOne() {
     return {

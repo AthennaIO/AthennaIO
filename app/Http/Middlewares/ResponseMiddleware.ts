@@ -1,11 +1,20 @@
 import { InterceptContextContract, MiddlewareContract } from '@athenna/http'
+import { Container } from 'providers/Container'
 
 export class ResponseMiddleware implements MiddlewareContract {
+  /**
+   * Use the constructor to resolve any dependency of the Ioc container
+   *
+   * @param _container
+   * @return ResponseMiddleware
+   */
+  constructor(_container: Container) {}
+
   /**
    * Intercept method is executed before the response has been sent
    *
    * @param ctx
-   * @type {(ctx: InterceptContextContract) => any}
+   * @return any
    */
   intercept({ request, body, status }: InterceptContextContract): any {
     const newBody: any = {
