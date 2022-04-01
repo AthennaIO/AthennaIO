@@ -1,33 +1,6 @@
 {
-  "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": ".",
-    "baseUrl": ".",
-    "target": "es2020",
-    "module": "commonjs",
-    "lib": ["es2020"],
-    "moduleResolution": "node",
-    "declaration": true,
-    "strictNullChecks": true,
-    "noImplicitAny": false,
-    "removeComments": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "paths": {
-      "app/*": ["app/*"],
-      "bootstrap/*": ["bootstrap/*"],
-      "config/*": ["config/*"],
-      "providers/*": ["providers/*"],
-      "routes/*": ["routes/*"],
-      "storage/*": ["storage/*"],
-      "tests/*": ["tests/*"]
-    },
-    "forceConsistentCasingInFileNames": true
-  },
+  "extends": "./node_modules/@athenna/core/_tsconfig",
+  "compilerOptions": {},
   "include": ["*.ts", "**/*.ts"],
   "exclude": ["node_modules", "build", "dist", "tests"]
 }
