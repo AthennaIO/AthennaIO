@@ -16,7 +16,7 @@ export class WelcomeController {
   }
 
   /**
-   * Intercept method is executed before the response has been sent
+   * Return the welcome payload
    *
    * @param ctx
    * @return Promise<any>
