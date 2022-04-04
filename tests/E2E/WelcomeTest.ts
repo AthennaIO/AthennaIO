@@ -3,7 +3,7 @@ import { TestIgnite } from '../Utils/TestIgnite'
 import { WelcomeServiceMock } from '../Stubs/WelcomeServiceMock'
 import { TestRequestContract } from '../Utils/TestRequestContract'
 
-describe('\n[E2E] Welcome', () => {
+describe('\n[E2E] WelcomeTest', () => {
   let request: TestRequestContract
   const testIgnite = new TestIgnite()
 
