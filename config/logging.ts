@@ -22,14 +22,14 @@ export default {
   | Here you may configure the log channels for your application.
   |
   | Available Drivers: "console", "debug", "file".
-  | Available Formatters: "context", "debug", "json", "log".
+  | Available Formatters: "cli", "simple", "nest", "json".
   |
   */
 
   channels: {
     application: {
       driver: 'console',
-      formatter: 'context',
+      formatter: 'nest',
       streamType: 'stdout',
       formatterConfig: {
         level: 'INFO',
@@ -38,7 +38,7 @@ export default {
     },
     debug: {
       driver: 'debug',
-      formatter: 'context',
+      formatter: 'nest',
       namespace: 'api:main',
       formatterConfig: {
         level: 'DEBUG',
@@ -47,7 +47,7 @@ export default {
     },
     file: {
       driver: 'file',
-      formatter: 'log',
+      formatter: 'simple',
       filePath: Path.noBuild().logs('athenna.log'),
       formatterConfig: {
         level: 'INFO',
