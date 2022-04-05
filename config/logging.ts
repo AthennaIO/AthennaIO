@@ -29,24 +29,30 @@ export default {
   channels: {
     application: {
       driver: 'console',
-      level: 'INFO',
-      context: 'Logger',
       formatter: 'context',
       streamType: 'stdout',
+      formatterConfig: {
+        level: 'INFO',
+        context: 'Logger',
+      },
     },
     debug: {
       driver: 'debug',
-      level: 'DEBUG',
-      context: 'Debugger',
       formatter: 'context',
       namespace: 'api:main',
+      formatterConfig: {
+        level: 'DEBUG',
+        context: 'Debugger',
+      },
     },
     file: {
       driver: 'file',
-      level: 'INFO',
-      context: 'Logger',
       formatter: 'log',
       filePath: Path.noBuild().logs('athenna.log'),
+      formatterConfig: {
+        level: 'INFO',
+        context: 'Logger',
+      },
     },
   },
 }
