@@ -12,11 +12,24 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
+  | Application debug
+  |--------------------------------------------------------------------------
+  |
+  | Set if the application will start in debug mode or not. If in debug mode,
+  | the application will show sensitive logs and return sensitive data on errors.
+  |
+  */
+
+  debug: Env('APP_DEBUG', 'false'),
+
+  /*
+  |--------------------------------------------------------------------------
   | Application Name
   |--------------------------------------------------------------------------
   |
-  | This value is the name of your application and can be used when you
-  | need to place the application's name in an email or other location.
+  | This value is the name of your application and can used when you
+  | need to place the application's name in a email, view or
+  | other location.
   |
   */
 
@@ -27,7 +40,7 @@ export default {
   | Application Version
   |--------------------------------------------------------------------------
   |
-  | This value is the version of your application and can be used when you
+  | This value is the version of your application and can used when you
   | need to place the application's version in a route, view or
   | other location.
   |
@@ -50,51 +63,70 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
-  | Application host
+  | Application key
   |--------------------------------------------------------------------------
   |
-  | This value is the HOST of your application and its used to access your
-  | application.
+  | This value is the application key used to make hashs and to authorize,
+  | requests.
   |
   */
 
-  host: Env('HOST', '127.0.0.1'),
-
-  /*
-  |--------------------------------------------------------------------------
-  | Application port
-  |--------------------------------------------------------------------------
-  |
-  | This value is the PORT of your application, and it's used to access your
-  | application.
-  |
-  */
-
-  port: Env('PORT', 1335),
-
-  /*
-  |--------------------------------------------------------------------------
-  | Application domain
-  |--------------------------------------------------------------------------
-  |
-  | This value is the APP_DOMAIN of your application, and it's used to access
-  | your application.
-  |
-  */
-
-  domain: Env('APP_DOMAIN', 'http://localhost:1335'),
+  appKey: Env('APP_KEY', '12345'),
 
   /*
   |--------------------------------------------------------------------------
   | Application source url
   |--------------------------------------------------------------------------
   |
-  | This value is the application source url, usually a link to a git
-  | repository.
+  | This value is the application source url, usually a link to a git repo-
+  | sitory.
   |
   */
 
-  source: Env('APP_SOURCE', 'https://github.com/AthennaIO'),
+  source: Env('APP_SOURCE', 'https://github.com'),
+
+  /*
+  |--------------------------------------------------------------------------
+  | Documentation url
+  |--------------------------------------------------------------------------
+  |
+  | This value is the application documentation url, usually a link to the
+  | main documentation of the API.
+  |
+  */
+
+  documentation: Env('APP_DOMAIN', 'http://localhost:1335'),
+
+  /*
+  |--------------------------------------------------------------------------
+  | Default Locale
+  |--------------------------------------------------------------------------
+  |
+  | Default locale to be used by Intl provider. You can always switch drivers
+  | in runtime or use the official Intl middleware to detect the driver
+  | based on HTTP headers/query string.
+  |
+  */
+
+  locale: Env('APP_LOCALE', 'pt'),
+
+  /*
+  |--------------------------------------------------------------------------
+  | Default authorization strategy
+  |--------------------------------------------------------------------------
+  |
+  | Default authorization strategy for the entire application.
+  |
+  */
+
+  authorization: {
+    defaultStrategy: 'jwt',
+    jwt: {
+      secret: Env('APP_KEY', ''),
+      signOptions: { expiresIn: 18000 },
+    },
+    apiKey: Env('APP_KEY', '12345'),
+  },
 
   /*
   |--------------------------------------------------------------------------
@@ -128,5 +160,6 @@ export default {
   | array.
   |
   */
-  preloads: ['../routes/http'],
+
+  preloads: [],
 }

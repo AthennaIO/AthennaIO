@@ -20,8 +20,7 @@ describe('\n[E2E] WelcomeTest', () => {
      */
     ioc.mock('App/Services/WelcomeService', WelcomeServiceMock)
 
-    await testIgnite.startHttp()
-    request = testIgnite.httpServerRequest
+    request = await testIgnite.createApplication().startHttp()
   })
 
   it('should return mocked welcome payload from API', async () => {

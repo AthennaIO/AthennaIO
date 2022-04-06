@@ -2,35 +2,38 @@ import 'reflect-metadata'
 import { Http } from '@athenna/http'
 import { Ignite } from '@athenna/core/src/Ignite'
 import { TestRequestContract } from './TestRequestContract'
+import { Application } from '@athenna/core/src/Application'
 
 export class TestIgnite {
-  static httpInstance: Http | null
+  private application: Application
 
-  get httpServerRequest(): TestRequestContract {
-    const server = this.httpServer
+  createApplication(): this {
+    this.application = new Ignite(__filename).createApplication()
+
+    return this
+  }
+
+  getApplication(): Application {
+    return this.application
+  }
+
+  getHttpServer(): Http {
+    return this.application.getHttpServer()
+  }
+
+  getHttpServerRequest(): TestRequestContract {
+    const server = this.getHttpServer()
 
     return server.request.bind(server)
   }
 
-  get httpServer(): Http {
-    return TestIgnite.httpInstance as Http
-  }
-
   async startHttp() {
-    if (TestIgnite.httpInstance) {
-      return
-    }
+    await this.application.bootHttpServer()
 
-    TestIgnite.httpInstance = await new Ignite(__filename).httpServer()
+    return this.getHttpServerRequest()
   }
 
   async closeHttp() {
-    if (!TestIgnite.httpInstance) {
-      return
-    }
-
-    await TestIgnite.httpInstance.close()
-
-    TestIgnite.httpInstance = null
+    await this.application.shutdownHttpServer()
   }
 }

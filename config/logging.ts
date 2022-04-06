@@ -1,4 +1,5 @@
 import { Path } from '@secjs/utils'
+import { Color } from '@athenna/logger'
 
 export default {
   /*
@@ -12,7 +13,7 @@ export default {
   |
   */
 
-  default: Env('LOG_CHANNEL', 'application'),
+  default: 'application',
 
   /*
   |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ export default {
       streamType: 'stdout',
       formatterConfig: {
         level: 'INFO',
+        chalk: Color.cyan,
         context: 'Logger',
       },
     },
@@ -42,6 +44,7 @@ export default {
       namespace: 'api:main',
       formatterConfig: {
         level: 'DEBUG',
+        chalk: Color.purple,
         context: 'Debugger',
       },
     },
@@ -51,6 +54,7 @@ export default {
       filePath: Path.noBuild().logs('athenna.log'),
       formatterConfig: {
         level: 'INFO',
+        chalk: Color.cyan,
         context: 'Logger',
       },
     },

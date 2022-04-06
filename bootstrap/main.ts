@@ -6,7 +6,9 @@ import { Ignite } from '@athenna/core/src/Ignite'
 async function main() {
   sourceMapSupport.install()
 
-  await new Ignite(__filename).httpServer()
+  const application = new Ignite(__filename).createApplication()
+
+  await application.bootHttpServer()
 }
 
 main().catch()

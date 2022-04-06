@@ -17,4 +17,4 @@ Route.group(() => {
     Route.get('/', 'WelcomeController.show')
     Route.get('/welcome', 'WelcomeController.show')
   }).prefix('/api')
-}).middleware('ResponseMiddleware')
+})
