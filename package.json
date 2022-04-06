@@ -8,7 +8,8 @@
     "start:dev": "nodemon --quiet --ignore tests storage node_modules --watch '.' --exec 'ts-node -r tsconfig-paths/register bootstrap/main.ts' -e ts",
     "test": "npm run lint:fix && jest --verbose --runInBand",
     "test:debug": "DEBUG=api:* && npm run test",
-    "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.ts\" --fix"
+    "eslint": "eslint",
+    "lint:fix": "npm run eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.ts\" --fix"
   },
   "devDependencies": {
     "@types/jest": "27.0.1",
