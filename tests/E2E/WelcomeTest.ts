@@ -5,7 +5,7 @@ import { TestRequestContract } from '../Utils/TestRequestContract'
 
 describe('\n[E2E] WelcomeTest', () => {
   let request: TestRequestContract
-  const testIgnite = new TestIgnite()
+  let testIgnite = new TestIgnite()
 
   beforeAll(async () => {
     /**
@@ -20,7 +20,10 @@ describe('\n[E2E] WelcomeTest', () => {
      */
     ioc.mock('App/Services/WelcomeService', WelcomeServiceMock)
 
-    request = await testIgnite.createApplication().startHttp()
+    testIgnite = await testIgnite.fire()
+
+    await testIgnite.startHttp()
+    request = testIgnite.getHttpServerRequest()
   })
 
   it('should return mocked welcome payload from API', async () => {

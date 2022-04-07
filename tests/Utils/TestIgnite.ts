@@ -7,8 +7,8 @@ import { Application } from '@athenna/core/src/Application'
 export class TestIgnite {
   private application: Application
 
-  createApplication(): this {
-    this.application = new Ignite(__filename).createApplication()
+  async fire(): Promise<this> {
+    this.application = await new Ignite(__filename).fire()
 
     return this
   }
