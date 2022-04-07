@@ -7,7 +7,7 @@ export class Kernel extends HttpKernel {
    * This middlewares are run during every request to your http server.
    */
   protected globalMiddlewares = [
-    require('../Http/Middlewares/ResponseMiddleware'),
+    import('../Http/Middlewares/ResponseMiddleware'),
   ]
 
   /**

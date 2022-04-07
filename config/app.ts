@@ -1,4 +1,4 @@
-import { name, version } from '../package.json'
+import { description, name, version } from '../package.json'
 
 export default {
   /*
@@ -22,7 +22,7 @@ export default {
   |
   */
 
-  debug: Env('APP_DEBUG', 'false'),
+  debug: Env('APP_DEBUG', false),
 
   /*
   |--------------------------------------------------------------------------
@@ -61,7 +61,7 @@ export default {
   |
   */
 
-  description: Env('APP_DESCRIPTION', 'Athenna Framework'),
+  description: description,
 
   /*
   |--------------------------------------------------------------------------
@@ -111,24 +111,6 @@ export default {
   */
 
   locale: Env('APP_LOCALE', 'pt'),
-
-  /*
-  |--------------------------------------------------------------------------
-  | Default authorization strategy
-  |--------------------------------------------------------------------------
-  |
-  | Default authorization strategy for the entire application.
-  |
-  */
-
-  authorization: {
-    defaultStrategy: 'jwt',
-    jwt: {
-      secret: Env('APP_KEY', ''),
-      signOptions: { expiresIn: 18000 },
-    },
-    apiKey: Env('APP_KEY', '12345'),
-  },
 
   /*
   |--------------------------------------------------------------------------
