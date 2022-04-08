@@ -27,7 +27,7 @@ describe('\n[E2E] WelcomeTest', () => {
   })
 
   it('should return mocked welcome payload from API', async () => {
-    const status = 200
+    const statusCode = 200
     const method = 'GET'
     const path = '/api/welcome'
 
@@ -36,7 +36,7 @@ describe('\n[E2E] WelcomeTest', () => {
     const body = json()
 
     expect(body.method).toBe(method)
-    expect(body.status).toBe(status)
+    expect(body.statusCode).toBe(statusCode)
     expect(body.data).toStrictEqual({ mock: true })
   })
 

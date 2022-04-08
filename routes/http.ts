@@ -1,4 +1,4 @@
-import { Route } from '@athenna/core/container'
+import { Route } from '@athenna/http'
 
 /*
 |--------------------------------------------------------------------------

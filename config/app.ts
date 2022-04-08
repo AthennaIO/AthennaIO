@@ -22,7 +22,7 @@ export default {
   |
   */
 
-  debug: Env('APP_DEBUG', false),
+  debug: Env('APP_DEBUG', true),
 
   /*
   |--------------------------------------------------------------------------
