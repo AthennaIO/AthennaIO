@@ -138,7 +138,7 @@
     }
   },
   "dependencies": {
-    "@athenna/core": "1.2.3",
+    "@athenna/core": "1.2.4",
     "@athenna/config": "1.0.8",
     "@athenna/ioc": "1.1.2",
     "@athenna/logger": "1.1.6",
