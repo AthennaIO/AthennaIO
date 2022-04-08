@@ -1,4 +1,3 @@
-import { File, Path } from '@secjs/utils'
 import { TestIgnite } from '../Utils/TestIgnite'
 import { WelcomeServiceMock } from '../Stubs/WelcomeServiceMock'
 import { TestRequestContract } from '../Utils/TestRequestContract'
@@ -9,11 +8,6 @@ describe('\n[E2E] WelcomeTest', () => {
 
   beforeAll(async () => {
     /**
-     * Just coping the .env.example to .env.test
-     */
-    new File(Path.pwd('.env.example')).loadSync().copySync(Path.pwd('.env.test'))
-
-    /**
      * Mocking WelcomeService using the global 'ioc' instance
      * it's important for this code to stay before where we ignite
      * the application
@@ -22,8 +16,7 @@ describe('\n[E2E] WelcomeTest', () => {
 
     testIgnite = await testIgnite.fire()
 
-    await testIgnite.startHttp()
-    request = testIgnite.getHttpServerRequest()
+    request = await testIgnite.startHttp()
   })
 
   it('should return mocked welcome payload from API', async () => {
@@ -42,6 +35,5 @@ describe('\n[E2E] WelcomeTest', () => {
 
   afterAll(async () => {
     await testIgnite.closeHttp()
-    await File.safeRemove(Path.pwd('.env.test'))
   })
 })
