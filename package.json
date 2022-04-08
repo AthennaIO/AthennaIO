@@ -138,11 +138,11 @@
     }
   },
   "dependencies": {
-    "@athenna/core": "1.2.4",
+    "@athenna/core": "1.2.5",
     "@athenna/config": "1.0.8",
     "@athenna/ioc": "1.1.2",
     "@athenna/logger": "1.1.6",
-    "@athenna/http": "1.2.1",
+    "@athenna/http": "1.2.2",
     "@secjs/utils": "1.8.3",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
