@@ -18,10 +18,11 @@ export class ResponseMiddleware implements MiddlewareContract {
    */
   intercept({ request, body, status }: InterceptContextContract): any {
     const newBody: any = {
-      code: 'RESPONSE',
+      code: body.code || 'RESPONSE',
       path: request.baseUrl,
       method: request.method,
-      status: status,
+      status: status <= 399 ? 'SUCCESS' : 'ERROR',
+      statusCode: status,
       data: body,
     }
 
