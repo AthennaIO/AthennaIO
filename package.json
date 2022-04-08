@@ -1,7 +1,7 @@
 {
   "name": "@athenna/scaffold",
   "version": "1.0.0",
-  "description": "The Athenna scaffold project used by 'athenna new project' command to create your project",
+  "description": "The Athenna scaffold project used by 'athenna new' command",
   "scripts": {
     "build": "rimraf dist && tsc",
     "start": "npm run build && TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/bootstrap/main.js",
