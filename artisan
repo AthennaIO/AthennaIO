@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require('reflect-metadata')
 const tsConfigPaths = require('tsconfig-paths')
 const sourceMapSupport = require('source-map-support')
