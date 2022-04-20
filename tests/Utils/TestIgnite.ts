@@ -1,8 +1,8 @@
 import 'reflect-metadata'
 import { Http } from '@athenna/http'
 import { Ignite } from '@athenna/core/src/Ignite'
-import { TestRequestContract } from './TestRequestContract'
 import { Application } from '@athenna/core/src/Application'
+import { TestRequestContract } from 'Tests/Utils/TestRequestContract'
 
 export class TestIgnite {
   private application: Application

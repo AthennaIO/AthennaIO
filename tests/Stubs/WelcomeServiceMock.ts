@@ -1,4 +1,4 @@
-import { WelcomeServiceContract } from '../../app/Contracts/WelcomeServiceContract'
+import { WelcomeServiceContract } from 'App/Contracts/WelcomeServiceContract'
 
 export class WelcomeServiceMock implements WelcomeServiceContract {
   async findOne(): Promise<any> {

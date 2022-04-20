@@ -1,6 +1,6 @@
-import { TestIgnite } from '../Utils/TestIgnite'
-import { WelcomeServiceMock } from '../Stubs/WelcomeServiceMock'
-import { TestRequestContract } from '../Utils/TestRequestContract'
+import { TestIgnite } from 'Tests/Utils/TestIgnite'
+import { WelcomeServiceMock } from 'Tests/Stubs/WelcomeServiceMock'
+import { TestRequestContract } from 'Tests/Utils/TestRequestContract'
 
 describe('\n[E2E] WelcomeTest', () => {
   let request: TestRequestContract

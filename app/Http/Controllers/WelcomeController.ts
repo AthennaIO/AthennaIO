@@ -1,6 +1,6 @@
 import { ContextContract } from '@athenna/http'
-import { Container } from 'providers/Container'
-import { WelcomeServiceContract } from 'app/Contracts/WelcomeServiceContract'
+import { Container } from 'Providers/Container'
+import { WelcomeServiceContract } from 'App/Contracts/WelcomeServiceContract'
 
 export class WelcomeController {
   private welcomeService: WelcomeServiceContract

@@ -128,10 +128,11 @@ export default {
     import('@athenna/http/src/Providers/HttpRouteProvider'),
     import('@athenna/logger/src/Providers/LoggerProvider'),
     import('@athenna/core/src/Providers/ServicesProvider'),
-    import('@athenna/core/src/Providers/ControllerProvider'),
-    import('@athenna/core/src/Providers/MiddlewareProvider'),
-
-    import('providers/AppServiceProvider'),
+    import('@athenna/http/src/Providers/ControllerProvider'),
+    import('@athenna/http/src/Providers/MiddlewareProvider'),
+    import('@athenna/artisan/src/Providers/ArtisanProvider'),
+    import('@athenna/artisan/src/Providers/CommandProvider'),
+    import('Providers/AppServiceProvider'),
   ],
 
   /*

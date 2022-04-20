@@ -1,6 +1,6 @@
-import { Container } from 'providers/Container'
+import { Container } from 'Providers/Container'
 import { getBranch, getCommitId } from '@secjs/utils'
-import { WelcomeServiceContract } from 'app/Contracts/WelcomeServiceContract'
+import { WelcomeServiceContract } from 'App/Contracts/WelcomeServiceContract'
 
 export class WelcomeService implements WelcomeServiceContract {
   /**
