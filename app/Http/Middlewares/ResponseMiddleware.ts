@@ -1,4 +1,4 @@
-import { Container } from 'providers/Container'
+import { Container } from 'Providers/Container'
 import { InterceptContextContract, MiddlewareContract } from '@athenna/http'
 
 export class ResponseMiddleware implements MiddlewareContract {

@@ -1,6 +1,6 @@
 import { Logger } from '@athenna/logger'
 import { Http, Router } from '@athenna/http'
-import { WelcomeServiceContract } from 'app/Contracts/WelcomeServiceContract'
+import { WelcomeServiceContract } from 'App/Contracts/WelcomeServiceContract'
 
 /*
 |--------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+require('reflect-metadata')
+const tsConfigPaths = require('tsconfig-paths')
+const sourceMapSupport = require('source-map-support')
+const { Ignite } = require('@athenna/core/src/Ignite')
+const { Exec } = require('@athenna/artisan/src/Utils/Exec')
+
+async function main() {
+  sourceMapSupport.install()
+  tsConfigPaths.register({
+    baseUrl: './dist',
+    paths: {
+      ...require('./tsconfig.json').paths,
+      ...require('@athenna/core/_tsconfig.json').paths,
+    },
+  })
+
+  await Exec.command('npm run --silent build', true)
+
+  process.env.BOOT_LOGS = 'false'
+
+  const application = await new Ignite(__filename + '.js').fire()
+  const artisan = await application.bootArtisan()
+
+  await artisan.main()
+}
+
+main().catch()
