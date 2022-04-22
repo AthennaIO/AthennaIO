@@ -3,6 +3,9 @@
 require('reflect-metadata')
 const tsConfigPaths = require('tsconfig-paths')
 const sourceMapSupport = require('source-map-support')
+
+const { existsSync } = require('fs')
+const { Path } = require('@secjs/utils')
 const { Ignite } = require('@athenna/core/src/Ignite')
 const { Exec } = require('@athenna/artisan/src/Utils/Exec')
 
@@ -15,9 +18,12 @@ async function main() {
       ...require('@athenna/core/_tsconfig.json').paths,
     },
   })
-  
-  if (process.argv[2] !== 'build') {
-    await Exec.command('rimraf dist && tsc', true)
+
+  const tscPath = Path.noBuild().pwd('node_modules/.bin/tsc')
+  const rimrafPath = Path.noBuild().pwd('node_modules/.bin/rimraf')
+
+  if (process.argv[2] !== 'build' || !existsSync(Path.noBuild().pwd('dist'))) {
+    await Exec.command(`${rimrafPath} dist && ${tscPath}`, true)
   }
 
   process.env.BOOT_LOGS = 'false'
