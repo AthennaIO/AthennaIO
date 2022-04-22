@@ -1,6 +1,6 @@
-import { description, name, version } from '../package.json'
 import { Log } from '@athenna/logger'
 import { Server } from '@athenna/http'
+import { description, name, version } from '../package.json'
 
 export default {
   /*
@@ -125,7 +125,7 @@ export default {
   */
 
   gracefulShutdownCb: () => {
-    Log.warn('Application going down!')
+    Log.warn('Athenna application gracefully shutting down.')
 
     Server.close()
   },
