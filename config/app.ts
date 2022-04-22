@@ -1,3 +1,5 @@
+import { Log } from '@athenna/logger'
+import { Server } from '@athenna/http'
 import { description, name, version } from '../package.json'
 
 export default {
@@ -111,6 +113,22 @@ export default {
   */
 
   locale: Env('APP_LOCALE', 'pt'),
+
+  /*
+  |--------------------------------------------------------------------------
+  | Graceful shutdown callback
+  |--------------------------------------------------------------------------
+  |
+  | Default graceful shutdown callback configured to listen to SIGINT and
+  | SIGTERM events.
+  |
+  */
+
+  gracefulShutdownCb: () => {
+    Log.warn('Athenna application gracefully shutting down.')
+
+    Server.close()
+  },
 
   /*
   |--------------------------------------------------------------------------
