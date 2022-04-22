@@ -15,8 +15,10 @@ async function main() {
       ...require('@athenna/core/_tsconfig.json').paths,
     },
   })
-
-  await Exec.command('rimraf dist && tsc', true)
+  
+  if (process.argv[2] !== 'build') {
+    await Exec.command('rimraf dist && tsc', true)
+  }
 
   process.env.BOOT_LOGS = 'false'
 
