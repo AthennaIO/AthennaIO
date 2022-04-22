@@ -16,7 +16,7 @@ async function main() {
     },
   })
 
-  await Exec.command('npm run --silent build', true)
+  await Exec.command('rimraf dist && tsc', true)
 
   process.env.BOOT_LOGS = 'false'
 
