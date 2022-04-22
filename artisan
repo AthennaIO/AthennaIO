@@ -23,7 +23,7 @@ async function main() {
   const application = await new Ignite(__filename + '.js').fire()
   const artisan = await application.bootArtisan()
 
-  await artisan.main()
+  await artisan.main('Artisan')
 }
 
 main().catch()
