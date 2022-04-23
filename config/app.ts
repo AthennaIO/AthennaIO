@@ -124,10 +124,10 @@ export default {
   |
   */
 
-  gracefulShutdownCb: () => {
+  gracefulShutdownCb: async () => {
     Log.warn('Athenna application gracefully shutting down.')
 
-    Server.close()
+    await Server.close()
   },
 
   /*

@@ -1,5 +1,3 @@
-import { Logger } from '@athenna/logger'
-import { Http, Router } from '@athenna/http'
 import { WelcomeServiceContract } from 'App/Contracts/WelcomeServiceContract'
 
 /*
@@ -13,9 +11,6 @@ import { WelcomeServiceContract } from 'App/Contracts/WelcomeServiceContract'
 */
 
 export interface ContainerContract {
-  server: Http
-  route: Router
-  logger: Logger
   welcomeService: WelcomeServiceContract
 }
 

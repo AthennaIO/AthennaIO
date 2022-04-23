@@ -83,6 +83,18 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
+  | No requestId middleware
+  |--------------------------------------------------------------------------
+  |
+  | This value defines if HttpKernel will set the Athenna requestId middleware
+  | that sets the ctx.data.requestId value for each new request.
+  |
+  */
+
+  noRequestId: false,
+
+  /*
+  |--------------------------------------------------------------------------
   | Cross-Origin Resource Sharing (CORS) Configuration
   |--------------------------------------------------------------------------
   |

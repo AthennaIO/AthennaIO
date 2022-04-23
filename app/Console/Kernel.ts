@@ -18,6 +18,7 @@ export class Kernel extends ConsoleKernel {
     import('@athenna/artisan/src/Commands/Make/Command'),
     import('@athenna/artisan/src/Commands/Make/Service'),
     import('@athenna/artisan/src/Commands/Make/Provider'),
+    import('@athenna/artisan/src/Commands/Make/Exception'),
     import('@athenna/artisan/src/Commands/Make/Controller'),
     import('@athenna/artisan/src/Commands/Make/Middleware'),
   ]
