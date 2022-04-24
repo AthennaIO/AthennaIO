@@ -11,9 +11,9 @@
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.ts\" --fix"
   },
   "dependencies": {
-    "@athenna/artisan": "1.1.2",
+    "@athenna/artisan": "1.1.3",
     "@athenna/config": "1.0.8",
-    "@athenna/core": "1.4.7",
+    "@athenna/core": "1.4.8",
     "@athenna/http": "1.3.3",
     "@athenna/ioc": "1.1.3",
     "@athenna/logger": "1.1.8",

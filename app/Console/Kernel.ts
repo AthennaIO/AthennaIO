@@ -11,7 +11,7 @@ export class Kernel extends ConsoleKernel {
     import('@athenna/artisan/src/Commands/Build'),
     import('@athenna/artisan/src/Commands/Serve'),
     import('@athenna/artisan/src/Commands/Eslint/Fix'),
-    import('@athenna/artisan/src/Commands/Route/List'),
+    import('@athenna/artisan/src/Commands/Route/RouteList'),
     import('@athenna/artisan/src/Commands/Make/Facade'),
     import('@athenna/artisan/src/Commands/Make/Command'),
     import('@athenna/artisan/src/Commands/Make/Service'),
