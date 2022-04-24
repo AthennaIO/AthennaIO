@@ -7,11 +7,9 @@ export class Kernel extends ConsoleKernel {
    * @return void
    */
   protected commands = [
-    import('@athenna/core/src/Commands/Build'),
-    import('@athenna/core/src/Commands/Serve'),
-    import('@athenna/artisan/src/Commands/List/Make'),
-    import('@athenna/artisan/src/Commands/List/Route'),
-    import('@athenna/artisan/src/Commands/List/Eslint'),
+    import('@athenna/artisan/src/Commands/List'),
+    import('@athenna/artisan/src/Commands/Build'),
+    import('@athenna/artisan/src/Commands/Serve'),
     import('@athenna/artisan/src/Commands/Eslint/Fix'),
     import('@athenna/artisan/src/Commands/Route/List'),
     import('@athenna/artisan/src/Commands/Make/Facade'),
