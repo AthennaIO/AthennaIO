@@ -78,14 +78,18 @@
   "c8": {
     "all": true,
     "include": [
-      "src/**/*.js"
+      "app/**/*.js"
     ],
     "reporter": [
       "text-summary",
       "html"
     ],
     "report-dir": "./tests/Coverage",
-    "check-coverage": true
+    "check-coverage": true,
+    "statements": "70",
+    "branches": "70",
+    "functions": "70",
+    "lines": "70"
   },
   "husky": {
     "hooks": {

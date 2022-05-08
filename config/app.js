@@ -91,7 +91,7 @@ export default {
   |
   */
 
-  source: Env('APP_SOURCE', 'https://github.com'),
+  source: Env('APP_SOURCE', 'https://github.com/AthennaIO'),
 
   /*
   |--------------------------------------------------------------------------
