@@ -1,6 +1,10 @@
+import { File } from '@secjs/utils'
 import { Log } from '@athenna/logger'
 import { Server } from '@athenna/http'
-import { description, name, version } from '../package.json'
+
+const { name, version, description } = JSON.parse(
+  new File('../package.json').getContentSync().toString(),
+)
 
 export default {
   /*
@@ -50,7 +54,7 @@ export default {
   |
   */
 
-  version: version,
+  version,
 
   /*
   |--------------------------------------------------------------------------
@@ -63,7 +67,7 @@ export default {
   |
   */
 
-  description: description,
+  description: description || Env('APP_DESCRIPTION', 'Athenna is awesome!'),
 
   /*
   |--------------------------------------------------------------------------
@@ -87,7 +91,7 @@ export default {
   |
   */
 
-  source: Env('APP_SOURCE', 'https://github.com'),
+  source: Env('APP_SOURCE', 'https://github.com/AthennaIO'),
 
   /*
   |--------------------------------------------------------------------------
@@ -142,15 +146,14 @@ export default {
   */
 
   providers: [
-    import('@athenna/http/src/Providers/HttpServerProvider'),
-    import('@athenna/http/src/Providers/HttpRouteProvider'),
-    import('@athenna/logger/src/Providers/LoggerProvider'),
-    import('@athenna/core/src/Providers/ServicesProvider'),
-    import('@athenna/http/src/Providers/ControllerProvider'),
-    import('@athenna/http/src/Providers/MiddlewareProvider'),
-    import('@athenna/artisan/src/Providers/ArtisanProvider'),
-    import('@athenna/artisan/src/Providers/CommandProvider'),
-    import('Providers/AppServiceProvider'),
+    import('@athenna/http/providers/HttpServerProvider'),
+    import('@athenna/http/providers/HttpRouteProvider'),
+    import('@athenna/logger/providers/LoggerProvider'),
+    import('@athenna/core/providers/ServiceProvider'),
+    import('@athenna/http/providers/ControllerProvider'),
+    import('@athenna/http/providers/MiddlewareProvider'),
+    import('@athenna/artisan/providers/ArtisanProvider'),
+    import('#providers/AppServiceProvider'),
   ],
 
   /*

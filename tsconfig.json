@@ -1,8 +1,0 @@
-{
-  "extends": "./node_modules/@athenna/core/_tsconfig.json",
-  "compilerOptions": {
-    "esModuleInterop": true
-  },
-  "include": ["*.ts", "**/*.ts"],
-  "exclude": ["node_modules", "build", "dist", "tests"]
-}

@@ -1,5 +1,4 @@
 import { Path } from '@secjs/utils'
-import { Color } from '@athenna/logger'
 
 export default {
   /*
@@ -32,51 +31,39 @@ export default {
   channels: {
     application: {
       driver: 'console',
-      formatter: 'nest',
-      formatterConfig: {
-        level: 'INFO',
-        chalk: Color.cyan,
-        context: 'Logger',
-      },
-
+      formatter: 'simple',
       streamType: 'stdout',
+      formatterConfig: {},
     },
     console: {
       driver: 'console',
       formatter: 'cli',
       streamType: 'stdout',
-      formatterConfig: {
-        level: 'INFO',
-        chalk: Color.cyan,
-      },
+      formatterConfig: {},
     },
     request: {
       driver: 'console',
       formatter: 'request',
+      streamType: 'stdout',
       formatterConfig: {
         asJson: false,
       },
-
-      streamType: 'stdout',
     },
     pino: {
       driver: 'pino',
       formatter: 'pino-pretty',
       formatterConfig: {
-        level: 'INFO',
         colorize: true,
       },
     },
     debug: {
       driver: 'debug',
       formatter: 'nest',
+      namespace: 'api:main',
       formatterConfig: {
         level: 'DEBUG',
-        chalk: Color.purple,
         context: 'Debugger',
       },
-
-      namespace: 'api:main',
     },
     discard: {
       driver: 'null',
@@ -84,43 +71,29 @@ export default {
     file: {
       driver: 'file',
       formatter: 'simple',
-      formatterConfig: {
-        level: 'INFO',
-        chalk: Color.cyan,
-        context: 'Logger',
-      },
-
-      filePath: Path.noBuild().logs('athenna.log'),
+      filePath: Path.logs('athenna.log'),
+      formatterConfig: {},
     },
     slack: {
       driver: 'slack',
       formatter: 'message',
-      formatterConfig: {
-        level: 'INFO',
-      },
-
       url: 'your-slack-webhook-url',
+      formatterConfig: {},
     },
     discord: {
       driver: 'discord',
       formatter: 'message',
-      formatterConfig: {
-        level: 'INFO',
-      },
-
       username: 'Athenna',
       url: 'your-discord-webhook-url',
+      formatterConfig: {},
     },
     telegram: {
       driver: 'telegram',
       formatter: 'message',
-      formatterConfig: {
-        level: 'INFO',
-      },
-
       token: 'your-telegram-bot-token',
       chatId: 0,
       parseMode: 'HTML',
+      formatterConfig: {},
     },
   },
 }

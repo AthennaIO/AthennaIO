@@ -4,14 +4,14 @@ export class AppServiceProvider extends ServiceProvider {
   /**
    * Register any application services.
    *
-   * @return void
+   * @return {void}
    */
   register() {}
 
   /**
    * Bootstrap any application services.
    *
-   * @return void
+   * @return {void}
    */
   boot() {}
 }

@@ -12,4 +12,6 @@ import { Artisan } from '@athenna/artisan'
 
 Artisan.command('hello', function () {
   this.success('Hello from Athenna!')
-}).description('Athenna just says hello.')
+})
+  .description('Athenna just says hello.')
+  .createHelp()
