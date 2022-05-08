@@ -12,11 +12,11 @@
     "athenna"
   ],
   "scripts": {
-    "lint:fix": "eslint \"{src,tests}/**/*.js\" --fix",
+    "start": "node bootstrap/main.js",
     "test": "npm run --silent lint:fix && node ./tests/index.js Unit E2E",
     "test:debug": "cross-env DEBUG=api:* && npm run --silent test",
     "test:coverage": "c8 npm run --silent test",
-    "gen:types": "tsc src/*.js --declaration --allowJs --emitDeclarationOnly --out src/index.js"
+    "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.js\" --fix"
   },
   "files": [
     "src/*.js",
@@ -45,7 +45,6 @@
     "@athenna/artisan": "1.1.7",
     "@athenna/config": "1.1.0",
     "@athenna/core": "1.5.3",
-    "@athenna/http": "1.3.7",
     "@athenna/ioc": "1.1.8",
     "@athenna/logger": "1.2.3",
     "@secjs/utils": "1.9.3",

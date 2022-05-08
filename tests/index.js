@@ -7,15 +7,14 @@
  * file that was distributed with this source code.
  */
 
-import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
-
 import { assert } from '@japa/assert'
 import { Ignite } from '@athenna/core'
-import { Server } from '@athenna/http'
 import { pathToFileURL } from 'node:url'
 import { specReporter } from '@japa/spec-reporter'
 import { runFailedTests } from '@japa/run-failed-tests'
 import { processCliArgs, configure, run, TestContext } from '@japa/runner'
+
+import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +64,6 @@ configure({
           suite.setup(async () => {
             const application = await new Ignite().fire()
 
-            TestContext.macro('request', () => {})
             TestContext.macro('application', application)
 
             return () => {}
@@ -79,12 +77,11 @@ configure({
           suite.setup(async () => {
             const application = await new Ignite().fire()
 
-            await application.bootHttpServer()
+            await application.bootArtisan()
 
-            TestContext.macro('request', Server.request)
             TestContext.macro('application', application)
 
-            return async () => await application.shutdownHttpServer()
+            return async () => {}
           })
         },
       },

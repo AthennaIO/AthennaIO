@@ -1,17 +1,10 @@
 import { test } from '@japa/runner'
+import { Artisan } from '@athenna/artisan'
 
 test.group('WelcomeTest', () => {
-  test('should return mocked welcome payload from API', async ({ assert, request }) => {
-    const statusCode = 200
-    const method = 'GET'
-    const path = '/api/welcome'
+  test('should return mocked welcome payload from API', async ({ assert }) => {
+    const useCase = async () => await Artisan.call('welcome')
 
-    const { json } = await request({ path, method })
-
-    const body = json()
-
-    assert.equal(body.method, method)
-    assert.equal(body.statusCode, statusCode)
-    assert.deepEqual(body.data, { mock: true })
+    await assert.doesNotRejects(useCase)
   })
 })

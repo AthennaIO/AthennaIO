@@ -4,8 +4,12 @@ import { install } from 'source-map-support'
 async function main() {
   install()
 
+  process.env.BOOT_LOGS = 'false'
+
   const application = await new Ignite().fire()
-  await application.bootHttpServer()
+  const artisan = await application.bootArtisan()
+
+  await artisan.main()
 }
 
 main().catch()
