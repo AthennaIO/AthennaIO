@@ -1,6 +1,6 @@
 # Scaffold 🦴
 
-> The Athenna scaffold project used by 'athenna new project' command to create your project
+> The Athenna scaffold project used by 'athenna new project' command to create your project.
 
 [![GitHub followers](https://img.shields.io/github/followers/athennaio.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/athennaio?tab=followers)
 [![GitHub stars](https://img.shields.io/github/stars/athennaio/scaffold.svg?style=social&label=Star&maxAge=2592000)](https://github.com/athennaio/scaffold/stargazers/)
