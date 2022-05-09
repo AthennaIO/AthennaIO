@@ -11,6 +11,9 @@
     "esm",
     "athenna"
   ],
+  "bin": {
+    "artisan": "./boostrap/main.js"
+  },
   "scripts": {
     "start": "node bootstrap/main.js",
     "test": "npm run --silent lint:fix && node ./tests/index.js Unit E2E",
