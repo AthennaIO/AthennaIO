@@ -41,6 +41,11 @@ export default {
       streamType: 'stdout',
       formatterConfig: {},
     },
+    exception: {
+      driver: 'console',
+      formatter: 'none',
+      streamType: 'stdout',
+    },
     request: {
       driver: 'console',
       formatter: 'request',
