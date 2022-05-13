@@ -47,7 +47,7 @@
   "dependencies": {
     "@athenna/artisan": "1.1.8",
     "@athenna/config": "1.1.0",
-    "@athenna/core": "1.5.4",
+    "@athenna/core": "1.5.5",
     "@athenna/ioc": "1.1.8",
     "@athenna/logger": "1.2.3",
     "@secjs/utils": "1.9.3",
