@@ -45,11 +45,11 @@
     "#tests/*": "./tests/*.js"
   },
   "dependencies": {
-    "@athenna/artisan": "1.1.8",
+    "@athenna/artisan": "1.1.9",
     "@athenna/config": "1.1.0",
-    "@athenna/core": "1.5.5",
-    "@athenna/ioc": "1.1.8",
-    "@athenna/logger": "1.2.3",
+    "@athenna/core": "1.5.6",
+    "@athenna/ioc": "1.1.9",
+    "@athenna/logger": "1.2.4",
     "@secjs/utils": "1.9.3",
     "source-map-support": "0.5.21"
   },
