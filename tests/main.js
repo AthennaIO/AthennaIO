@@ -7,25 +7,14 @@
  * file that was distributed with this source code.
  */
 
+import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
+
 import { assert } from '@japa/assert'
 import { Ignite } from '@athenna/core'
 import { pathToFileURL } from 'node:url'
 import { specReporter } from '@japa/spec-reporter'
 import { runFailedTests } from '@japa/run-failed-tests'
 import { processCliArgs, configure, run, TestContext } from '@japa/runner'
-
-import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
-
-/*
-|--------------------------------------------------------------------------
-| Set test environment
-|--------------------------------------------------------------------------
-|
-| Set the test environment. This value will remove bootstrap logs and set
-| the `.env.${process.env.NODE_ENV}` file as default.
-*/
-
-process.env.NODE_ENV = 'test'
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +43,7 @@ ioc.mock('App/Services/WelcomeService', WelcomeServiceMock)
 */
 
 configure({
-  ...processCliArgs(process.argv.slice(2)),
+  ...processCliArgs(process.argv[2] === 'test' ? process.argv.slice(3) : process.argv.slice(2)),
   ...{
     suites: [
       {
