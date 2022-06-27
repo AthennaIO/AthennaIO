@@ -1,17 +1,10 @@
 import { test } from '@japa/runner'
 
 test.group('WelcomeTest', () => {
-  test('should return mocked welcome payload from API', async ({ assert, request }) => {
-    const statusCode = 200
-    const method = 'GET'
-    const path = '/api/welcome'
+  test('should return mocked welcome payload from API', async ({ request }) => {
+    const response = await request.get('/api/welcome')
 
-    const { json } = await request({ path, method })
-
-    const body = json()
-
-    assert.equal(body.method, method)
-    assert.equal(body.statusCode, statusCode)
-    assert.deepEqual(body.data, { mock: true })
+    response.assertStatusCode(200)
+    response.assertBodyContains({ data: { mock: true } })
   })
 })
