@@ -54,7 +54,7 @@ configure({
       {
         name: 'E2E',
         files: ['tests/E2E/**/*Test.js'],
-        configure: suite => TestSuite.end2EndSuite(suite),
+        configure: suite => TestSuite.httpEnd2EndSuite(suite),
       },
     ],
     plugins: [assert(), runFailedTests()],
