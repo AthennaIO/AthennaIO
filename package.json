@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "node bootstrap/main.js",
-    "test": "npm run --silent lint:fix && node artisan test",
+    "test": "npm run --silent lint:fix && node artisan test --unit",
     "test:debug": "cross-env DEBUG=api:* && npm run --silent test",
     "test:coverage": "c8 npm run --silent test",
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.js\" --fix"
@@ -45,12 +45,12 @@
     "#tests/*": "./tests/*.js"
   },
   "dependencies": {
-    "@athenna/artisan": "1.2.1",
-    "@athenna/config": "1.1.0",
-    "@athenna/core": "1.6.0",
-    "@athenna/ioc": "1.1.9",
-    "@athenna/logger": "1.2.4",
-    "@secjs/utils": "1.9.3",
+    "@athenna/artisan": "1.2.2",
+    "@athenna/config": "1.1.1",
+    "@athenna/core": "1.6.2",
+    "@athenna/ioc": "1.2.0",
+    "@athenna/logger": "1.2.5",
+    "@secjs/utils": "1.9.4",
     "source-map-support": "0.5.21"
   },
   "devDependencies": {

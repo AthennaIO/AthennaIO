@@ -11,10 +11,10 @@ import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
 
 import { assert } from '@japa/assert'
 import { pathToFileURL } from 'node:url'
-import { Ignite, TestSuite } from '@athenna/core'
+import { TestSuite } from '@athenna/core'
 import { specReporter } from '@japa/spec-reporter'
 import { runFailedTests } from '@japa/run-failed-tests'
-import { processCliArgs, configure, run, TestContext } from '@japa/runner'
+import { processCliArgs, configure, run } from '@japa/runner'
 
 /*
 |--------------------------------------------------------------------------
@@ -50,21 +50,6 @@ configure({
         name: 'Unit',
         files: ['tests/Unit/**/*Test.js'],
         configure: suite => TestSuite.unitSuite(suite),
-      },
-      {
-        name: 'E2E',
-        files: ['tests/E2E/**/*Test.js'],
-        configure(suite) {
-          suite.setup(async () => {
-            const application = await new Ignite().fire()
-
-            await application.bootArtisan()
-
-            TestContext.macro('application', application)
-
-            return async () => {}
-          })
-        },
       },
     ],
     plugins: [assert(), runFailedTests()],
