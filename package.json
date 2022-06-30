@@ -43,7 +43,7 @@
     "#tests/*": "./tests/*.js"
   },
   "dependencies": {
-    "@athenna/artisan": "1.2.3",
+    "@athenna/artisan": "1.2.4",
     "@athenna/config": "1.1.1",
     "@athenna/core": "1.6.4",
     "@athenna/http": "1.4.0",
