@@ -43,10 +43,10 @@
     "#tests/*": "./tests/*.js"
   },
   "dependencies": {
-    "@athenna/artisan": "1.2.4",
+    "@athenna/artisan": "1.2.7",
     "@athenna/config": "1.1.1",
-    "@athenna/core": "1.6.4",
-    "@athenna/http": "1.4.0",
+    "@athenna/core": "1.6.6",
+    "@athenna/http": "1.4.5",
     "@athenna/ioc": "1.2.0",
     "@athenna/logger": "1.2.5",
     "@secjs/utils": "1.9.4",
