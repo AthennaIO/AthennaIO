@@ -7,7 +7,7 @@ export class Kernel extends ConsoleKernel {
    * @return void
    */
   commands = [
-    ...ArtisanLoader.loadHttp(),
+    ...ArtisanLoader.loadCommands(),
     import('#app/Console/Commands/WelcomeCommand'),
   ]
 }
