@@ -50,7 +50,7 @@
     "@athenna/core": "1.7.1",
     "@athenna/ioc": "1.2.3",
     "@athenna/logger": "1.2.8",
-    "@athenna/test": "1.0.1",
+    "@athenna/test": "1.0.2",
     "@secjs/utils": "1.9.7",
     "source-map-support": "0.5.21"
   },
