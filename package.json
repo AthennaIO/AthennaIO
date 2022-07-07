@@ -49,7 +49,7 @@
     "@athenna/http": "1.5.1",
     "@athenna/ioc": "1.2.3",
     "@athenna/logger": "1.2.8",
-    "@athenna/test": "1.0.0",
+    "@athenna/test": "1.0.1",
     "@secjs/utils": "1.9.7",
     "source-map-support": "0.5.21"
   },
