@@ -5,6 +5,8 @@ async function main() {
   install()
 
   const application = await new Ignite().fire()
+
+  await application.bootArtisan()
   await application.bootHttpServer()
 }
 
