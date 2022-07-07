@@ -7,26 +7,11 @@
  * file that was distributed with this source code.
  */
 
-import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
-
 import { assert } from '@japa/assert'
-import { pathToFileURL } from 'node:url'
-import { TestSuite } from '@athenna/core'
+import { TestSuite } from '@athenna/test'
 import { specReporter } from '@japa/spec-reporter'
 import { runFailedTests } from '@japa/run-failed-tests'
 import { processCliArgs, configure, run } from '@japa/runner'
-
-/*
-|--------------------------------------------------------------------------
-| Service container mocking
-|--------------------------------------------------------------------------
-|
-| Reserve this space to set mocks for the service container using the global
-| 'ioc' instance. It's important for this code to stay before where we
-| ignite the application.
-*/
-
-ioc.mock('App/Services/WelcomeService', WelcomeServiceMock)
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +28,7 @@ ioc.mock('App/Services/WelcomeService', WelcomeServiceMock)
 */
 
 configure({
-  ...processCliArgs(process.argv[2] === 'test' ? process.argv.slice(3) : process.argv.slice(2)),
+  ...processCliArgs(TestSuite.getArgs()),
   ...{
     suites: [
       {
@@ -54,7 +39,7 @@ configure({
     ],
     plugins: [assert(), runFailedTests()],
     reporters: [specReporter()],
-    importer: filePath => import(pathToFileURL(filePath).href),
+    importer: filePath => TestSuite.importer(filePath),
   },
 })
 

@@ -1,4 +1,5 @@
 import { ArtisanLoader, ConsoleKernel } from '@athenna/artisan'
+import { TestCommandsLoader } from '@athenna/test'
 
 export class Kernel extends ConsoleKernel {
   /**
@@ -9,7 +10,17 @@ export class Kernel extends ConsoleKernel {
   get commands() {
     return [
       ...ArtisanLoader.loadCommands(),
+      ...TestCommandsLoader.loadCommands(),
       import('#app/Console/Commands/WelcomeCommand'),
     ]
+  }
+
+  /**
+   * Register the custom templates for the application.
+   *
+   * @return {any[]}
+   */
+  get templates() {
+    return [...TestCommandsLoader.loadTemplates()]
   }
 }
