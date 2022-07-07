@@ -46,14 +46,14 @@ configure({
   ...{
     suites: [
       {
-        name: 'Unit',
-        files: ['tests/Unit/**/*Test.js'],
-        configure: suite => TestSuite.unitSuite(suite),
-      },
-      {
         name: 'E2E',
         files: ['tests/E2E/**/*Test.js'],
         configure: suite => TestSuite.httpEnd2EndSuite(suite),
+      },
+      {
+        name: 'Unit',
+        files: ['tests/Unit/**/*Test.js'],
+        configure: suite => TestSuite.unitSuite(suite),
       },
     ],
     plugins: [assert(), runFailedTests()],
