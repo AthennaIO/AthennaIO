@@ -4,10 +4,12 @@ export class Kernel extends ConsoleKernel {
   /**
    * Register the commands for the application.
    *
-   * @return void
+   * @return {any[]}
    */
-  commands = [
-    ...ArtisanLoader.loadCommands(),
-    import('#app/Console/Commands/WelcomeCommand'),
-  ]
+  get commands() {
+    return [
+      ...ArtisanLoader.loadCommands(),
+      import('#app/Console/Commands/WelcomeCommand'),
+    ]
+  }
 }

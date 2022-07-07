@@ -3,13 +3,21 @@ import { Command } from '@athenna/artisan'
 export class WelcomeCommand extends Command {
   /**
    * The name and signature of the console command.
+   *
+   * @return {string}
    */
-  signature = 'welcome'
+  get signature() {
+    return 'welcome'
+  }
 
   /**
    * The console command description.
+   *
+   * @return {string}
    */
-  description = 'Display welcome object.'
+  get description() {
+    return 'Display welcome object.'
+  }
 
   /**
    * The welcome service dependency.
@@ -27,17 +35,6 @@ export class WelcomeCommand extends Command {
     super()
 
     this.#welcomeService = welcomeService
-  }
-
-  /**
-   * Set additional flags in the commander instance.
-   * This method is executed when registering your command.
-   *
-   * @param {import('commander').Command} commander
-   * @return {import('commander').Command}
-   */
-  addFlags(commander) {
-    return commander
   }
 
   /**
