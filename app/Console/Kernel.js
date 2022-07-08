@@ -1,5 +1,5 @@
-import { ArtisanLoader, ConsoleKernel } from '@athenna/artisan'
 import { TestCommandsLoader } from '@athenna/test'
+import { ArtisanLoader, ConsoleKernel } from '@athenna/artisan'
 
 export class Kernel extends ConsoleKernel {
   /**
