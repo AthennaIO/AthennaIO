@@ -4,7 +4,7 @@ export class WelcomeTest extends Test {
   /**
    * Run your test.
    *
-   * @param {import('#src/index').HttpTestContext} ctx
+   * @param {import('@athenna/test').HttpTestContext} ctx
    */
   async shouldReturnMockedWelcomePayloadFromApi({ request }) {
     const response = await request.get('/api/welcome')
