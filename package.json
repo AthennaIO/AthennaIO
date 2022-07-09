@@ -19,18 +19,7 @@
     "test:coverage": "c8 npm run --silent test",
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.js\" --fix"
   },
-  "files": [
-    "src/*.js",
-    "src/*.d.ts",
-    "src/**/*.js",
-    "src/**/*.d.ts"
-  ],
   "type": "module",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
-  "exports": {
-    ".": "./src/index.js"
-  },
   "imports": {
     "#app/*": "./app/*.js",
     "#bootstrap/*": "./bootstrap/*.js",
