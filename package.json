@@ -28,10 +28,10 @@
     "src/**/*.d.ts"
   ],
   "type": "module",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "main": "./bootstrap/main.js",
+  "types": "./bootstrap/main.d.ts",
   "exports": {
-    ".": "./src/index.js"
+    ".": "./bootstrap/main.js"
   },
   "imports": {
     "#app/*": "./app/*.js",
