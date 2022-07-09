@@ -22,10 +22,10 @@
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.js\" --fix"
   },
   "files": [
-    "src/*.js",
-    "src/*.d.ts",
-    "src/**/*.js",
-    "src/**/*.d.ts"
+    "bootstrap/*.js",
+    "bootstrap/*.d.ts",
+    "bootstrap/**/*.js",
+    "bootstrap/**/*.d.ts"
   ],
   "type": "module",
   "main": "./bootstrap/main.js",
