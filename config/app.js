@@ -1,6 +1,4 @@
 import { File } from '@secjs/utils'
-import { Log } from '@athenna/logger'
-import { Server } from '@athenna/http'
 
 const { name, version, description } = JSON.parse(
   new File('../package.json').getContentSync().toString(),
@@ -128,11 +126,7 @@ export default {
   |
   */
 
-  gracefulShutdownCb: async () => {
-    Log.warn('Athenna application gracefully shutting down.')
-
-    await Server.close()
-  },
+  gracefulShutdownCb: async () => {},
 
   /*
   |--------------------------------------------------------------------------
@@ -146,12 +140,8 @@ export default {
   */
 
   providers: [
-    import('@athenna/http/providers/HttpServerProvider'),
-    import('@athenna/http/providers/HttpRouteProvider'),
     import('@athenna/logger/providers/LoggerProvider'),
     import('@athenna/core/providers/ServiceProvider'),
-    import('@athenna/http/providers/ControllerProvider'),
-    import('@athenna/http/providers/MiddlewareProvider'),
     import('@athenna/artisan/providers/ArtisanProvider'),
     import('#providers/AppServiceProvider'),
   ],
