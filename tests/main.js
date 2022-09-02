@@ -33,7 +33,7 @@ configure({
     suites: [
       {
         name: 'Unit',
-        files: ['tests/Unit/**/*Test.js'],
+        files: ['tests/Unit/**/*Test.js', 'tests/Unit/**/*TestFn.js'],
         configure: suite => TestSuite.unitSuite(suite),
       },
     ],
