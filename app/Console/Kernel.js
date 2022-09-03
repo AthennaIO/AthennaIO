@@ -8,11 +8,16 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get commands() {
-    return [
-      ...ArtisanLoader.loadCommands(),
-      ...TestCommandsLoader.loadCommands(),
-      import('#app/Console/Commands/WelcomeCommand'),
-    ]
+    const internalCommands = []
+
+    if (Env('NODE_ENV') !== 'production') {
+      internalCommands.push(
+        ...ArtisanLoader.loadCommands(),
+        ...TestCommandsLoader.loadCommands(),
+      )
+    }
+
+    return [...internalCommands, import('#app/Console/Commands/WelcomeCommand')]
   }
 
   /**
