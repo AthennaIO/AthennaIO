@@ -32,6 +32,11 @@ configure({
   ...{
     suites: [
       {
+        name: 'E2E',
+        files: ['tests/E2E/**/*Test.js', 'tests/E2E/**/*TestFn.js'],
+        configure: suite => TestSuite.cliEnd2EndSuite(suite),
+      },
+      {
         name: 'Unit',
         files: ['tests/Unit/**/*Test.js', 'tests/Unit/**/*TestFn.js'],
         configure: suite => TestSuite.unitSuite(suite),

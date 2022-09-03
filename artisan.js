@@ -7,6 +7,7 @@ async function main() {
   install()
 
   process.env.BOOT_LOGS = 'false'
+  process.env.CALL_PATH = process.cwd()
 
   const application = await new Ignite().fire()
   const artisan = await application.bootArtisan()
