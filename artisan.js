@@ -1,4 +1,4 @@
-#!/usr/bin/env node --input-type module
+#!/usr/bin/env node
 
 import { Ignite } from '@athenna/core'
 import { install } from 'source-map-support'

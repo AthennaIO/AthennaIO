@@ -1,3 +1,4 @@
+import { Folder, Path } from '@secjs/utils'
 import { TestCommandsLoader } from '@athenna/test'
 import { ArtisanLoader, ConsoleKernel } from '@athenna/artisan'
 
@@ -17,7 +18,12 @@ export class Kernel extends ConsoleKernel {
       )
     }
 
-    return [...internalCommands, import('#app/Console/Commands/WelcomeCommand')]
+    const appCommands = new Folder(Path.console('Commands'))
+      .loadSync()
+      .getFilesByPattern('**/*.js', true)
+      .map(command => import(command.href))
+
+    return [...internalCommands, ...appCommands]
   }
 
   /**
@@ -26,6 +32,9 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get templates() {
-    return [...TestCommandsLoader.loadTemplates()]
+    return [
+      ...TestCommandsLoader.loadTemplates(),
+      ...ArtisanLoader.loadTemplates(),
+    ]
   }
 }
