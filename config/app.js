@@ -150,6 +150,7 @@ export default {
     import('@athenna/http/providers/HttpRouteProvider'),
     import('@athenna/logger/providers/LoggerProvider'),
     import('@athenna/core/providers/ServiceProvider'),
+    import('@athenna/core/providers/RepositoryProvider'),
     import('@athenna/http/providers/ControllerProvider'),
     import('@athenna/http/providers/MiddlewareProvider'),
     import('@athenna/artisan/providers/ArtisanProvider'),
