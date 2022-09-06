@@ -10,17 +10,18 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get commands() {
+    const internalCommands = [
+      ...ArtisanLoader.loadCommands(),
+      ...HttpCommandsLoader.loadCommands(),
+      ...TestCommandsLoader.loadCommands(),
+    ]
+
     const appCommands = new Folder(Path.console('Commands'))
       .loadSync()
       .getFilesByPattern('**/*.js', true)
       .map(command => import(command.href))
 
-    return [
-      ...ArtisanLoader.loadCommands(),
-      ...HttpCommandsLoader.loadCommands(),
-      ...TestCommandsLoader.loadCommands(),
-      ...appCommands,
-    ]
+    return [...internalCommands, ...appCommands]
   }
 
   /**
