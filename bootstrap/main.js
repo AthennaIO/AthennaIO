@@ -8,6 +8,7 @@ async function main() {
 
   process.env.NODE_ENV = 'production'
   process.env.BOOT_LOGS = 'false'
+  process.env.IS_ARTISAN = 'false'
   process.env.CALL_PATH = process.cwd()
 
   const application = await new Ignite().fire()
