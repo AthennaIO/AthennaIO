@@ -7,6 +7,7 @@ async function main() {
   install()
 
   process.env.BOOT_LOGS = 'false'
+  process.env.DB_AUTO_CONNECT = 'false'
   process.env.CALL_PATH = process.cwd()
 
   const application = await new Ignite().fire()
