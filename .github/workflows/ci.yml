@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      [ 'develop', 'http', 'cli', 'slim' ]
+      - cli
   pull_request:
     branches:
-      [ 'develop', 'http', 'cli', 'slim' ]
+      - cli
 
 jobs:
   linux:
