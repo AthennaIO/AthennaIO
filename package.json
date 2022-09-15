@@ -1,6 +1,6 @@
 {
   "name": "@athenna/scaffold",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "The Athenna scaffold project used by 'athenna new project' command to create your project.",
   "license": "MIT",
   "author": "João Lenon <lenon@athenna.io>",

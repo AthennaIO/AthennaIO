@@ -39,7 +39,7 @@
 </p>
 
 <p align='center'>
-  <a href='https://github.com/AthennaIO/IoC/graphs/contributors'>
-    <img src='https://contrib.rocks/image?repo=AthennaIO/IoC'/>
+  <a href='https://github.com/AthennaIO/Scaffold/graphs/contributors'>
+    <img src='https://contrib.rocks/image?repo=AthennaIO/Scaffold'/>
   </a>
 </p>
