@@ -22,9 +22,9 @@ export default {
   | Here you may configure the log channels for your application.
   |
   | Available Drivers:
-  |   "console", "debug", "discord", "file", "null", "pino", "slack", "telegram".
+  |   "console", "discord", "file", "null", "slack", "telegram".
   | Available Formatters:
-  |   "cli", "simple", "nest", "json", "request", "message", "pino-pretty(only for pino driver)".
+  |   "cli", "simple", "json", "request", "message".
   |
   */
 
@@ -32,42 +32,22 @@ export default {
     application: {
       driver: 'console',
       formatter: 'simple',
-      streamType: 'stdout',
-      formatterConfig: {},
     },
     console: {
       driver: 'console',
       formatter: 'cli',
-      streamType: 'stdout',
-      formatterConfig: {},
     },
     exception: {
       driver: 'console',
+      streamType: 'stderr',
+
       formatter: 'none',
-      streamType: 'stdout',
     },
     request: {
       driver: 'console',
       formatter: 'request',
-      streamType: 'stdout',
       formatterConfig: {
         asJson: false,
-      },
-    },
-    pino: {
-      driver: 'pino',
-      formatter: 'pino-pretty',
-      formatterConfig: {
-        colorize: true,
-      },
-    },
-    debug: {
-      driver: 'debug',
-      formatter: 'nest',
-      namespace: 'api:main',
-      formatterConfig: {
-        level: 'DEBUG',
-        context: 'Debugger',
       },
     },
     discard: {
@@ -75,29 +55,33 @@ export default {
     },
     file: {
       driver: 'file',
-      formatter: 'simple',
       filePath: Path.logs('athenna.log'),
+
+      formatter: 'simple',
       formatterConfig: {},
     },
     slack: {
       driver: 'slack',
-      formatter: 'message',
       url: 'your-slack-webhook-url',
+
+      formatter: 'message',
       formatterConfig: {},
     },
     discord: {
       driver: 'discord',
-      formatter: 'message',
       username: 'Athenna',
       url: 'your-discord-webhook-url',
+
+      formatter: 'message',
       formatterConfig: {},
     },
     telegram: {
       driver: 'telegram',
-      formatter: 'message',
-      token: 'your-telegram-bot-token',
       chatId: 0,
       parseMode: 'HTML',
+      token: 'your-telegram-bot-token',
+
+      formatter: 'message',
       formatterConfig: {},
     },
   },
