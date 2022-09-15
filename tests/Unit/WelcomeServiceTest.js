@@ -25,7 +25,7 @@ export class WelcomeServiceTest extends Test {
     const { name, version, description, source } = await welcomeService.findOne()
 
     assert.equal(name, '@athenna/scaffold')
-    assert.equal(version, '1.0.1')
+    assert.equal(version, '1.0.0')
     assert.equal(source, 'https://github.com/AthennaIO')
     assert.equal(
       description,
