@@ -12,7 +12,7 @@ export default {
   |
   */
 
-  default: Env('LOG_CHANNEL', 'application'),
+  default: Env('LOG_CHANNEL', 'stack'),
 
   /*
   |--------------------------------------------------------------------------
@@ -22,13 +22,18 @@ export default {
   | Here you may configure the log channels for your application.
   |
   | Available Drivers:
-  |   "console", "discord", "file", "null", "slack", "telegram".
+  |   "stack", "console", "discord", "file", "null", "slack", "telegram".
   | Available Formatters:
   |   "cli", "simple", "json", "request", "message".
   |
   */
 
   channels: {
+    stack: {
+      driver: 'stack',
+      channels: ['application'],
+    },
+
     application: {
       driver: 'console',
       level: 'trace',
