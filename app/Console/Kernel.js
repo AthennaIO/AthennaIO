@@ -29,7 +29,7 @@ export class Kernel extends ConsoleKernel {
   /**
    * Register custom templates files.
    *
-   * @return {import('@secjs/utils').File[] | Promise<any[]>}
+   * @return {any[]}
    */
   get templates() {
     return [
