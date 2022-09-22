@@ -12,7 +12,7 @@
     "athenna"
   ],
   "bin": {
-    "artisan": "./boostrap/main.js"
+    "artisan": "./bootstrap/main.js"
   },
   "scripts": {
     "start": "node bootstrap/main.js",
