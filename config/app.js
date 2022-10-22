@@ -1,5 +1,5 @@
-import { File } from '@secjs/utils'
 import { Log } from '@athenna/logger'
+import { File } from '@athenna/common'
 import { Server } from '@athenna/http'
 
 const { name, version, description } = JSON.parse(
