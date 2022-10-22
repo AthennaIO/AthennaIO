@@ -1,4 +1,4 @@
-import { File } from '@secjs/utils'
+import { File } from '@athenna/common'
 
 const { name, version, description } = JSON.parse(
   new File('../package.json').getContentSync().toString(),
