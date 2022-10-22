@@ -154,6 +154,7 @@ export default {
     import('@athenna/http/providers/ControllerProvider'),
     import('@athenna/http/providers/MiddlewareProvider'),
     import('@athenna/artisan/providers/ArtisanProvider'),
+    import('@athenna/artisan/providers/TemplateProvider'),
     import('#providers/AppServiceProvider'),
   ],
 
