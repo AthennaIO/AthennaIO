@@ -129,7 +129,7 @@ export default {
 
   gracefulShutdown: {
     SIGINT: async () => {
-      await ProviderHelper.shutdownAll()
+      await ProviderHelper.shutdownAll(false)
 
       process.exit()
     },
