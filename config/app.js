@@ -142,6 +142,24 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
+  | Protected Artisan commands
+  |--------------------------------------------------------------------------
+  |
+  | Protected commands are usually commands that will let the Node.js process
+  | running for some reason.
+  |
+  | For example: "node artisan repl"
+  |
+  | This command will bootstrap a REPL session. The Node.js process needs to
+  | stay running, so we cannot force shutdown the application after this command
+  | is executed.
+  |
+  */
+
+  protectedCommands: ['repl', 'test', 'serve'],
+
+  /*
+  |--------------------------------------------------------------------------
   | Application providers
   |--------------------------------------------------------------------------
   |
