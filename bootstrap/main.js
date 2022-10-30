@@ -2,9 +2,8 @@ import { Ignite } from '@athenna/core'
 import { install } from 'source-map-support'
 
 async function main() {
+  console.clear()
   install()
-
-  process.env.IS_ARTISAN = 'false'
 
   const application = await new Ignite().fire()
 

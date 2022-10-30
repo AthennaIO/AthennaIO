@@ -10,11 +10,8 @@ import { Route } from '@athenna/http'
 |
 */
 
+Route.get('/', 'WelcomeController.show')
+
 Route.group(() => {
   Route.get('/', 'WelcomeController.show')
-
-  Route.group(() => {
-    Route.get('/', 'WelcomeController.show')
-    Route.get('/welcome', 'WelcomeController.show')
-  }).prefix('/api')
-})
+}).prefix('/api/v1')
