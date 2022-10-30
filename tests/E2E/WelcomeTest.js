@@ -7,9 +7,9 @@ export class WelcomeTest extends Test {
    * @param {import('@athenna/test').HttpTestContext} ctx
    */
   async shouldReturnMockedWelcomePayloadFromApi({ request }) {
-    const response = await request.get('/api/welcome')
+    const response = await request.get('/api/v1')
 
     response.assertStatusCode(200)
-    response.assertBodyContains({ data: { mock: true } })
+    response.assertBodyContains({ mock: true })
   }
 }
