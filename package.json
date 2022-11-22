@@ -42,10 +42,10 @@
     "@athenna/artisan": "1.5.9",
     "@athenna/common": "1.0.1",
     "@athenna/config": "1.2.0",
-    "@athenna/core": "2.0.8",
+    "@athenna/core": "2.0.9",
     "@athenna/ioc": "1.2.9",
     "@athenna/logger": "1.3.7",
-    "@athenna/test": "1.4.1",
+    "@athenna/test": "1.4.2",
     "source-map-support": "0.5.21"
   },
   "devDependencies": {
