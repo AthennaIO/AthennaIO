@@ -14,8 +14,9 @@
   "scripts": {
     "start": "node artisan serve",
     "start:dev": "node artisan serve --watch",
+    "start:debug": "node --inspect artisan serve --watch",
     "test": "npm run --silent lint:fix && node artisan test",
-    "test:debug": "cross-env DEBUG=api:* && npm run --silent test",
+    "test:debug": "cross-env DEBUG=api:* && npm run --silent test -- --inspect",
     "test:coverage": "c8 npm run --silent test",
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,routes,storage,tests}/**/*.js\" --fix"
   },
