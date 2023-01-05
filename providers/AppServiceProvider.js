@@ -1,6 +1,6 @@
 import { ServiceProvider } from '@athenna/ioc'
 
-export class AppServiceProvider extends ServiceProvider {
+export default class AppServiceProvider extends ServiceProvider {
   /**
    * Register any application services.
    *
