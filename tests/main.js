@@ -25,7 +25,7 @@ import { WelcomeServiceMock } from '#tests/Stubs/WelcomeServiceMock'
 | ignite the application.
 */
 
-ioc.mock('App/Services/WelcomeService', WelcomeServiceMock)
+ioc.fake('App/Services/WelcomeService', WelcomeServiceMock)
 
 /*
 |--------------------------------------------------------------------------
