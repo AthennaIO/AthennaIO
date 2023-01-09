@@ -19,7 +19,7 @@
   <img alt="Commitizen" src="https://img.shields.io/badge/commitizen-friendly-brightgreen?style=for-the-badge&logo=appveyor">
 </p>
 
-<img src="https://raw.githubusercontent.com/AthennaIO/Scaffold/9d2247f0afce10b754e171b0ac23062eeb2f5024/.github/logo.svg" width="200px" align="right" hspace="30px" vspace="100px">
+<img src="https://raw.githubusercontent.com/AthennaIO/AthennaIO/9d2247f0afce10b754e171b0ac23062eeb2f5024/.github/logo.svg" width="200px" align="right" hspace="30px" vspace="100px">
 
 ## Links
 
@@ -39,7 +39,7 @@
 </p>
 
 <p align='center'>
-  <a href='https://github.com/AthennaIO/Scaffold/graphs/contributors'>
-    <img src='https://contrib.rocks/image?repo=AthennaIO/Scaffold'/>
+  <a href='https://github.com/AthennaIO/AthennaIO/graphs/contributors'>
+    <img src='https://contrib.rocks/image?repo=AthennaIO/AthennaIO'/>
   </a>
 </p>
