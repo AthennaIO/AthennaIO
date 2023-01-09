@@ -74,6 +74,7 @@
     ],
     "reporter": [
       "text-summary",
+      "lcovonly",
       "html"
     ],
     "report-dir": "./tests/Coverage",
