@@ -1,4 +1,4 @@
-## 👉 [Please follow one of these issue templates](https://github.com/AthennaIO/Scaffold/issues/new/choose) 👈
+## 👉 [Please follow one of these issue templates](https://github.com/AthennaIO/AthennaIO/issues/new/choose) 👈
 
 <!-- Love Athenna? Please consider supporting our collective: 👉  https://opencollective.com/athenna/donate -->
 
