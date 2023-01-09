@@ -8,6 +8,7 @@
  */
 
 import { assert } from '@japa/assert'
+import { Path } from '@athenna/common'
 import { TestSuite } from '@athenna/test'
 import { specReporter } from '@japa/spec-reporter'
 import { runFailedTests } from '@japa/run-failed-tests'
@@ -33,12 +34,12 @@ configure({
     suites: [
       {
         name: 'E2E',
-        files: ['tests/E2E/**/*Test.js', 'tests/E2E/**/*TestFn.js'],
+        files: [`tests/E2E/**/*Test.${Path.ext()}`, `tests/E2E/**/*TestFn.${Path.ext()}`],
         configure: suite => TestSuite.cliEnd2EndSuite(suite),
       },
       {
         name: 'Unit',
-        files: ['tests/Unit/**/*Test.js', 'tests/Unit/**/*TestFn.js'],
+        files: [`tests/Unit/**/*Test.${Path.ext()}`, `tests/Unit/**/*TestFn.${Path.ext()}`],
         configure: suite => TestSuite.unitSuite(suite),
       },
     ],
