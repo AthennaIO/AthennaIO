@@ -6,6 +6,7 @@ import { Ignite, ProviderHelper } from '@athenna/core'
 async function main() {
   install()
 
+  process.env.IS_ARTISAN = 'true'
   process.env.BOOT_LOGS = 'false'
 
   const application = await new Ignite().fire()

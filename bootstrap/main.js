@@ -9,7 +9,7 @@ async function main() {
   await application.bootArtisan()
   await application.bootHttpServer()
 
-  console.log('\n')
+  console.log()
 }
 
 main().catch()
