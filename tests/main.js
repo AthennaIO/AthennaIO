@@ -29,6 +29,17 @@ ioc.fake('App/Services/WelcomeService', WelcomeServiceMock)
 
 /*
 |--------------------------------------------------------------------------
+| Environments
+|--------------------------------------------------------------------------
+|
+| Reserve this space to set default environment variables before configuring
+| your tests.
+*/
+
+process.env.IS_ARTISAN = 'false'
+
+/*
+|--------------------------------------------------------------------------
 | Configure tests
 |--------------------------------------------------------------------------
 |

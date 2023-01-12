@@ -29,6 +29,7 @@
     "#lang/*": "./lang/*.js",
     "#providers/*": "./providers/*.js",
     "#facades/*": "./providers/facades/*.js",
+    "#resources/*": "./resources/*.js",
     "#routes/*": "./routes/*.js",
     "#storage/*": "./storage/*.js",
     "#tests/*": "./tests/*.js"
