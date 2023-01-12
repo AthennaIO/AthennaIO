@@ -1,18 +1,20 @@
-/**
- * @athenna/athenna
- *
- * (c) João Lenon <lenon@athenna.io>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 import { assert } from '@japa/assert'
 import { Path } from '@athenna/common'
 import { TestSuite } from '@athenna/test'
 import { specReporter } from '@japa/spec-reporter'
 import { runFailedTests } from '@japa/run-failed-tests'
 import { processCliArgs, configure, run } from '@japa/runner'
+
+/*
+|--------------------------------------------------------------------------
+| Environments
+|--------------------------------------------------------------------------
+|
+| Reserve this space to set default environment variables before configuring
+| your tests.
+*/
+
+process.env.IS_ARTISAN = 'false'
 
 /*
 |--------------------------------------------------------------------------

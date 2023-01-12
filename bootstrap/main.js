@@ -6,7 +6,7 @@ import { install } from 'source-map-support'
 async function main() {
   install()
 
-  process.env.BOOT_LOGS = 'false'
+  process.env.IS_ARTISAN = 'false'
   process.env.NODE_ENV = 'production'
   process.env.CALL_PATH = process.cwd()
 
