@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
-import { install } from 'source-map-support'
 import { Ignite, ProviderHelper } from '@athenna/core'
 
 async function main() {
-  install()
-
   process.env.IS_ARTISAN = 'true'
   process.env.CALL_PATH = process.cwd()
 
