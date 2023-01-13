@@ -27,9 +27,6 @@ export class WelcomeServiceTest extends Test {
     assert.equal(name, '@athenna/athenna')
     assert.equal(version, '1.0.0')
     assert.equal(source, 'https://github.com/AthennaIO')
-    assert.equal(
-      description,
-      "The Athenna scaffold project used by 'athenna new project' command to create your project.",
-    )
+    assert.equal(description, 'Athenna is awesome!')
   }
 }
