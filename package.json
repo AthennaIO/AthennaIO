@@ -47,7 +47,8 @@
     "@athenna/config": "3.0.2",
     "@athenna/core": "3.0.6",
     "@athenna/ioc": "3.0.0",
-    "@athenna/logger": "3.0.5"
+    "@athenna/logger": "3.0.5",
+    "cls-rtracer": "2.6.2"
   },
   "devDependencies": {
     "@athenna/test": "3.0.7",
