@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
 import { Ignite } from '@athenna/core'
-import { install } from 'source-map-support'
 
 async function main() {
-  install()
-
   process.env.IS_ARTISAN = 'false'
   process.env.NODE_ENV = 'production'
   process.env.CALL_PATH = process.cwd()
