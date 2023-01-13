@@ -137,6 +137,19 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
+  | Trace Artisan commands
+  |--------------------------------------------------------------------------
+  |
+  | Trace artisan commands. If this value is true, Athenna will use the
+  | rTracer library to generate a unique uuid v1 for each command executed
+  | by Artisan.
+  |
+  */
+
+  traceArtisan: false,
+
+  /*
+  |--------------------------------------------------------------------------
   | Protected Artisan commands
   |--------------------------------------------------------------------------
   |

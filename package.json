@@ -42,16 +42,15 @@
     "#tests/*": "./tests/*.js"
   },
   "dependencies": {
-    "@athenna/artisan": "3.0.5",
+    "@athenna/artisan": "3.0.6",
     "@athenna/common": "3.0.0",
     "@athenna/config": "3.0.2",
-    "@athenna/core": "3.0.5",
+    "@athenna/core": "3.0.6",
     "@athenna/ioc": "3.0.0",
-    "@athenna/logger": "3.0.3",
-    "source-map-support": "0.5.21"
+    "@athenna/logger": "3.0.5"
   },
   "devDependencies": {
-    "@athenna/test": "3.0.6",
+    "@athenna/test": "3.0.7",
     "@japa/assert": "1.3.4",
     "@japa/run-failed-tests": "1.0.7",
     "@japa/runner": "2.0.7",
