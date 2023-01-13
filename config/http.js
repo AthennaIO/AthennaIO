@@ -60,25 +60,14 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
-  | No Helmet
+  | No tracer
   |--------------------------------------------------------------------------
   |
-  | This value defines if HttpKernel will set Helmet plugin or not.
+  | This value defines if HttpKernel will set rTracer plugin or not.
   |
   */
 
-  noHelmet: false,
-
-  /*
-  |--------------------------------------------------------------------------
-  | No Swagger
-  |--------------------------------------------------------------------------
-  |
-  | This value defines if HttpKernel will set Swagger plugin or not.
-  |
-  */
-
-  noSwagger: false,
+  noTracer: false,
 
   /*
   |--------------------------------------------------------------------------
@@ -102,18 +91,6 @@ export default {
   */
 
   noErrorHandler: false,
-
-  /*
-  |--------------------------------------------------------------------------
-  | No requestId middleware
-  |--------------------------------------------------------------------------
-  |
-  | This value defines if HttpKernel will set the Athenna requestId middleware
-  | that sets the ctx.data.requestId value for each new request.
-  |
-  */
-
-  noRequestId: false,
 
   /*
   |--------------------------------------------------------------------------
@@ -232,234 +209,67 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
-  | Helmet
+  | Tracer
   |--------------------------------------------------------------------------
   |
-  | Helmet helps you secure your apps by setting various HTTP headers. It's
-  | not a silver bullet, but it can help! Here you can define all helmet
-  | configurations (You can check all helmet configuration available at
-  | https://www.npmjs.com/package/helmet:
+  | Here you may configure your settings for the rTracer plugin. The rTracer
+  | plugin automatically generates a UUID V1 value as the id for each request
+  | and stores it in AsyncLocalStorage (CLS core API). Allows to obtain the
+  | generated request id anywhere in your routes later and use it for logging
+  | or any other purposes.
+  |
+  | To learn more: https://github.com/puzpuzpuz/cls-rtracer
   |
   */
 
-  helmet: {
+  tracer: {
     /*
     |--------------------------------------------------------------------------
-    | Global
+    | Echo header
     |--------------------------------------------------------------------------
     |
-    | If global is true, Athenna allows you to register Helmet for all your
-    | application routes by default. If you want a more granular control on how
-    | to apply Helmet to your application you can choose to disable it on a
-    | global scope by passing global as false bellow.
+    | Add request id to response header. If set to true, the middleware/plugin
+    | will add request id to the specified header. Use headerName option to
+    | specify header name.
     |
     */
 
-    global: true,
-  },
+    echoHeader: false,
 
-  /*
-  |--------------------------------------------------------------------------
-  | Swagger
-  |--------------------------------------------------------------------------
-  |
-  | Swagger allows you to describe the structure of your APIs so that machines
-  | can read them. The ability of APIs to describe their own structure is the
-  | root of all awesomeness in Swagger. Define your configurations for the ui
-  | and for the schema generator bellow.
-  |
-  */
+    /*
+    |--------------------------------------------------------------------------
+    | Use header
+    |--------------------------------------------------------------------------
+    |
+    | Respect request header flag. If set to true, the middleware/plugin will
+    | always use a value from the specified header (if the value is present).
+    |
+    */
 
-  swagger: {
-    ui: {
-      /*
-      |--------------------------------------------------------------------------
-      | Route prefix
-      |--------------------------------------------------------------------------
-      |
-      | Define the route prefix that swagger-ui will use the render the documentation.
-      |
-      */
+    useHeader: false,
 
-      routePrefix: '/documentation',
+    /*
+    |--------------------------------------------------------------------------
+    | Header name
+    |--------------------------------------------------------------------------
+    |
+    | Request/response header name, case-insensitive. Used if useHeader or
+    | echoHeader is set to true.
+    |
+    */
 
-      /*
-      |--------------------------------------------------------------------------
-      | UI Configurations
-      |--------------------------------------------------------------------------
-      |
-      | Define all possible configurations of swagger-ui. You can check all the
-      | configurations at: https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#display
-      |
-      */
+    headerName: 'X-Request-Id',
 
-      uiConfig: {},
+    /*
+    |--------------------------------------------------------------------------
+    | Use Fastify request id
+    |--------------------------------------------------------------------------
+    |
+    | Use request id generated by Fastify instead of generating a new id.
+    |
+    */
 
-      /*
-      |--------------------------------------------------------------------------
-      | UI Hooks
-      |--------------------------------------------------------------------------
-      |
-      | Additional hooks for the documentation's routes. You can provide the onRequest
-      | and preHandler hooks with the same route's options interface.
-      |
-      */
-
-      uiHooks: {},
-
-      /*
-      |--------------------------------------------------------------------------
-      | Static CSP
-      |--------------------------------------------------------------------------
-      |
-      | Enable CSP header for static resources.
-      |
-      */
-
-      staticCSP: true,
-
-      /*
-      |--------------------------------------------------------------------------
-      | Static CSP
-      |--------------------------------------------------------------------------
-      |
-      | Synchronous function to transform CSP header for static resources if the
-      | header has been previously set.
-      |
-      */
-
-      transformStaticCSP: header => header,
-    },
-    configurations: {
-      mode: 'dynamic',
-      swagger: {
-        /*
-        |--------------------------------------------------------------------------
-        | Info object
-        |--------------------------------------------------------------------------
-        |
-        | Info object defines the information of your Swagger document, such as title
-        | description and version.
-        |
-        */
-
-        info: {
-          title: Config.get('app.name'),
-          version: Config.get('app.version'),
-          description: Config.get('app.description'),
-        },
-
-        /*
-        |--------------------------------------------------------------------------
-        | External docs object
-        |--------------------------------------------------------------------------
-        |
-        | External docs object defines the url and description for other documentations
-        | that your project might have.
-        |
-        */
-
-        externalDocs: {
-          url: 'https://swagger.io',
-          description: 'Find more info about Swagger here',
-        },
-
-        /*
-        |--------------------------------------------------------------------------
-        | Host
-        |--------------------------------------------------------------------------
-        |
-        | Host is the domain name or IP address (IPv4) of the host that serves the API.
-        | It may include the port number if different from the scheme’s default port
-        | (80 for HTTP and 443 for HTTPS). Note that this must be the host only,
-        | without http(s):// or sub-paths.
-        |
-        */
-
-        host: Env('APP_DOMAIN', '127.0.0.1:1335'),
-
-        /*
-        |--------------------------------------------------------------------------
-        | Base path
-        |--------------------------------------------------------------------------
-        |
-        | Host is the domain name or IP address (IPv4) of the host that serves the API.
-        | It may include the port number if different from the scheme’s default port
-        | (80 for HTTP and 443 for HTTPS). Note that this must be the host only,
-        | without http(s):// or sub-paths.
-        |
-        */
-
-        basePath: '/',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Schemes
-        |--------------------------------------------------------------------------
-        |
-        | Schemes are the transfer protocols used by the API. Swagger supports the
-        | http, https, and WebSocket schemes – ws and wss.
-        |
-        */
-
-        // schemes: ['http'],
-
-        /*
-        |--------------------------------------------------------------------------
-        | MIME Types: Consumes and Produces
-        |--------------------------------------------------------------------------
-        |
-        | An API can accept and return data in different formats, the most common
-        | being JSON and XML. You can use the consumes and produces keywords to
-        | specify the MIME types understood by your API. The value of consumes and
-        | produces is an array of MIME types. Global MIME types can be defined on
-        | the root level of an API specification and are inherited by all API operations.
-        |
-        */
-
-        consumes: ['application/json'],
-        produces: ['application/json'],
-
-        /*
-        |--------------------------------------------------------------------------
-        | Tags
-        |--------------------------------------------------------------------------
-        |
-        | You can assign a list of tags to each API operation. Tagged operations may
-        | be handled differently by tools and libraries. For example, Swagger UI uses
-        | tags to group the displayed operations.
-        |
-        */
-
-        tags: [],
-
-        /*
-        |--------------------------------------------------------------------------
-        | Definitions
-        |--------------------------------------------------------------------------
-        |
-        | The global definitions section lets you define common data structures used
-        | in your API. They can be referenced via $refwhenever a schema is required –
-        | both for request body and response body.
-        |
-        */
-
-        definitions: {},
-
-        /*
-        |--------------------------------------------------------------------------
-        | Security Definitions
-        |--------------------------------------------------------------------------
-        |
-        | The securityDefinitions section is used to define all security schemes
-        | (authentication types) supported by the API. It is a name->definition map
-        | that maps arbitrary names to the security scheme definitions.
-        |
-        */
-
-        securityDefinitions: {},
-      },
-    },
+    useFastifyRequestId: false,
   },
 
   /*
