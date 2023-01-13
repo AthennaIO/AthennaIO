@@ -1,9 +1,4 @@
-import { File } from '@athenna/common'
 import { ProviderHelper } from '@athenna/core'
-
-const { name, version, description } = JSON.parse(
-  new File('../package.json').getContentSync().toString(),
-)
 
 export default {
   /*
@@ -40,7 +35,7 @@ export default {
   |
   */
 
-  name: name || Env('APP_NAME', 'Athenna'),
+  name: Env('APP_NAME', '@athenna/athenna'),
 
   /*
   |--------------------------------------------------------------------------
@@ -53,7 +48,7 @@ export default {
   |
   */
 
-  version,
+  version: Env('APP_VERSION', '1.0.0'),
 
   /*
   |--------------------------------------------------------------------------
@@ -66,7 +61,7 @@ export default {
   |
   */
 
-  description: description || Env('APP_DESCRIPTION', 'Athenna is awesome!'),
+  description: Env('APP_DESCRIPTION', 'Athenna is awesome!'),
 
   /*
   |--------------------------------------------------------------------------
