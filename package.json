@@ -47,8 +47,7 @@
     "@fastify/rate-limit": "7.5.0",
     "@fastify/swagger": "8.1.0",
     "@fastify/swagger-ui": "1.1.0",
-    "cls-rtracer": "2.6.2",
-    "source-map-support": "0.5.21"
+    "cls-rtracer": "2.6.2"
   },
   "devDependencies": {
     "@athenna/test": "3.0.7",
