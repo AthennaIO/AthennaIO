@@ -40,12 +40,14 @@ export default {
 
       formatter: 'simple',
     },
+
     console: {
       driver: 'console',
       level: 'trace',
 
       formatter: 'cli',
     },
+
     exception: {
       driver: 'console',
       level: 'trace',
@@ -53,6 +55,7 @@ export default {
 
       formatter: 'none',
     },
+
     request: {
       driver: 'console',
       level: 'trace',
@@ -62,9 +65,11 @@ export default {
         asJson: false,
       },
     },
+
     discard: {
       driver: 'null',
     },
+
     file: {
       driver: 'file',
       level: 'trace',
@@ -73,6 +78,7 @@ export default {
       formatter: 'simple',
       formatterConfig: {},
     },
+
     slack: {
       driver: 'slack',
       level: 'fatal',
@@ -81,6 +87,7 @@ export default {
       formatter: 'message',
       formatterConfig: {},
     },
+
     discord: {
       driver: 'discord',
       level: 'fatal',
@@ -90,6 +97,7 @@ export default {
       formatter: 'message',
       formatterConfig: {},
     },
+
     telegram: {
       driver: 'telegram',
       level: 'fatal',

@@ -124,8 +124,6 @@ export default {
 
   gracefulShutdown: {
     SIGINT: async () => {
-      await ProviderHelper.shutdownAll(false)
-
       process.exit()
     },
     SIGTERM: async signal => {

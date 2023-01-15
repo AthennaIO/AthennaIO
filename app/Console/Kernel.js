@@ -41,7 +41,7 @@ export class Kernel extends ConsoleKernel {
    */
   get templates() {
     if (Env('NODE_ENV') === 'production') {
-      return ArtisanLoader.loadTemplates()
+      return [...CoreLoader.loadTemplates(), ...ArtisanLoader.loadTemplates()]
     }
 
     const testTemplatesPath = Path.nodeModules('@athenna/test/templates')
@@ -49,6 +49,10 @@ export class Kernel extends ConsoleKernel {
       .loadSync()
       .getFilesByPattern('**/*.edge', true)
 
-    return [...testTemplates, ...ArtisanLoader.loadTemplates()]
+    return [
+      ...testTemplates,
+      ...CoreLoader.loadTemplates(),
+      ...ArtisanLoader.loadTemplates(),
+    ]
   }
 }
