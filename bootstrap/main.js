@@ -1,9 +1,7 @@
 import { Ignite } from '@athenna/core'
 
 async function main() {
-  process.env.IS_ARTISAN = 'false'
-
-  const application = await new Ignite().fire()
+  const application = await new Ignite().fire(import.meta.url)
 
   await application.bootArtisan()
   await application.bootHttpServer()
