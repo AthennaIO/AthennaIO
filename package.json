@@ -17,7 +17,7 @@
   "scripts": {
     "start": "node bootstrap/main.js",
     "start:debug": "node --inspect bootstrap/main.js",
-    "test": "npm run --silent lint:fix && node artisan test --unit",
+    "test": "npm run --silent lint:fix && node artisan test",
     "test:debug": "cross-env DEBUG=api:* && npm run --silent test -- --inspect",
     "test:coverage": "c8 npm run --silent test",
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,resources,routes,storage,tests}/**/*.js\" --fix"
