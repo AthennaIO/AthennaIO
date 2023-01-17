@@ -57,9 +57,7 @@
     "@japa/spec-reporter": "1.1.12",
     "@types/commander": "2.12.2",
     "c8": "7.11.2",
-    "commitizen": "4.2.5",
     "cross-env": "7.0.3",
-    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.14.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
@@ -94,7 +92,7 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "lint-staged && exec < /dev/tty && git cz --hook || true"
+      "prepare-commit-msg": "lint-staged"
     }
   },
   "lint-staged": {
@@ -106,11 +104,6 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   },
   "prettier": {
     "singleQuote": true,
