@@ -50,7 +50,13 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get appCommands() {
-    return new Folder(Path.console('Commands'))
+    const path = Path.console('Commands')
+
+    if (!Folder.existsSync(path)) {
+      return []
+    }
+
+    return new Folder(path)
       .getFilesByPattern(`**/*.${Path.ext()}`, true)
       .map(command => import(command.href))
   }
@@ -81,10 +87,13 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get appTemplates() {
-    return new Folder(Path.resources('templates')).getFilesByPattern(
-      '**/*.edge',
-      true,
-    )
+    const path = Path.resources('templates')
+
+    if (!Folder.existsSync(path)) {
+      return []
+    }
+
+    return new Folder(path).getFilesByPattern('**/*.edge', true)
   }
 
   /**
