@@ -10,15 +10,7 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get commands() {
-    if (Env('NODE_ENV') === 'production') {
-      return [...this.internalCommands(), ...this.appCommands()]
-    }
-
-    return [
-      ...this.internalCommands(),
-      ...this.testCommands(),
-      ...this.appCommands(),
-    ]
+    return [...this.internalCommands, ...this.testCommands, ...this.appCommands]
   }
 
   /**
@@ -28,14 +20,10 @@ export class Kernel extends ConsoleKernel {
    * @return {any[]}
    */
   get templates() {
-    if (Env('NODE_ENV') === 'production') {
-      return [...this.internalTemplates(), ...this.appTemplates()]
-    }
-
     return [
-      ...this.internalTemplates(),
-      ...this.testTemplates(),
-      ...this.appTemplates(),
+      ...this.internalTemplates,
+      ...this.testTemplates,
+      ...this.appTemplates,
     ]
   }
 
@@ -44,9 +32,8 @@ export class Kernel extends ConsoleKernel {
    *
    * @return {any[]}
    */
-  appCommands() {
+  get appCommands() {
     return new Folder(Path.console('Commands'))
-      .loadSync()
       .getFilesByPattern(`**/*.${Path.ext()}`, true)
       .map(command => import(command.href))
   }
@@ -56,9 +43,8 @@ export class Kernel extends ConsoleKernel {
    *
    * @return {any[]}
    */
-  testCommands() {
+  get testCommands() {
     return new Folder(Path.nodeModules('@athenna/test/src/Commands'))
-      .loadSync()
       .getFilesByPattern(`**/*.${Path.ext()}`, true)
       .map(command => import(command.href))
   }
@@ -68,7 +54,7 @@ export class Kernel extends ConsoleKernel {
    *
    * @return {any[]}
    */
-  internalCommands() {
+  get internalCommands() {
     return [
       ...HttpLoader.loadCommands(),
       ...CoreLoader.loadCommands(),
@@ -81,10 +67,11 @@ export class Kernel extends ConsoleKernel {
    *
    * @return {any[]}
    */
-  appTemplates() {
-    return new Folder(Path.resources('templates'))
-      .loadSync()
-      .getFilesByPattern('**/*.edge', true)
+  get appTemplates() {
+    return new Folder(Path.resources('templates')).getFilesByPattern(
+      '**/*.edge',
+      true,
+    )
   }
 
   /**
@@ -92,10 +79,10 @@ export class Kernel extends ConsoleKernel {
    *
    * @return {any[]}
    */
-  testTemplates() {
-    return new Folder(Path.nodeModules('@athenna/test/templates'))
-      .loadSync()
-      .getFilesByPattern('**/*.edge', true)
+  get testTemplates() {
+    return new Folder(
+      Path.nodeModules('@athenna/test/templates'),
+    ).getFilesByPattern('**/*.edge', true)
   }
 
   /**
@@ -103,7 +90,7 @@ export class Kernel extends ConsoleKernel {
    *
    * @return {any[]}
    */
-  internalTemplates() {
+  get internalTemplates() {
     return [
       ...CoreLoader.loadTemplates(),
       ...HttpLoader.loadTemplates(),
