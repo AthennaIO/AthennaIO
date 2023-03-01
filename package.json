@@ -39,7 +39,7 @@
     "@athenna/common": "3.0.2",
     "@athenna/config": "3.0.4",
     "@athenna/core": "3.0.15",
-    "@athenna/http": "3.0.11",
+    "@athenna/http": "3.1.0",
     "@athenna/ioc": "3.0.2",
     "@athenna/logger": "3.0.9",
     "@fastify/cors": "8.1.1",
