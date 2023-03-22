@@ -1,4 +1,4 @@
-import { ProviderHelper } from '@athenna/core'
+import { LoadHelper } from '@athenna/core'
 
 export default {
   /*
@@ -65,18 +65,6 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
-  | Application key
-  |--------------------------------------------------------------------------
-  |
-  | This value is the application key used to make hashs and to authorize,
-  | requests.
-  |
-  */
-
-  appKey: Env('APP_KEY', '12345'),
-
-  /*
-  |--------------------------------------------------------------------------
   | Application source url
   |--------------------------------------------------------------------------
   |
@@ -114,90 +102,21 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
-  | Graceful shutdown callback
+  | Signals
   |--------------------------------------------------------------------------
   |
-  | Configure all the defaults graceful shutdown callbacks to listen to Node.js
-  | SIG events.
+  | Configure all the signals of your application.
   |
   */
 
-  gracefulShutdown: {
+  signals: {
     SIGINT: async () => {
       process.exit()
     },
     SIGTERM: async signal => {
-      await ProviderHelper.shutdownAll()
+      await LoadHelper.shutdownProviders()
 
       process.kill(process.pid, signal)
     },
   },
-
-  /*
-  |--------------------------------------------------------------------------
-  | Trace Artisan commands
-  |--------------------------------------------------------------------------
-  |
-  | Trace artisan commands. If this value is true, Athenna will use the
-  | rTracer library to generate a unique uuid v1 for each command executed
-  | by Artisan.
-  |
-  */
-
-  traceArtisan: false,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Protected Artisan commands
-  |--------------------------------------------------------------------------
-  |
-  | Protected commands are usually commands that will let the Node.js process
-  | running for some reason.
-  |
-  | For example: "node artisan repl"
-  |
-  | This command will bootstrap a REPL session. The Node.js process needs to
-  | stay running, so we cannot force shutdown the application after this command
-  | is executed.
-  |
-  */
-
-  protectedCommands: ['repl', 'test', 'serve'],
-
-  /*
-  |--------------------------------------------------------------------------
-  | Application providers
-  |--------------------------------------------------------------------------
-  |
-  | The service providers listed here will be automatically loaded on the
-  | ignite of your application. Feel free to add your own services to
-  | this array to grant expanded functionality to your applications.
-  |
-  */
-
-  providers: [
-    import('@athenna/http/providers/HttpServerProvider'),
-    import('@athenna/http/providers/HttpRouteProvider'),
-    import('@athenna/logger/providers/LoggerProvider'),
-    import('@athenna/core/providers/ServiceProvider'),
-    import('@athenna/core/providers/RepositoryProvider'),
-    import('@athenna/http/providers/ControllerProvider'),
-    import('@athenna/http/providers/MiddlewareProvider'),
-    import('@athenna/artisan/providers/ArtisanProvider'),
-    import('@athenna/artisan/providers/TemplateProvider'),
-    import('#providers/AppServiceProvider'),
-  ],
-
-  /*
-  |--------------------------------------------------------------------------
-  | Application preloads
-  |--------------------------------------------------------------------------
-  |
-  | The files listed here will be automatically loaded on the application
-  | ignite of your application. Fell free to add your own preloads to this
-  | array.
-  |
-  */
-
-  preloads: [],
 }

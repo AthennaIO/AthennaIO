@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find app bootstrap config database lang providers routes storage tests -name "*.js" -type f -delete
+find app bootstrap config database lang providers routes storage tests -name "*.d.ts" -type f -delete

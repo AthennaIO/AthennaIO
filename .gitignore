@@ -114,13 +114,23 @@ out
 .yarn/install-state.gz
 .pnp.*
 
+# Compiled code
+./dist
+./build
+*.js
+*.d.ts
+*.js.map
+!tests/Stubs/**/*.js
+!tests/Stubs/**/*.d.ts
+!tests/Stubs/**/*.js.map
+
 # IDE
 .idea
+.fleet
 .vscode
 
 # Environment variables file
 .env
-.env.test
 .env.production
 
 # MacOS folder mapper file

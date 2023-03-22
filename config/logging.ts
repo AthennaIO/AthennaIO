@@ -31,39 +31,14 @@ export default {
   channels: {
     stack: {
       driver: 'stack',
-      channels: ['application'],
+      channels: ['simple'],
     },
 
-    application: {
+    simple: {
       driver: 'console',
       level: 'trace',
 
       formatter: 'simple',
-    },
-
-    console: {
-      driver: 'console',
-      level: 'trace',
-
-      formatter: 'cli',
-    },
-
-    exception: {
-      driver: 'console',
-      level: 'trace',
-      streamType: 'stderr',
-
-      formatter: 'none',
-    },
-
-    request: {
-      driver: 'console',
-      level: 'trace',
-
-      formatter: 'request',
-      formatterConfig: {
-        asJson: false,
-      },
     },
 
     discard: {
