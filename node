@@ -8,16 +8,16 @@
 
 # ./node --version
 # ./node artisan --version
-# ./node bootstrap/main.ts
+# ./node bin/main.ts
 
 # Usage with "sh" or "bash":
 
 # sh node --version
 # sh node artisan --version
-# sh node bootstrap/main.ts
+# sh node bin/main.ts
 
 # Node.js executable with all arguments required to run the application.
 node="node --loader ts-node/esm --experimental-import-meta-resolve --no-warnings"
 
 # Convert the first "artisan" argument to the "boostrap/artisan.ts" file path.
-$node $(echo $@ | sed -e "s/artisan/bootstrap\/artisan.ts/")
+$node $(echo $@ | sed -e "s/artisan/bin\/artisan.ts/")

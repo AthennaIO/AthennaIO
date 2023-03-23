@@ -19,7 +19,7 @@
     "@athenna/core/commands/BuildCommand"
   ],
   "services": [
-    "#app/Services/WelcomeService"
+    "#src/services/app.service"
   ],
   "preloads": [],
   "providers": [
@@ -28,24 +28,63 @@
     "@athenna/http/providers/HttpServerProvider"
   ],
   "controllers": [
-    "#app/Http/Controllers/WelcomeController"
+    "#src/controllers/app.controller"
   ],
   "commandsManifest": {
-    "make:exception": "@athenna/core/commands/MakeExceptionCommand",
-    "make:facade": "@athenna/core/commands/MakeFacadeCommand",
-    "make:provider": "@athenna/core/commands/MakeProviderCommand",
-    "make:service": "@athenna/core/commands/MakeServiceCommand",
-    "make:test": "@athenna/core/commands/MakeTestCommand",
-    "make:command": "@athenna/artisan/commands/MakeCommandCommand",
-    "make:controller": "@athenna/http/commands/MakeControllerCommand",
-    "make:middleware": "@athenna/http/commands/MakeMiddlewareCommand",
-    "make:interceptor": "@athenna/http/commands/MakeInterceptorCommand",
-    "make:terminator": "@athenna/http/commands/MakeTerminatorCommand",
+    "make:exception": {
+      "path": "@athenna/core/commands/MakeExceptionCommand",
+      "destination": "./src/exceptions"
+    },
+    "make:facade": {
+      "path": "@athenna/core/commands/MakeFacadeCommand",
+      "destination": "./src/providers/facades"
+    },
+    "make:provider": {
+      "path": "@athenna/core/commands/MakeProviderCommand",
+      "destination": "./src/providers"
+    },
+    "make:service": {
+      "path": "@athenna/core/commands/MakeServiceCommand",
+      "destination": "./src/services"
+    },
+    "make:test": {
+      "path": "@athenna/core/commands/MakeTestCommand",
+      "destination": "./tests"
+    },
+    "make:command": {
+      "path": "@athenna/artisan/commands/MakeCommandCommand",
+      "destination": "./src/commands"
+    },
+    "make:controller": {
+      "path": "@athenna/http/commands/MakeControllerCommand",
+      "destination": "./src/controllers"
+    },
+    "make:middleware": {
+      "path": "@athenna/http/commands/MakeMiddlewareCommand",
+      "destination": "./src/middlewares"
+    },
+    "make:interceptor": {
+      "path": "@athenna/http/commands/MakeInterceptorCommand",
+      "destination": "./src/interceptors"
+    },
+    "make:terminator": {
+      "path": "@athenna/http/commands/MakeTerminatorCommand",
+      "destination": "./src/terminators"
+    },
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
-    "serve": "@athenna/core/commands/ServeCommand",
-    "test": "@athenna/core/commands/TestCommand",
-    "repl": "@athenna/core/commands/ReplCommand",
+    "serve": {
+      "path": "@athenna/core/commands/ServeCommand",
+      "entrypoint": "#bin/main"
+    },
+    "test": {
+      "path": "@athenna/core/commands/TestCommand",
+      "entrypoint": "#bin/test"
+    },
+    "repl": {
+      "path": "@athenna/core/commands/ReplCommand",
+      "entrypoint": "#bin/repl"
+    },
     "build": "@athenna/core/commands/BuildCommand"
   },
   "view": {
