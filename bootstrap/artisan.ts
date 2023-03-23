@@ -15,10 +15,7 @@ import { Ignite } from '@athenna/core'
 |
 */
 
-const ignite = await new Ignite().load(import.meta.url, {
-  bootLogs: false,
-  beforePath: '',
-})
+const ignite = await new Ignite().load(import.meta.url, { bootLogs: false })
 
 /*
 |--------------------------------------------------------------------------

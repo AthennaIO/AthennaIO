@@ -13,7 +13,7 @@ import { Ignite } from '@athenna/core'
 |
 */
 
-const ignite = await new Ignite().load(import.meta.url, { beforePath: '' })
+const ignite = await new Ignite().load(import.meta.url)
 
 /*
 |--------------------------------------------------------------------------
