@@ -1,17 +1,17 @@
 import { Test, BeforeAll, TestContext } from '@athenna/test'
-import { WelcomeService } from '#app/Services/WelcomeService'
+import { AppService } from '#app/Services/AppService'
 
-export default class WelcomeServiceTest {
+export default class AppServiceTest {
   @BeforeAll()
   public async beforeAll() {
     await Config.loadAll(Path.config())
   }
 
   @Test()
-  public async shouldReturnTheWelcomePayloadFromFindOneMethod({ assert }: TestContext) {
-    const welcomeService = new WelcomeService()
+  public async shouldReturnThePayloadFromFindOneMethod({ assert }: TestContext) {
+    const appService = new AppService()
 
-    const { name, version, description, source } = await welcomeService.findOne()
+    const { name, version, description, source } = await appService.findOne()
 
     assert.equal(name, '@athenna/athenna')
     assert.equal(version, '1.0.0')

@@ -1,9 +1,9 @@
 import { Test, TestContext } from '@athenna/test'
 import { BaseE2ETest } from '#tests/Helpers/BaseE2ETest'
 
-export default class WelcomeControllerTest extends BaseE2ETest {
+export default class AppControllerTest extends BaseE2ETest {
   @Test()
-  public async shouldBeAbleToGetTheWelcomePayloadFromApi({ request }: TestContext) {
+  public async shouldBeAbleToGetThePayloadFromApi({ request }: TestContext) {
     const response = await request.get('/api/v1')
 
     response.assertStatusCode(200)

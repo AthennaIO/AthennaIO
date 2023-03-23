@@ -2,7 +2,7 @@ import { Service } from '@athenna/core'
 import { Config } from '@athenna/config'
 
 @Service()
-export class WelcomeService {
+export class AppService {
   public async findOne() {
     return {
       name: Config.get('app.name'),

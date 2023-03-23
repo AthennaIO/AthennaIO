@@ -30,7 +30,7 @@ import { configure, processCliArgs, run } from '@japa/runner'
 configure({
   ...processCliArgs(process.argv.slice(2)),
   ...{
-    files: ['tests/**/*Test.ts'],
+    files: ['tests/E2E/**/*Test.ts', 'tests/Unit/**/*Test.ts'],
     plugins: [assert(), request()],
     reporters: [specReporter()],
     importer: Importer.import,

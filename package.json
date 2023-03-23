@@ -13,7 +13,7 @@
     "typescript"
   ],
   "scripts": {
-    "start": "./node bootstrap/main.ts",
+    "start": "./node artisan serve",
     "start:dev": "./node --watch artisan serve",
     "test": "npm run --silent lint:fix && ./node artisan test",
     "test:debug": "npm run --silent lint:fix && ./node --inspect artisan test",
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@athenna/artisan": "^3.3.7",
-    "@athenna/common": "^3.4.5",
+    "@athenna/common": "^3.4.6",
     "@athenna/config": "^3.2.5",
     "@athenna/core": "^3.1.8",
     "@athenna/http": "^3.4.3",

@@ -19,7 +19,7 @@
     "@athenna/core/commands/BuildCommand"
   ],
   "services": [
-    "#app/Services/WelcomeService"
+    "#app/Services/AppService"
   ],
   "preloads": [],
   "providers": [
@@ -28,7 +28,7 @@
     "@athenna/http/providers/HttpServerProvider"
   ],
   "controllers": [
-    "#app/Http/Controllers/WelcomeController"
+    "#app/Http/Controllers/AppController"
   ],
   "commandsManifest": {
     "make:exception": "@athenna/core/commands/MakeExceptionCommand",
