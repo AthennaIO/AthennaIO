@@ -13,10 +13,10 @@
     "typescript"
   ],
   "scripts": {
-    "start": "sh node bootstrap/main.ts",
-    "start:dev": "sh node --watch artisan serve",
-    "test": "npm run --silent lint:fix && sh node artisan test",
-    "test:debug": "npm run --silent lint:fix && sh node --inspect artisan test",
+    "start": "./node bootstrap/main.ts",
+    "start:dev": "./node --watch artisan serve",
+    "test": "npm run --silent lint:fix && ./node artisan test",
+    "test:debug": "npm run --silent lint:fix && ./node --inspect artisan test",
     "test:coverage": "c8 npm run --silent test",
     "lint:fix": "eslint \"{app,bootstrap,config,database,providers,resources,routes,storage,tests}/**/*.ts\" --fix"
   },

@@ -43,7 +43,10 @@ jobs:
         run: npm run test:coverage
 
       - name: Test code compilation
-        run: sh scripts/build
+        run: ./node artisan build
+
+      - name: Run application using compiled code
+        run: node --experimental-import-meta-resolve bootstrap/ci.js
 
   windows:
     runs-on: windows-latest
@@ -65,5 +68,8 @@ jobs:
       - name: Run tests
         run: npm run test:coverage
 
-      - name: Test code transpilation
-        run: npm run build
+      - name: Test code compilation
+        run: ./node artisan build
+
+      - name: Run application using compiled code
+        run: node --experimental-import-meta-resolve bootstrap/ci.js
