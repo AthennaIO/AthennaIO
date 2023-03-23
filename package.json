@@ -18,7 +18,7 @@
     "test": "npm run --silent lint:fix && ./node artisan test",
     "test:debug": "npm run --silent lint:fix && ./node --inspect artisan test",
     "test:coverage": "c8 npm run --silent test",
-    "lint:fix": "eslint \"{app,bootstrap,config,database,providers,resources,routes,storage,tests}/**/*.ts\" --fix"
+    "lint:fix": "eslint \"{bin,src,tests}/**/*.ts\" --fix"
   },
   "type": "module",
   "imports": {
