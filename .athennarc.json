@@ -15,7 +15,8 @@
     "@athenna/http/commands/MakeTerminatorCommand",
     "@athenna/core/commands/ServeCommand",
     "@athenna/core/commands/TestCommand",
-    "@athenna/core/commands/ReplCommand"
+    "@athenna/core/commands/ReplCommand",
+    "@athenna/core/commands/BuildCommand"
   ],
   "services": [
     "#app/Services/WelcomeService"
@@ -44,7 +45,8 @@
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
     "serve": "@athenna/core/commands/ServeCommand",
     "test": "@athenna/core/commands/TestCommand",
-    "repl": "@athenna/core/commands/ReplCommand"
+    "repl": "@athenna/core/commands/ReplCommand",
+    "build": "@athenna/core/commands/BuildCommand"
   },
   "view": {
     "disks": {},
