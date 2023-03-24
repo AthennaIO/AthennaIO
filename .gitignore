@@ -120,6 +120,7 @@ out
 *.js
 *.d.ts
 *.js.map
+!.github/ci.js
 !tests/Stubs/**/*.js
 !tests/Stubs/**/*.d.ts
 !tests/Stubs/**/*.js.map

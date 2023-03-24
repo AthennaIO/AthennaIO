@@ -46,7 +46,7 @@ jobs:
         run: ./node artisan build
 
       - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve bootstrap/ci.js
+        run: node --experimental-import-meta-resolve .github/ci.js
 
   windows:
     runs-on: windows-latest
@@ -72,4 +72,4 @@ jobs:
         run: ./node artisan build
 
       - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve bootstrap/ci.js
+        run: node --experimental-import-meta-resolve .github/ci.js
