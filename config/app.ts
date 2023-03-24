@@ -1,5 +1,3 @@
-import { LoadHelper } from '@athenna/core'
-
 export default {
   /*
   |--------------------------------------------------------------------------
