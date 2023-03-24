@@ -128,9 +128,7 @@
       }
     ]
   },
-  "eslintIgnore": [
-    "build/**/*"
-  ],
+  "eslintIgnore": [],
   "eslintConfig": {
     "env": {
       "es2021": true,
