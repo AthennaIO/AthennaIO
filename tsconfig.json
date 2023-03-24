@@ -16,7 +16,7 @@
     "removeComments": false,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "nodenext",
     "paths": {
       "#app/*": ["./app/*.ts"],
       "#bootstrap/*": ["./bootstrap/*.ts"],
@@ -32,5 +32,5 @@
     }
   },
   "include": ["./**/*"],
-  "exclude": ["build", "node_modules"]
+  "exclude": ["node_modules"]
 }
