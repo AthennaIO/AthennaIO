@@ -30,7 +30,7 @@
     "#tests": "./tests/index.js"
   },
   "dependencies": {
-    "@athenna/artisan": "^3.4.0",
+    "@athenna/artisan": "^3.5.0",
     "@athenna/common": "^3.5.0",
     "@athenna/config": "^3.3.0",
     "@athenna/core": "^3.2.0",
@@ -86,14 +86,14 @@
   "c8": {
     "all": true,
     "include": [
-      "app/**/*.ts"
+      "src/**/*.ts"
     ],
     "exclude": [],
     "reporter": [
       "text-summary",
       "html"
     ],
-    "report-dir": "./tests/Coverage",
+    "report-dir": "./tests/coverage",
     "check-coverage": true
   },
   "prettier": {
@@ -112,9 +112,7 @@
       }
     ]
   },
-  "eslintIgnore": [
-    "build/**/*"
-  ],
+  "eslintIgnore": [],
   "eslintConfig": {
     "env": {
       "es2021": true,
