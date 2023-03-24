@@ -43,7 +43,7 @@ jobs:
         run: npm run test:coverage
 
       - name: Test code compilation
-        run: ./node artisan build
+        run: sh node artisan build
 
       - name: Run application using compiled code
         run: node --experimental-import-meta-resolve .github/ci.js
@@ -69,7 +69,7 @@ jobs:
         run: npm run test:coverage
 
       - name: Test code compilation
-        run: ./node artisan build
+        run: sh node artisan build
 
       - name: Run application using compiled code
         run: node --experimental-import-meta-resolve .github/ci.js
