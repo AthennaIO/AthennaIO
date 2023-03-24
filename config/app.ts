@@ -99,24 +99,4 @@ export default {
   */
 
   locale: Env('APP_LOCALE', 'en'),
-
-  /*
-  |--------------------------------------------------------------------------
-  | Signals
-  |--------------------------------------------------------------------------
-  |
-  | Configure all the signals of your application.
-  |
-  */
-
-  signals: {
-    SIGINT: async () => {
-      process.exit()
-    },
-    SIGTERM: async signal => {
-      await LoadHelper.shutdownProviders()
-
-      process.kill(process.pid, signal)
-    },
-  },
 }
