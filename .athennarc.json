@@ -16,7 +16,6 @@
     "#app/Console/Commands/AppCommand"
   ],
   "services": [
-    "#app/Services/AppService",
     "#app/Services/AppService"
   ],
   "preloads": [],
