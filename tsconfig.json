@@ -18,16 +18,8 @@
     "experimentalDecorators": true,
     "moduleResolution": "nodenext",
     "paths": {
-      "#app/*": ["./app/*.ts"],
-      "#bootstrap/*": ["./bootstrap/*.ts"],
-      "#config/*": ["./config/*.ts"],
-      "#database/*": ["./database/*.ts"],
-      "#lang/*": ["./lang/*.ts"],
-      "#providers/*": ["./providers/*.ts"],
-      "#facades/*": ["./facades/*.ts"],
-      "#resources/*": ["./resources/*.ts"],
-      "#routes/*": ["./routes/*.ts"],
-      "#storage/*": ["./storage/*.ts"],
+      "#bin/*": ["./bin/*.ts"],
+      "#src/*": ["./src/*.ts"],
       "#tests/*": ["./tests/*.ts"]
     }
   },

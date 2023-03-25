@@ -13,7 +13,7 @@
     "typescript"
   ],
   "bin": {
-    "artisan": "./bootstrap/artisan.js"
+    "artisan": "./bin/artisan.js"
   },
   "scripts": {
     "start": "sh node artisan serve",
@@ -21,30 +21,14 @@
     "test": "npm run --silent lint:fix && sh node artisan test",
     "test:debug": "npm run --silent lint:fix && sh node --inspect artisan test",
     "test:coverage": "c8 npm run --silent test",
-    "lint:fix": "eslint \"{app,bootstrap,config,database,providers,resources,routes,storage,tests}/**/*.ts\" --fix"
+    "lint:fix": "eslint \"{bin,src,tests}/**/*.ts\" --fix"
   },
   "type": "module",
   "imports": {
-    "#app/*": "./app/*.js",
-    "#app": "./app/index.js",
-    "#bootstrap/*": "./bootstrap/*.js",
-    "#bootstrap": "./bootstrap/index.js",
-    "#config/*": "./config/*.js",
-    "#config": "./config/index.js",
-    "#database/*": "./database/*.js",
-    "#database": "./database/index.js",
-    "#lang/*": "./lang/*.js",
-    "#lang": "./lang/index.js",
-    "#providers/*": "./providers/*.js",
-    "#providers": "./providers/index.js",
-    "#facades/*": "./providers/facades/*.js",
-    "#facades": "./providers/facades/index.js",
-    "#resources/*": "./resources/*.js",
-    "#resources": "./resources/index.js",
-    "#routes/*": "./routes/*.js",
-    "#routes": "./routes/index.js",
-    "#storage/*": "./storage/*.js",
-    "#storage": "./storage/index.js",
+    "#bin/*": "./bin/*.js",
+    "#bin": "./bin/index.js",
+    "#src/*": "./src/*.js",
+    "#src": "./src/index.js",
     "#tests/*": "./tests/*.js",
     "#tests": "./tests/index.js"
   },
