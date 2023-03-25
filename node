@@ -21,7 +21,7 @@
 # Node.js executable with all arguments required to run the application.
 node="node --loader ts-node/esm --experimental-import-meta-resolve --no-warnings"
 
-# Replace the first occurrence of "artisan" with "bootstrap/artisan.ts",
+# Replace the first occurrence of "artisan" with "bin/artisan.ts",
 # including any preceding or following spaces.
 args=$(echo "$@" | sed -E 's/(^| )artisan( |$)/ \1bin\/artisan.ts\2/')
 
