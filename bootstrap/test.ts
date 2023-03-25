@@ -1,8 +1,7 @@
 import { assert } from '@japa/assert'
-import { TestSuite } from '@athenna/test'
+import { Importer } from '@athenna/test'
 import { specReporter } from '@japa/spec-reporter'
-import { runFailedTests } from '@japa/run-failed-tests'
-import { processCliArgs, configure, run } from '@japa/runner'
+import { configure, processCliArgs, run } from '@japa/runner'
 
 /*
 |--------------------------------------------------------------------------
@@ -19,23 +18,13 @@ import { processCliArgs, configure, run } from '@japa/runner'
 */
 
 configure({
-  ...processCliArgs(TestSuite.getArgs()),
+  ...processCliArgs(process.argv.slice(2)),
   ...{
-    suites: [
-      {
-        name: 'E2E',
-        files: ['tests/E2E/**/*Test.js', 'tests/E2E/**/*TestFn.js'],
-        configure: suite => TestSuite.cliEnd2EndSuite(import.meta.url, suite),
-      },
-      {
-        name: 'Unit',
-        files: ['tests/Unit/**/*Test.js', 'tests/Unit/**/*TestFn.js'],
-        configure: suite => TestSuite.unitSuite(suite),
-      },
-    ],
-    plugins: [assert(), runFailedTests()],
+    files: ['tests/E2E/**/*Test.ts', 'tests/Unit/**/*Test.ts'],
+    plugins: [assert()],
     reporters: [specReporter()],
-    importer: filePath => TestSuite.importer(filePath),
+    importer: Importer.import,
+    timeout: 10000,
   },
 })
 

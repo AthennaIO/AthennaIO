@@ -1,12 +1,12 @@
-export class WelcomeService {
-  /**
-   * Use the constructor to resolve any dependency of the Ioc container.
-   */
-  constructor() {}
+import { Service } from '@athenna/core'
+import { Config } from '@athenna/config'
 
-  async findOne() {
+@Service()
+export class AppService {
+  public async findOne() {
     return {
       name: Config.get('app.name'),
+      domain: Config.get('http.domain'),
       version: Config.get('app.version'),
       description: Config.get('app.description'),
       source: Config.get('app.source'),
