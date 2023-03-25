@@ -1,0 +1,64 @@
+{
+  "commands": [
+    "@athenna/core/commands/MakeExceptionCommand",
+    "@athenna/core/commands/MakeFacadeCommand",
+    "@athenna/core/commands/MakeProviderCommand",
+    "@athenna/core/commands/MakeServiceCommand",
+    "@athenna/core/commands/MakeTestCommand",
+    "@athenna/artisan/commands/ListCommand",
+    "@athenna/artisan/commands/ConfigureCommand",
+    "@athenna/artisan/commands/MakeCommandCommand",
+    "@athenna/artisan/commands/TemplateCustomizeCommand",
+    "@athenna/http/commands/MakeControllerCommand",
+    "@athenna/http/commands/MakeMiddlewareCommand",
+    "@athenna/http/commands/MakeInterceptorCommand",
+    "@athenna/http/commands/MakeTerminatorCommand",
+    "@athenna/core/commands/ServeCommand",
+    "@athenna/core/commands/TestCommand",
+    "@athenna/core/commands/ReplCommand",
+    "@athenna/core/commands/BuildCommand"
+  ],
+  "services": [
+    "#app/Services/AppService"
+  ],
+  "preloads": [],
+  "providers": [
+    "@athenna/core/providers/CoreProvider",
+    "@athenna/http/providers/HttpRouteProvider",
+    "@athenna/http/providers/HttpServerProvider"
+  ],
+  "controllers": [
+    "#app/Http/Controllers/AppController"
+  ],
+  "commandsManifest": {
+    "make:exception": "@athenna/core/commands/MakeExceptionCommand",
+    "make:facade": "@athenna/core/commands/MakeFacadeCommand",
+    "make:provider": "@athenna/core/commands/MakeProviderCommand",
+    "make:service": "@athenna/core/commands/MakeServiceCommand",
+    "make:test": "@athenna/core/commands/MakeTestCommand",
+    "make:command": "@athenna/artisan/commands/MakeCommandCommand",
+    "make:controller": "@athenna/http/commands/MakeControllerCommand",
+    "make:middleware": "@athenna/http/commands/MakeMiddlewareCommand",
+    "make:interceptor": "@athenna/http/commands/MakeInterceptorCommand",
+    "make:terminator": "@athenna/http/commands/MakeTerminatorCommand",
+    "configure": "@athenna/artisan/commands/ConfigureCommand",
+    "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
+    "serve": "@athenna/core/commands/ServeCommand",
+    "test": "@athenna/core/commands/TestCommand",
+    "repl": "@athenna/core/commands/ReplCommand",
+    "build": "@athenna/core/commands/BuildCommand"
+  },
+  "templates": {
+    "exception": "node_modules/@athenna/core/templates/exception.edge",
+    "facade": "node_modules/@athenna/core/templates/facade.edge",
+    "provider": "node_modules/@athenna/core/templates/provider.edge",
+    "service": "node_modules/@athenna/core/templates/service.edge",
+    "test": "node_modules/@athenna/core/templates/test.edge",
+    "testFn": "node_modules/@athenna/core/templates/testFn.edge",
+    "command": "node_modules/@athenna/artisan/templates/command.edge",
+    "controller": "node_modules/@athenna/http/templates/controller.edge",
+    "middleware": "node_modules/@athenna/http/templates/middleware.edge",
+    "interceptor": "node_modules/@athenna/http/templates/interceptor.edge",
+    "terminator": "node_modules/@athenna/http/templates/terminator.edge"
+  }
+}
