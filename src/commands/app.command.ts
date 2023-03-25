@@ -1,4 +1,3 @@
-import { AppService } from '#src/services/app.service'
 import { BaseCommand, CommandSettings } from '@athenna/artisan'
 
 export class AppCommand extends BaseCommand {
@@ -9,16 +8,17 @@ export class AppCommand extends BaseCommand {
   }
 
   public static signature(): string {
-    return 'hello'
+    return 'app'
   }
 
   public static description(): string {
-    return 'Athenna says hello.'
+    return 'Get some informations about the application.'
   }
 
   public async handle(): Promise<void> {
-    const appService = ioc.safeUse<AppService>('App/Services/AppService')
+    const appService = ioc.safeUse('App/Services/AppService')
+    const json = JSON.stringify(appService.findOne(), null, 2)
 
-    this.logger.info(appService.hello())
+    this.logger.info(`Application informations: ${json}`)
   }
 }

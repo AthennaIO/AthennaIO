@@ -6,6 +6,12 @@ export default class AppServiceTest {
   public async shouldReturnThePayloadFromHelloMethod({ assert }: TestContext) {
     const appService = new AppService()
 
-    assert.equal(appService.hello(), 'Hello World!')
+    assert.deepEqual(appService.findOne(), {
+      name: '@athenna/athenna',
+      domain: null,
+      version: '1.0.0',
+      description: 'Athenna is awesome!',
+      source: 'https://github.com/AthennaIO',
+    })
   }
 }
