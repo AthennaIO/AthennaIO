@@ -3,7 +3,7 @@ import { Config } from '@athenna/config'
 
 @Service()
 export class AppService {
-  public async findOne() {
+  public findOne() {
     return {
       name: Config.get('app.name'),
       domain: Config.get('http.domain'),

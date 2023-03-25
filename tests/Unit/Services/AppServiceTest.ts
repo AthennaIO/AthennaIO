@@ -1,5 +1,5 @@
-import { Test, BeforeAll, TestContext } from '@athenna/test'
 import { AppService } from '#app/Services/AppService'
+import { Test, BeforeAll, TestContext } from '@athenna/test'
 
 export default class AppServiceTest {
   @BeforeAll()
@@ -11,7 +11,7 @@ export default class AppServiceTest {
   public async shouldReturnThePayloadFromFindOneMethod({ assert }: TestContext) {
     const appService = new AppService()
 
-    const { name, version, description, source } = await appService.findOne()
+    const { name, version, description, source } = appService.findOne()
 
     assert.equal(name, '@athenna/athenna')
     assert.equal(version, '1.0.0')
