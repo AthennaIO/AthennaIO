@@ -1,18 +1,16 @@
+import { Test, TestContext } from '@athenna/test'
 import { AppService } from '#src/services/app.service'
-import { Test, BeforeEach, TestContext } from '@athenna/test'
 
 export default class AppServiceTest {
-  private appService: AppService
-
-  @BeforeEach()
-  public async beforeEach() {
-    this.appService = new AppService()
-  }
-
   @Test()
-  public async shouldReturnTheHelloPayloadFromHelloMethod({ assert }: TestContext) {
-    const hello = this.appService.hello()
+  public async shouldReturnThePayloadFromFindOneMethod({ assert }: TestContext) {
+    const appService = new AppService()
 
-    assert.equal(hello, 'Hello World!')
+    const { name, version, description, source } = appService.findOne()
+
+    assert.equal(name, '@athenna/athenna')
+    assert.equal(version, '1.0.0')
+    assert.equal(source, 'https://github.com/AthennaIO')
+    assert.equal(description, 'Athenna is awesome!')
   }
 }

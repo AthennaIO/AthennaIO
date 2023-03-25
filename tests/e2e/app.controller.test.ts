@@ -7,6 +7,11 @@ export default class AppControllerTest extends BaseE2ETest {
     const response = await request.get('/')
 
     response.assertStatusCode(200)
-    response.assertBodyDeepEqual({ message: 'Hello World!' })
+    response.assertBodyContains({
+      name: '@athenna/athenna',
+      version: '1.0.0',
+      source: 'https://github.com/AthennaIO',
+      description: 'Athenna is awesome!',
+    })
   }
 }

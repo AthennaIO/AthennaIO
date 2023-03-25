@@ -2,7 +2,13 @@ import { Service } from '@athenna/core'
 
 @Service()
 export class AppService {
-  public hello(): string {
-    return 'Hello World!'
+  public findOne() {
+    return {
+      name: '@athenna/athenna',
+      domain: null,
+      version: '1.0.0',
+      description: 'Athenna is awesome!',
+      source: 'https://github.com/AthennaIO',
+    }
   }
 }

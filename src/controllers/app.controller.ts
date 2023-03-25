@@ -9,7 +9,9 @@ export class AppController {
     this.appService = appService
   }
 
-  public show({ response }: Context): void {
-    response.send({ message: this.appService.hello() })
+  public async show({ response }: Context): Promise<void> {
+    const data = this.appService.findOne()
+
+    return response.status(200).send(data)
   }
 }
