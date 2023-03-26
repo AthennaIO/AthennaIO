@@ -61,7 +61,8 @@
       "path": "@athenna/core/commands/ReplCommand",
       "entrypoint": "#bin/repl"
     },
-    "build": "@athenna/core/commands/BuildCommand"
+    "build": "@athenna/core/commands/BuildCommand",
+    "app": "#src/commands/app.command"
   },
   "templates": {
     "exception": "node_modules/@athenna/core/templates/exception.edge",
