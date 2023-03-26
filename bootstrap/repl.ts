@@ -40,4 +40,4 @@ await import('@athenna/common').then(common => {
   Object.keys(common).forEach(key => (repl.context[key] = common[key]))
 })
 
-repl.context.welcomeService = ioc.safeUse('welcomeService')
+repl.context.appService = ioc.safeUse('App/Services/AppService')
