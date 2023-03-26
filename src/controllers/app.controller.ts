@@ -9,7 +9,7 @@ export class AppController {
     this.appService = appService
   }
 
-  public async show({ response }: Context): Promise<void> {
+  public async show({ response }: Context) {
     const data = this.appService.findOne()
 
     return response.status(200).send(data)
