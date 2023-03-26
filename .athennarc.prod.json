@@ -1,0 +1,13 @@
+{
+  "commands": [
+    "#src/commands/app.command"
+  ],
+  "services": [],
+  "preloads": [],
+  "providers": [
+    "@athenna/core/providers/CoreProvider"
+  ],
+  "commandsManifest": {
+    "app": "#src/commands/app.command"
+  }
+}
