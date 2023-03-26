@@ -35,7 +35,7 @@
     "test": "@athenna/core/commands/TestCommand",
     "repl": "@athenna/core/commands/ReplCommand",
     "build": "@athenna/core/commands/BuildCommand",
-    "appCommand": "#app/Console/Commands/AppCommand"
+    "app": "#app/Console/Commands/AppCommand"
   },
   "templates": {
     "exception": "node_modules/@athenna/core/templates/exception.edge",
