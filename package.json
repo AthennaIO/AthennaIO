@@ -13,7 +13,7 @@
     "typescript"
   ],
   "bin": {
-    "artisan": "./bin/artisan.js"
+    "artisan": "./bin/main.js"
   },
   "scripts": {
     "start": "sh node artisan serve",
@@ -36,7 +36,7 @@
     "@athenna/artisan": "^3.5.0",
     "@athenna/common": "^3.5.0",
     "@athenna/config": "^3.3.0",
-    "@athenna/core": "^3.2.0",
+    "@athenna/core": "^3.3.3",
     "@athenna/ioc": "^3.2.0",
     "@athenna/logger": "^3.2.0",
     "@athenna/view": "^3.1.0",
