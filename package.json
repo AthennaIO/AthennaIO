@@ -13,7 +13,7 @@
     "typescript"
   ],
   "bin": {
-    "artisan": "./bootstrap/main.js"
+    "athenna": "./bootstrap/main.js"
   },
   "scripts": {
     "start": "sh node artisan serve",
