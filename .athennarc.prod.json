@@ -1,12 +1,13 @@
 {
-  "services": [],
-  "preloads": [],
+  "services": [
+    "#app/Services/AppService"
+  ],
   "providers": [
     "@athenna/core/providers/CoreProvider"
   ],
   "commands": {
     "app": {
-      "path": "#src/commands/app.command",
+      "path": "#app/Console/Commands/AppCommand",
       "loadApp": true
     }
   }
