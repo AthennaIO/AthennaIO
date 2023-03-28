@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - http
+      - http-slim
   pull_request:
     branches:
-      - http
+      - http-slim
 
 jobs:
   qodana:
