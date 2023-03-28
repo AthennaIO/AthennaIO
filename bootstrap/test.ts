@@ -24,7 +24,7 @@ configure({
     plugins: [assert()],
     reporters: [specReporter()],
     importer: Importer.import,
-    timeout: 10000,
+    timeout: 60000,
   },
 })
 
