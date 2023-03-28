@@ -1,23 +1,4 @@
 {
-  "commands": [
-    "@athenna/core/commands/MakeExceptionCommand",
-    "@athenna/core/commands/MakeFacadeCommand",
-    "@athenna/core/commands/MakeProviderCommand",
-    "@athenna/core/commands/MakeServiceCommand",
-    "@athenna/core/commands/MakeTestCommand",
-    "@athenna/artisan/commands/ListCommand",
-    "@athenna/artisan/commands/ConfigureCommand",
-    "@athenna/artisan/commands/MakeCommandCommand",
-    "@athenna/artisan/commands/TemplateCustomizeCommand",
-    "@athenna/http/commands/MakeControllerCommand",
-    "@athenna/http/commands/MakeMiddlewareCommand",
-    "@athenna/http/commands/MakeInterceptorCommand",
-    "@athenna/http/commands/MakeTerminatorCommand",
-    "@athenna/core/commands/ServeCommand",
-    "@athenna/core/commands/TestCommand",
-    "@athenna/core/commands/ReplCommand",
-    "@athenna/core/commands/BuildCommand"
-  ],
   "services": [
     "#app/Services/AppService"
   ],
@@ -30,7 +11,7 @@
   "controllers": [
     "#app/Http/Controllers/AppController"
   ],
-  "commandsManifest": {
+  "commands": {
     "make:exception": "@athenna/core/commands/MakeExceptionCommand",
     "make:facade": "@athenna/core/commands/MakeFacadeCommand",
     "make:provider": "@athenna/core/commands/MakeProviderCommand",
@@ -43,10 +24,19 @@
     "make:terminator": "@athenna/http/commands/MakeTerminatorCommand",
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
-    "serve": "@athenna/core/commands/ServeCommand",
-    "test": "@athenna/core/commands/TestCommand",
-    "repl": "@athenna/core/commands/ReplCommand",
-    "build": "@athenna/core/commands/BuildCommand"
+    "build": "@athenna/core/commands/BuildCommand",
+    "serve": {
+      "path": "@athenna/core/commands/ServeCommand",
+      "stayAlive": true
+    },
+    "test": {
+      "path": "@athenna/core/commands/TestCommand",
+      "stayAlive": true
+    },
+    "repl": {
+      "path": "@athenna/core/commands/ReplCommand",
+      "stayAlive": true
+    }
   },
   "templates": {
     "exception": "node_modules/@athenna/core/templates/exception.edge",
