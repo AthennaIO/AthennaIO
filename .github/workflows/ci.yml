@@ -45,15 +45,14 @@ jobs:
       - name: Test code compilation
         run: sh node artisan build
 
-      - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve .github/ci.js
+      - name: Link the package and run the CLI
+        run: npm link . && athenna --version
 
   windows:
     runs-on: windows-latest
     strategy:
       matrix:
         node-version:
-          - 16.13.1
           - 18.x
     steps:
       - uses: actions/checkout@v2
@@ -71,5 +70,5 @@ jobs:
       - name: Test code compilation
         run: sh node artisan build
 
-      - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve .github/ci.js
+      - name: Link the package and run the CLI
+        run: npm link . && athenna --version
