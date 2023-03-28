@@ -6,7 +6,7 @@
   "providers": [
     "@athenna/core/providers/CoreProvider"
   ],
-  "commandsManifest": {
+  "commands": {
     "build": "@athenna/core/commands/BuildCommand",
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
