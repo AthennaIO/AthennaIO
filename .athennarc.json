@@ -2,7 +2,6 @@
   "services": [
     "#src/services/app.service"
   ],
-  "preloads": [],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/http/providers/HttpRouteProvider",
