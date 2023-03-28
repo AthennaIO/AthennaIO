@@ -21,7 +21,7 @@ export class BaseE2ETest {
   }
 
   /**
-   * Execute your bootstrap/artisan.ts file inside a child process.
+   * Execute your bin/artisan.ts file inside a child process.
    */
   public async execute(command: string): Promise<{ stdout: string; stderr: string }> {
     return Artisan.callInChild(command, Path.pwd('bin/artisan.ts'))

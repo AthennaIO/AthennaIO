@@ -1,20 +1,4 @@
 {
-  "commands": [
-    "@athenna/core/commands/MakeExceptionCommand",
-    "@athenna/core/commands/MakeFacadeCommand",
-    "@athenna/core/commands/MakeProviderCommand",
-    "@athenna/core/commands/MakeServiceCommand",
-    "@athenna/core/commands/MakeTestCommand",
-    "@athenna/artisan/commands/ListCommand",
-    "@athenna/artisan/commands/ConfigureCommand",
-    "@athenna/artisan/commands/MakeCommandCommand",
-    "@athenna/artisan/commands/TemplateCustomizeCommand",
-    "@athenna/core/commands/ServeCommand",
-    "@athenna/core/commands/TestCommand",
-    "@athenna/core/commands/ReplCommand",
-    "@athenna/core/commands/BuildCommand",
-    "#src/commands/app.command"
-  ],
   "services": [
     "#src/services/app.service"
   ],
@@ -23,6 +7,9 @@
     "@athenna/core/providers/CoreProvider"
   ],
   "commandsManifest": {
+    "build": "@athenna/core/commands/BuildCommand",
+    "configure": "@athenna/artisan/commands/ConfigureCommand",
+    "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
     "make:exception": {
       "path": "@athenna/core/commands/MakeExceptionCommand",
       "destination": "./src/exceptions"
@@ -47,22 +34,25 @@
       "path": "@athenna/artisan/commands/MakeCommandCommand",
       "destination": "./src/commands"
     },
-    "configure": "@athenna/artisan/commands/ConfigureCommand",
-    "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
     "serve": {
       "path": "@athenna/core/commands/ServeCommand",
-      "entrypoint": "#bin/main"
+      "entrypoint": "#bin/main",
+      "stayAlive": true
     },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
-      "entrypoint": "#bin/test"
+      "entrypoint": "#bin/test",
+      "stayAlive": true
     },
     "repl": {
       "path": "@athenna/core/commands/ReplCommand",
-      "entrypoint": "#bin/repl"
+      "entrypoint": "#bin/repl",
+      "stayAlive": true
     },
-    "build": "@athenna/core/commands/BuildCommand",
-    "app": "#src/commands/app.command"
+    "app": {
+      "path": "#src/commands/app.command",
+      "loadApp": true
+    }
   },
   "templates": {
     "exception": "node_modules/@athenna/core/templates/exception.edge",

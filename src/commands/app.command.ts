@@ -1,12 +1,6 @@
-import { BaseCommand, CommandSettings } from '@athenna/artisan'
+import { BaseCommand } from '@athenna/artisan'
 
 export class AppCommand extends BaseCommand {
-  public static settings(): CommandSettings {
-    return {
-      loadApp: true,
-    }
-  }
-
   public static signature(): string {
     return 'app'
   }
