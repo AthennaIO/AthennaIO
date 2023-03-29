@@ -43,7 +43,8 @@
     "@fastify/rate-limit": "^7.5.0",
     "@fastify/swagger": "^8.1.0",
     "@fastify/swagger-ui": "^1.1.0",
-    "cls-rtracer": "^2.6.2"
+    "cls-rtracer": "^2.6.2",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@athenna/test": "^3.3.0",
@@ -78,7 +79,6 @@
     "minimist": "^1.2.7",
     "nodemon": "^2.0.21",
     "prettier": "^2.8.7",
-    "reflect-metadata": "^0.1.13",
     "sinon": "^15.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2"
