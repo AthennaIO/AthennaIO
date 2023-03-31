@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@athenna/artisan": "^3.7.1",
-    "@athenna/common": "^3.5.0",
+    "@athenna/common": "^3.5.1",
     "@athenna/config": "^3.3.0",
     "@athenna/core": "^3.5.0",
     "@athenna/http": "^3.8.0",
@@ -47,7 +47,7 @@
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@athenna/test": "^3.3.0",
+    "@athenna/test": "^3.4.0",
     "@japa/assert": "^1.3.6",
     "@japa/run-failed-tests": "^1.1.0",
     "@japa/runner": "^2.2.2",
