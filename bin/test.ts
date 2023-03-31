@@ -11,6 +11,7 @@ configure({
     reporters: [specReporter()],
     importer: Importer.import,
     timeout: 60000,
+    forceExit: true,
   },
 })
 
