@@ -32,8 +32,8 @@
   "dependencies": {
     "@athenna/artisan": "^3.7.1",
     "@athenna/common": "^3.5.1",
-    "@athenna/config": "^3.3.0",
-    "@athenna/core": "^3.5.0",
+    "@athenna/config": "^3.3.2",
+    "@athenna/core": "^3.5.2",
     "@athenna/http": "^3.8.0",
     "@athenna/ioc": "^3.2.0",
     "@athenna/logger": "^3.2.0",
