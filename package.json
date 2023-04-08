@@ -44,6 +44,7 @@
     "@fastify/swagger": "^8.1.0",
     "@fastify/swagger-ui": "^1.1.0",
     "cls-rtracer": "^2.6.2",
+    "cross-env": "^7.0.3",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
@@ -52,7 +53,6 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "c8": "^7.12.0",
-    "cross-env": "^7.0.3",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
