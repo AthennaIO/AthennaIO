@@ -43,7 +43,6 @@
     "@fastify/rate-limit": "^7.5.0",
     "@fastify/swagger": "^8.1.0",
     "@fastify/swagger-ui": "^1.1.0",
-    "cls-rtracer": "^2.6.2",
     "cross-env": "^7.0.3",
     "reflect-metadata": "^0.1.13"
   },
