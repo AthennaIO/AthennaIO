@@ -11,8 +11,8 @@ export class BaseE2ETest {
     this.ignite = await new Ignite().load(import.meta.url, { bootLogs: false, loadConfigSafe: false })
     this.httpServer = await this.ignite.httpServer({
       port: 3000,
-      host: '0.0.0.0',
-      routePath: '#src/routes/http.route',
+      trace: true,
+      host: 'localhost',
     })
   }
 

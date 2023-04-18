@@ -6,5 +6,4 @@ await ignite.httpServer({
   port: 3000,
   trace: true,
   host: '0.0.0.0',
-  routePath: '#src/routes/http.route',
 })
