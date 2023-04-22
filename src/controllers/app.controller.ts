@@ -1,13 +1,11 @@
+import { Inject } from '@athenna/ioc'
 import { Context, Controller } from '@athenna/http'
 import { AppService } from '#src/services/app.service'
 
 @Controller()
 export class AppController {
+  @Inject()
   private readonly appService: AppService
-
-  public constructor(appService: AppService) {
-    this.appService = appService
-  }
 
   public async show({ response }: Context) {
     const data = this.appService.findOne()
