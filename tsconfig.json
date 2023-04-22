@@ -1,7 +1,7 @@
 {
   "ts-node": {
     "esm": true,
-    "swc": true
+    "transpileOnly": true
   },
   "compilerOptions": {
     "strict": false,
@@ -16,6 +16,7 @@
     "removeComments": false,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
+    "useDefineForClassFields": false,
     "moduleResolution": "nodenext",
     "paths": {
       "#app/*": ["./app/*.ts"],
