@@ -7,7 +7,11 @@ export class BaseE2ETest {
 
   @BeforeAll()
   public async beforeAll() {
-    this.ignite = await new Ignite().load(import.meta.url, { bootLogs: false, loadConfigSafe: false })
+    this.ignite = await new Ignite().load(import.meta.url, {
+      bootLogs: false,
+      loadConfigSafe: false,
+      environments: ['test'],
+    })
   }
 
   @BeforeEach()
