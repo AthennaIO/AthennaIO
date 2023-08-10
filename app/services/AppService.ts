@@ -1,4 +1,4 @@
-import { Service } from '@athenna/core'
+import { Service } from '@athenna/ioc'
 import { Config } from '@athenna/config'
 
 @Service()

@@ -7,19 +7,17 @@
 # Usage:
 
 # ./node --version
-# ./node artisan --version
 # ./node bootstrap/main.ts
-# ./node bootstrap/artisan.ts
+# ./node --inspect bootstrap/artisan.ts
 
 # Usage with "sh" or "bash":
 
 # sh node --version
-# sh node artisan --version
 # sh node bootstrap/main.ts
-# sh node bootstrap/artisan.ts
+# sh node --inspect bootstrap/artisan.ts
 
 # Node.js executable with all arguments required to run the application.
-node="node --loader ts-node/esm --experimental-import-meta-resolve --no-warnings"
+node="node --loader=ts-node/esm --experimental-import-meta-resolve --no-warnings"
 
 # Replace the first occurrence of "artisan" with "bootstrap/artisan.ts",
 # including any preceding or following spaces.

@@ -1,5 +1,5 @@
-import { AppService } from '#app/Services/AppService'
-import { Test, BeforeAll, TestContext } from '@athenna/test'
+import { AppService } from '#app/services/AppService'
+import { Test, BeforeAll, type Context } from '@athenna/test'
 
 export default class AppServiceTest {
   @BeforeAll()
@@ -8,7 +8,7 @@ export default class AppServiceTest {
   }
 
   @Test()
-  public async shouldReturnThePayloadFromFindOneMethod({ assert }: TestContext) {
+  public async shouldReturnThePayloadFromFindOneMethod({ assert }: Context) {
     const appService = new AppService()
 
     const { name, version, description, source } = appService.findOne()

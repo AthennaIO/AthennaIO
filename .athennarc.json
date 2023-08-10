@@ -1,6 +1,6 @@
 {
   "services": [
-    "#app/Services/AppService"
+    "#app/services/AppService"
   ],
   "providers": [
     "@athenna/core/providers/CoreProvider"
@@ -28,7 +28,7 @@
       "stayAlive": true
     },
     "app": {
-      "path": "#app/Console/Commands/AppCommand",
+      "path": "#app/console/commands/AppCommand",
       "loadApp": true
     }
   },
