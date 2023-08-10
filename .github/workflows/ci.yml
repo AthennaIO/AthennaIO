@@ -61,4 +61,4 @@ jobs:
         run: npm run build
 
       - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve .github/ci.js
+        run: cp .github/ci.js build/bin/ci.js && node --experimental-import-meta-resolve build/bin/ci.js
