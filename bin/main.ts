@@ -4,7 +4,7 @@ import { Ignite } from '@athenna/core'
 
 const ignite = await new Ignite().load(import.meta.url, {
   bootLogs: false,
-  athennaRcPath: './.athennarc.prod.json',
+  athennaRcPath: 'bin/.athennarc.prod.json',
 })
 
 await ignite.artisan(process.argv, { displayName: 'Athenna' })
