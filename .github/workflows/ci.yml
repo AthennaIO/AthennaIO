@@ -35,7 +35,7 @@ jobs:
         run: npm run build
 
       - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve .github/ci.js
+        run: cp .github/ci.js build/bootstrap/ci.js && node --experimental-import-meta-resolve build/bootstrap/ci.js
 
   windows:
     runs-on: windows-latest
@@ -61,4 +61,4 @@ jobs:
         run: npm run build
 
       - name: Run application using compiled code
-        run: node --experimental-import-meta-resolve .github/ci.js
+        run: cp .github/ci.js build/bootstrap/ci.js && node --experimental-import-meta-resolve build/bootstrap/ci.js
