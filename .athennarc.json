@@ -11,8 +11,8 @@
     "#src/controllers/app.controller"
   ],
   "commands": {
-    "build": "@athenna/core/commands/BuildCommand",
     "configure": "@athenna/artisan/commands/ConfigureCommand",
+    "route:list": "@athenna/http/commands/RouteListCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
     "make:exception": "@athenna/core/commands/MakeExceptionCommand",
     "make:facade": "@athenna/core/commands/MakeFacadeCommand",

@@ -9,17 +9,6 @@ on:
       - http-slim
 
 jobs:
-  qodana:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@main
-        env:
-          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
-
   linux:
     runs-on: ubuntu-latest
     strategy:
@@ -43,7 +32,7 @@ jobs:
         run: npm run test:coverage
 
       - name: Test code compilation
-        run: sh node artisan build
+        run: npm run build
 
       - name: Run application using compiled code
         run: node --experimental-import-meta-resolve .github/ci.js
@@ -69,7 +58,7 @@ jobs:
         run: npm run test:coverage
 
       - name: Test code compilation
-        run: sh node artisan build
+        run: npm run build
 
       - name: Run application using compiled code
         run: node --experimental-import-meta-resolve .github/ci.js

@@ -1,19 +1,12 @@
-import { assert } from '@japa/assert'
-import { Importer } from '@athenna/test'
-import { specReporter } from '@japa/spec-reporter'
 import { request } from '@athenna/http/testing/plugins'
-import { configure, processCliArgs, run } from '@japa/runner'
+import { Runner, assert, specReporter } from '@athenna/test'
 
-configure({
-  ...processCliArgs(process.argv.slice(2)),
-  ...{
-    files: ['tests/unit/**/*.test.ts', 'tests/e2e/**/*.test.ts'],
-    plugins: [assert(), request()],
-    reporters: [specReporter()],
-    importer: Importer.import,
-    timeout: 10000,
-    forceExit: true,
-  },
-})
-
-run()
+await Runner.setTsEnv()
+  .addPlugin(assert())
+  .addPlugin(request())
+  .addReporter(specReporter())
+  .addPath('tests/e2e/**/*.ts')
+  .addPath('tests/unit/**/*.ts')
+  .setCliArgs(process.argv.slice(2))
+  .setGlobalTimeout(5000)
+  .run()
