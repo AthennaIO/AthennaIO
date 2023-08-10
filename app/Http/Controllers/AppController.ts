@@ -1,6 +1,6 @@
 import { Inject } from '@athenna/ioc'
-import { Context, Controller } from '@athenna/http'
-import { AppService } from '#app/Services/AppService'
+import { AppService } from '#app/services/AppService'
+import { Controller, type Context } from '@athenna/http'
 
 @Controller()
 export class AppController {

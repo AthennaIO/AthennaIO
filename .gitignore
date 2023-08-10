@@ -115,15 +115,15 @@ out
 .pnp.*
 
 # Compiled code
-./dist
-./build
+dist
+build
 *.js
 *.d.ts
 *.js.map
 !.github/ci.js
-!tests/Stubs/**/*.js
-!tests/Stubs/**/*.d.ts
-!tests/Stubs/**/*.js.map
+!tests/stubs/**/*.js
+!tests/stubs/**/*.d.ts
+!tests/stubs/**/*.js.map
 
 # IDE
 .idea

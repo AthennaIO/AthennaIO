@@ -1,15 +1,17 @@
 {
   "ts-node": {
     "esm": true,
-    "transpileOnly": true
+    "transpileOnly": true,
+    "ignoreDiagnostics": [5104]
   },
   "compilerOptions": {
     "strict": false,
     "rootDir": ".",
     "baseUrl": ".",
-    "outDir": ".",
+    "outDir": "build",
     "module": "NodeNext",
     "target": "ESNext",
+    "moduleResolution": "NodeNext",
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,7 +19,8 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
-    "moduleResolution": "nodenext",
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
       "#app/*": ["./app/*.ts"],
       "#bootstrap/*": ["./bootstrap/*.ts"],
@@ -33,5 +36,5 @@
     }
   },
   "include": ["./**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["build", "node_modules"]
 }

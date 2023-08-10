@@ -57,7 +57,9 @@ export default {
   |
   */
 
-  logger: Env('LOG_HTTP', true),
+  logger: {
+    enabled: Env('LOG_HTTP', true),
+  },
 
   /*
   |--------------------------------------------------------------------------

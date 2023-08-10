@@ -1,6 +1,6 @@
 {
   "services": [
-    "#app/Services/AppService"
+    "#app/services/AppService"
   ],
   "providers": [
     "@athenna/core/providers/CoreProvider",
@@ -8,7 +8,7 @@
     "@athenna/http/providers/HttpServerProvider"
   ],
   "controllers": [
-    "#app/Http/Controllers/AppController"
+    "#app/http/controllers/AppController"
   ],
   "commands": {
     "make:exception": "@athenna/core/commands/MakeExceptionCommand",
@@ -22,8 +22,8 @@
     "make:interceptor": "@athenna/http/commands/MakeInterceptorCommand",
     "make:terminator": "@athenna/http/commands/MakeTerminatorCommand",
     "configure": "@athenna/artisan/commands/ConfigureCommand",
+    "route:list": "@athenna/http/commands/RouteListCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
-    "build": "@athenna/core/commands/BuildCommand",
     "serve": {
       "path": "@athenna/core/commands/ServeCommand",
       "stayAlive": true
