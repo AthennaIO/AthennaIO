@@ -6,7 +6,6 @@
     "@athenna/core/providers/CoreProvider"
   ],
   "commands": {
-    "build": "@athenna/core/commands/BuildCommand",
     "make:exception": "@athenna/core/commands/MakeExceptionCommand",
     "make:facade": "@athenna/core/commands/MakeFacadeCommand",
     "make:provider": "@athenna/core/commands/MakeProviderCommand",
