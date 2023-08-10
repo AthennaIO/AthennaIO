@@ -1,5 +1,5 @@
 import { BaseCommand } from '@athenna/artisan'
-import { AppService } from '#app/Services/AppService'
+import { AppService } from '#app/services/AppService'
 
 export class AppCommand extends BaseCommand {
   public static signature(): string {
