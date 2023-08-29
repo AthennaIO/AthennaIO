@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@athenna/artisan": "^4.2.0",
-    "@athenna/common": "^4.7.0",
+    "@athenna/common": "^4.8.0",
     "@athenna/config": "^4.3.0",
     "@athenna/core": "^4.3.0",
     "@athenna/http": "^4.4.0",
