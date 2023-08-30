@@ -18,7 +18,7 @@
   "scripts": {
     "start": "sh node artisan serve",
     "start:dev": "sh node --watch artisan serve",
-    "build": "rimraf build && tsc --project bootstrap/tsconfig.build.json && cp bootstrap/.bin build/bootstrap/.bin",
+    "build": "sh node artisan build",
     "test": "npm run --silent lint:fix && sh node artisan test",
     "test:debug": "npm run --silent lint:fix && cross-env NODE_DEBUG=athenna:* sh node --inspect artisan test",
     "test:coverage": "c8 npm run --silent test",
