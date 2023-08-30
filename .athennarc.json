@@ -19,7 +19,7 @@
       "stayAlive": true
     },
     "build": {
-      "path": "@athenna/artisan/commands/BuildCommand",
+      "path": "@athenna/core/commands/BuildCommand",
       "tsconfig": "bootstrap/tsconfig.build.json",
       "metaFiles": [
         "package.json",
