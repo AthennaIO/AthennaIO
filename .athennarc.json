@@ -28,6 +28,15 @@
       "path": "@athenna/core/commands/ServeCommand",
       "stayAlive": true
     },
+    "build": {
+      "path": "@athenna/artisan/commands/BuildCommand",
+      "tsconfig": "bootstrap/tsconfig.build.json",
+      "metaFiles": [
+        "package.json",
+        "package-lock.json",
+        ".athennarc.json"
+      ]
+    },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
       "stayAlive": true
