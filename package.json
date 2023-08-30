@@ -30,7 +30,7 @@
   "scripts": {
     "start": "sh node artisan serve",
     "start:dev": "sh node --watch artisan serve",
-    "build": "rimraf build && tsc --project bin/tsconfig.build.json && cp bin/.bin build/bin/.bin",
+    "build": "sh node artisan build",
     "test": "npm run --silent lint:fix && sh node artisan test",
     "test:debug": "npm run --silent lint:fix && cross-env NODE_DEBUG=athenna:* sh node --inspect artisan test",
     "test:coverage": "c8 npm run --silent test",
@@ -46,7 +46,7 @@
     "#tests": "./tests/index.js"
   },
   "dependencies": {
-    "@athenna/artisan": "^4.2.0",
+    "@athenna/artisan": "^4.4.0",
     "@athenna/common": "^4.9.1",
     "@athenna/config": "^4.3.0",
     "@athenna/core": "^4.3.0",
@@ -61,6 +61,7 @@
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "c8": "^7.12.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
@@ -163,6 +164,16 @@
       "serve": {
         "path": "@athenna/core/commands/ServeCommand",
         "stayAlive": true
+      },
+      "build": {
+        "path": "@athenna/artisan/commands/BuildCommand",
+        "tsconfig": "bin/tsconfig.build.json",
+        "metaFiles": [
+          "package.json",
+          "package-lock.json",
+          "bootstrap/.bin",
+          "bootstrap/.athennarc.prod.json"
+        ]
       },
       "test": {
         "path": "@athenna/core/commands/TestCommand",

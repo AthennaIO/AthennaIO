@@ -1,5 +1,7 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["../**/*", "../package.json", "./.athennarc.prod.json"],
+  "compilerOptions": {
+    "outDir": "../build"
+  },
   "exclude": ["../build", "../tests", "../node_modules"]
 }
