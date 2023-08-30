@@ -171,8 +171,8 @@
         "metaFiles": [
           "package.json",
           "package-lock.json",
-          "bootstrap/.bin",
-          "bootstrap/.athennarc.prod.json"
+          "bin/.bin",
+          "bin/.athennarc.prod.json"
         ]
       },
       "test": {
