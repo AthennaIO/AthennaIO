@@ -34,6 +34,9 @@ jobs:
       - name: Test code compilation
         run: npm run build
 
+      - name: Install dependencies for compiled code
+        run: cd build && npm ci --production
+
       - name: Run application using compiled code
         run: cp .github/ci.js build/bin/ci.js && node --experimental-import-meta-resolve build/bin/ci.js
 
