@@ -18,7 +18,7 @@ export class BaseE2ETest {
   }
 
   @AfterAll()
-  public async afterEach() {
+  public async afterAll() {
     await this.httpServer.close()
   }
 }
