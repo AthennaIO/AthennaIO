@@ -1,7 +1,7 @@
 import { Test, type Context } from '@athenna/test'
-import { BaseE2ETest } from '#tests/helpers/base.e2e.test'
+import { BaseCliTest } from '@athenna/core/testing/BaseCliTest'
 
-export default class AppCommandTest extends BaseE2ETest {
+export default class AppCommandTest extends BaseCliTest {
   @Test()
   public async shouldBeAbleToGetTheStdoutOfAppCommand({ assert }: Context) {
     const { stdout, stderr } = await this.execute('app')
