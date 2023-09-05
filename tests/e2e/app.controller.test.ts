@@ -1,7 +1,7 @@
 import { Test, type Context } from '@athenna/test'
-import { BaseE2ETest } from '#tests/helpers/base.e2e.test'
+import { BaseRestTest } from '@athenna/core/testing/BaseRestTest'
 
-export default class AppControllerTest extends BaseE2ETest {
+export default class AppControllerTest extends BaseRestTest {
   @Test()
   public async shouldBeAbleToGetTheHelloPayloadFromApi({ request }: Context) {
     const response = await request.get('/')
