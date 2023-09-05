@@ -14,11 +14,7 @@ export class BaseE2ETest {
       environments: ['test'],
     })
 
-    this.httpServer = await this.ignite.httpServer({
-      port: 3000,
-      trace: true,
-      host: 'localhost',
-    })
+    this.httpServer = await this.ignite.httpServer()
   }
 
   @AfterAll()
