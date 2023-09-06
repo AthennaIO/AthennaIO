@@ -35,7 +35,7 @@
     "@athenna/common": "^4.9.2",
     "@athenna/config": "^4.3.0",
     "@athenna/core": "^4.7.0",
-    "@athenna/http": "^4.4.0",
+    "@athenna/http": "^4.5.0",
     "@athenna/ioc": "^4.1.0",
     "@athenna/logger": "^4.2.0",
     "@athenna/view": "^4.1.0",
