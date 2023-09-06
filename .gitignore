@@ -121,9 +121,12 @@ build
 *.d.ts
 *.js.map
 !.github/ci.js
-!tests/Stubs/**/*.js
-!tests/Stubs/**/*.d.ts
-!tests/Stubs/**/*.js.map
+!tests/stubs/**/*.js
+!tests/stubs/**/*.d.ts
+!tests/stubs/**/*.js.map
+!tests/fixtures/**/*.js
+!tests/fixtures/**/*.d.ts
+!tests/fixtures/**/*.js.map
 
 # IDE
 .idea

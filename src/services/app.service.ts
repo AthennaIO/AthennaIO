@@ -8,7 +8,7 @@ export class AppService {
       domain: null,
       version: '1.0.0',
       description: 'Athenna is awesome!',
-      source: 'https://github.com/AthennaIO',
+      source: 'https://github.com/AthennaIO'
     }
   }
 }
