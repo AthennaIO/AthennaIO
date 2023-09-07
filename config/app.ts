@@ -96,5 +96,5 @@ export default {
   |
   */
 
-  locale: Env('APP_LOCALE', 'en'),
+  locale: Env('APP_LOCALE', 'en')
 }
