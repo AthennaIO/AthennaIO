@@ -124,6 +124,9 @@ build
 !tests/stubs/**/*.js
 !tests/stubs/**/*.d.ts
 !tests/stubs/**/*.js.map
+!tests/fixtures/**/*.js
+!tests/fixtures/**/*.d.ts
+!tests/fixtures/**/*.js.map
 
 # IDE
 .idea
