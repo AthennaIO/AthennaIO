@@ -211,7 +211,6 @@
       "interceptors": "src/interceptors",
       "terminators": "src/terminators",
       "repositories": "src/repositories",
-      "tests": "tests",
       "resources": "src/resources",
       "views": "src/resources/views",
       "locales": "src/resources/locales",
