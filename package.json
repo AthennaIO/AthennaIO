@@ -193,7 +193,9 @@
       "provider": "node_modules/@athenna/core/templates/provider.edge",
       "service": "node_modules/@athenna/core/templates/service.edge",
       "test": "node_modules/@athenna/core/templates/test.edge",
-      "testFn": "node_modules/@athenna/core/templates/testFn.edge",
+      "test-fn": "node_modules/@athenna/core/templates/test-fn.edge",
+      "test-cli": "node_modules/@athenna/core/templates/test-cli.edge",
+      "test-rest": "node_modules/@athenna/core/templates/test-rest.edge",
       "command": "node_modules/@athenna/artisan/templates/command.edge"
     },
     "directories": {
