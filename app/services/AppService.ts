@@ -9,7 +9,7 @@ export class AppService {
       domain: Config.get('http.domain'),
       version: Config.get('app.version'),
       description: Config.get('app.description'),
-      source: Config.get('app.source'),
+      source: Config.get('app.source')
     }
   }
 }

@@ -58,7 +58,7 @@ export default {
   */
 
   logger: {
-    enabled: Env('LOG_HTTP', true),
+    enabled: Env('LOG_HTTP', true)
   },
 
   /*
@@ -79,7 +79,7 @@ export default {
     allowedHeaders: ['*'],
     exposedHeaders: ['*'],
     maxAge: 0,
-    credentials: false,
+    credentials: false
   },
 
   /*
@@ -98,7 +98,7 @@ export default {
     echoHeader: false,
     useHeader: false,
     headerName: 'X-Request-Id',
-    useFastifyRequestId: false,
+    useFastifyRequestId: false
   },
 
   /*
@@ -114,7 +114,7 @@ export default {
   */
 
   helmet: {
-    global: true,
+    global: true
   },
 
   /*
@@ -133,7 +133,7 @@ export default {
   swagger: {
     ui: {
       staticCSP: true,
-      routePrefix: '/documentation',
+      routePrefix: '/documentation'
     },
     configurations: {
       mode: 'dynamic',
@@ -144,14 +144,14 @@ export default {
         info: {
           title: Config.get('app.name'),
           version: Config.get('app.version'),
-          description: Config.get('app.description'),
+          description: Config.get('app.description')
         },
         externalDocs: {
           url: 'https://athenna.io',
-          description: 'Find more info about Athenna here',
-        },
-      },
-    },
+          description: 'Find more info about Athenna here'
+        }
+      }
+    }
   },
 
   /*
@@ -174,6 +174,6 @@ export default {
     cache: 5000,
     allowList: [],
     continueExceeding: false,
-    enableDraftSpec: false,
-  },
+    enableDraftSpec: false
+  }
 }

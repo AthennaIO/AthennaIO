@@ -31,18 +31,18 @@ export default {
   channels: {
     stack: {
       driver: 'stack',
-      channels: ['simple'],
+      channels: ['simple']
     },
 
     simple: {
       driver: 'console',
       level: 'trace',
 
-      formatter: 'simple',
+      formatter: 'simple'
     },
 
     discard: {
-      driver: 'null',
+      driver: 'null'
     },
 
     file: {
@@ -51,7 +51,7 @@ export default {
       filePath: Path.logs('athenna.log'),
 
       formatter: 'simple',
-      formatterConfig: {},
+      formatterConfig: {}
     },
 
     slack: {
@@ -60,7 +60,7 @@ export default {
       url: 'your-slack-webhook-url',
 
       formatter: 'message',
-      formatterConfig: {},
+      formatterConfig: {}
     },
 
     discord: {
@@ -70,7 +70,7 @@ export default {
       url: 'your-discord-webhook-url',
 
       formatter: 'message',
-      formatterConfig: {},
+      formatterConfig: {}
     },
 
     telegram: {
@@ -81,7 +81,7 @@ export default {
       token: 'your-telegram-bot-token',
 
       formatter: 'message',
-      formatterConfig: {},
-    },
-  },
+      formatterConfig: {}
+    }
+  }
 }
