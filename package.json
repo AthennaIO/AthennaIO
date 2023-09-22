@@ -31,14 +31,14 @@
     "#tests": "./tests/index.js"
   },
   "dependencies": {
-    "@athenna/artisan": "^4.9.1",
-    "@athenna/common": "^4.10.1",
+    "@athenna/artisan": "^4.10.0",
+    "@athenna/common": "^4.13.2",
     "@athenna/config": "^4.4.0",
-    "@athenna/core": "^4.8.0",
-    "@athenna/http": "^4.6.0",
-    "@athenna/ioc": "^4.2.0",
-    "@athenna/logger": "^4.3.0",
-    "@athenna/view": "^4.2.0",
+    "@athenna/core": "^4.9.1",
+    "@athenna/http": "^4.8.0",
+    "@athenna/ioc": "^4.4.1",
+    "@athenna/logger": "^4.5.0",
+    "@athenna/view": "^4.3.0",
     "@fastify/cors": "^8.3.0",
     "@fastify/helmet": "^11.0.0",
     "@fastify/rate-limit": "^8.0.3",
@@ -47,7 +47,7 @@
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@athenna/test": "^4.5.0",
+    "@athenna/test": "^4.7.0",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "c8": "^7.12.0",
