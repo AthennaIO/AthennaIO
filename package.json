@@ -50,17 +50,17 @@
     "#tests": "./tests/index.js"
   },
   "dependencies": {
-    "@athenna/artisan": "^4.10.0",
-    "@athenna/common": "^4.13.2",
+    "@athenna/artisan": "^4.11.0",
+    "@athenna/common": "^4.14.0",
     "@athenna/config": "^4.4.0",
     "@athenna/core": "^4.9.1",
-    "@athenna/ioc": "^4.4.1",
+    "@athenna/ioc": "^4.4.2",
     "@athenna/logger": "^4.5.0",
     "@athenna/view": "^4.3.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@athenna/test": "^4.7.0",
+    "@athenna/test": "^4.8.0",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "c8": "^7.12.0",
