@@ -58,7 +58,7 @@
     "@fastify/cors": "^8.3.0",
     "@fastify/helmet": "^11.0.0",
     "@fastify/rate-limit": "^8.0.3",
-    "@fastify/swagger": "^8.10.0",
+    "@fastify/swagger": "^8.10.1",
     "@fastify/swagger-ui": "^1.9.3",
     "reflect-metadata": "^0.1.13"
   },
