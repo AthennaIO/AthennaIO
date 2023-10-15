@@ -1,6 +1,11 @@
-#!/usr/bin/env -S node --experimental-import-meta-resolve
+#!/usr/bin/node
+
+import 'reflect-metadata'
+import sourceMapSupport from 'source-map-support'
 
 import { Ignite } from '@athenna/core'
+
+sourceMapSupport.install({ handleUncaughtExceptions: false })
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +34,4 @@ const ignite = await new Ignite().load(import.meta.url, {
 |
 */
 
-await ignite.artisan(process.argv, { displayName: 'Athenna' })
+await ignite.console(process.argv, { displayName: 'Athenna' })
