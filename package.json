@@ -25,7 +25,7 @@
     "src/**/*.d.ts"
   ],
   "bin": {
-    "athenna": "./bootstrap/main.js"
+    "athenna": "./bin/main.js"
   },
   "engines": {
     "node": ">=20.0.0"
