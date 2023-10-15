@@ -1,4 +1,21 @@
+import 'reflect-metadata'
+import sourceMapSupport from 'source-map-support'
+
 import { Ignite } from '@athenna/core'
+
+/*
+|--------------------------------------------------------------------------
+| Source maps
+|--------------------------------------------------------------------------
+|
+| Install source maps only in production code. This will allow you to see
+| the original source code line number when debugging compiled code.
+|
+*/
+
+if (!process.execArgv.includes('--enable-source-maps')) {
+  sourceMapSupport.install({ handleUncaughtExceptions: false })
+}
 
 /*
 |--------------------------------------------------------------------------
