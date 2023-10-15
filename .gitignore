@@ -120,6 +120,7 @@ build
 *.js
 *.d.ts
 *.js.map
+!artisan.js
 !.github/ci.js
 !tests/stubs/**/*.js
 !tests/stubs/**/*.d.ts

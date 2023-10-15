@@ -28,16 +28,14 @@ const repl = await ignite.repl()
 
 /*
 |--------------------------------------------------------------------------
-| REPL Context
+| Extending the REPL session
 |--------------------------------------------------------------------------
 |
-| This space is reserved for you to add your own custom context to the your
-| REPL session.
+| This space is reserved for you to register your own REPL commands and
+| register data in the REPL context.
 |
 */
 
-await import('@athenna/common').then(common => {
-  Object.keys(common).forEach(key => (repl.context[key] = common[key]))
-})
+await repl.importInContext('@athenna/common')
 
-repl.context.appService = ioc.safeUse('App/Services/AppService')
+repl.setInContext('appService', ioc.safeUse('App/Services/AppService'))
