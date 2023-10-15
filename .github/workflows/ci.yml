@@ -14,8 +14,7 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16.13.1
-          - 18.x
+          - 20.x
     steps:
       - uses: actions/checkout@v2
         with:
@@ -35,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Install dependencies for compiled code
-        run: cd build && npm ci --production
+        run: cd build && npm ci --omit=dev
 
       - name: Link the package and run the CLI
         run: cd build && npm link . && athenna --version
@@ -45,8 +44,7 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16.13.1
-          - 18.x
+          - 20.x
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -64,7 +62,7 @@ jobs:
         run: npm run build
 
       - name: Install dependencies for compiled code
-        run: cd build && npm ci --production
+        run: cd build && npm ci --omit=dev
 
       - name: Link the package and run the CLI
         shell: bash

@@ -1,7 +1,7 @@
 import { Test, type Context } from '@athenna/test'
-import { BaseCliTest } from '@athenna/core/testing/BaseCliTest'
+import { BaseConsoleTest } from '@athenna/core/testing/BaseConsoleTest'
 
-export default class AppCommandTest extends BaseCliTest {
+export default class AppCommandTest extends BaseConsoleTest {
   @Test()
   public async shouldBeAbleToGetTheStdoutOfAppCommand({ command }: Context) {
     const output = await command.run('app')
