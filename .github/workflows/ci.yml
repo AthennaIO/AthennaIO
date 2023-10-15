@@ -14,8 +14,7 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16.13.1
-          - 18.x
+          - 20.x
     steps:
       - uses: actions/checkout@v2
         with:
@@ -38,15 +37,14 @@ jobs:
         run: cd build && npm ci --production
 
       - name: Run application using compiled code
-        run: cp .github/ci.js build/bin/ci.js && node --experimental-import-meta-resolve build/bin/ci.js
+        run: cp .github/ci.js build/bin/ci.js && node build/bin/ci.js
 
   windows:
     runs-on: windows-latest
     strategy:
       matrix:
         node-version:
-          - 16.13.1
-          - 18.x
+          - 20.x
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -67,4 +65,4 @@ jobs:
         run: cd build && npm ci --production
 
       - name: Run application using compiled code
-        run: cp .github/ci.js build/bin/ci.js && node --experimental-import-meta-resolve build/bin/ci.js
+        run: cp .github/ci.js build/bin/ci.js && node build/bin/ci.js
