@@ -34,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Install dependencies for compiled code
-        run: cd build && npm ci --production
+        run: cd build && npm ci --omit=dev
 
       - name: Link the package and run the CLI
         run: cd build && npm link . && athenna --version
@@ -62,7 +62,7 @@ jobs:
         run: npm run build
 
       - name: Install dependencies for compiled code
-        run: cd build && npm ci --production
+        run: cd build && npm ci --omit=dev
 
       - name: Link the package and run the CLI
         shell: bash

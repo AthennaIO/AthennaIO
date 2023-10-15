@@ -13,7 +13,7 @@
     "typescript"
   ],
   "bin": {
-    "athenna": "./bootstrap/artisan.js"
+    "athenna": "./bootstrap/main.js"
   },
   "engines": {
     "node": ">=20.0.0"
