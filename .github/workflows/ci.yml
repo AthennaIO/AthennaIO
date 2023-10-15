@@ -34,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Install dependencies for compiled code
-        run: cd build && npm ci --production
+        run: cd build && npm ci --omit=dev
 
       - name: Run application using compiled code
         run: cp .github/ci.js build/bin/ci.js && node build/bin/ci.js
@@ -62,7 +62,7 @@ jobs:
         run: npm run build
 
       - name: Install dependencies for compiled code
-        run: cd build && npm ci --production
+        run: cd build && npm ci --omit=dev
 
       - name: Run application using compiled code
         run: cp .github/ci.js build/bin/ci.js && node build/bin/ci.js
