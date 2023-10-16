@@ -36,6 +36,6 @@ const repl = await ignite.repl()
 |
 */
 
-await repl.importInContext('@athenna/common')
+await repl.importAll('@athenna/common')
 
 repl.setInContext('appService', ioc.safeUse('App/Services/AppService'))
