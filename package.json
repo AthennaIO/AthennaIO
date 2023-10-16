@@ -28,7 +28,7 @@
     "athenna": "./bin/main.js"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "start": "node artisan serve",
