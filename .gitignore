@@ -120,11 +120,6 @@ build
 *.js
 *.d.ts
 *.js.map
-!.github/ci.js
-!artisan.js
-!tests/stubs/**/*.js
-!tests/stubs/**/*.d.ts
-!tests/stubs/**/*.js.map
 !tests/fixtures/**/*.js
 !tests/fixtures/**/*.d.ts
 !tests/fixtures/**/*.js.map
@@ -136,6 +131,7 @@ build
 
 # Environment variables file
 .env
+.env.testing
 .env.production
 
 # MacOS folder mapper file

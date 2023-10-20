@@ -1,4 +1,4 @@
 {
-  "extends": "@athenna/tsconfig/tsconfig.app.json",
+  "extends": "@athenna/tsconfig/tsconfig.lib.json",
   "compilerOptions": {}
 }

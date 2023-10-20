@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - cli-slim
+      - develop
   pull_request:
     branches:
-      - cli-slim
+      - develop
 
 jobs:
   linux:
@@ -33,12 +33,6 @@ jobs:
       - name: Test code compilation
         run: npm run build
 
-      - name: Install dependencies for compiled code
-        run: cd build && npm ci --omit=dev
-
-      - name: Link the package and run the CLI
-        run: cd build && npm link . && athenna --version
-
   windows:
     runs-on: windows-latest
     strategy:
@@ -60,10 +54,3 @@ jobs:
 
       - name: Test code compilation
         run: npm run build
-
-      - name: Install dependencies for compiled code
-        run: cd build && npm ci --omit=dev
-
-      - name: Link the package and run the CLI
-        shell: bash
-        run: cd build && npm link . && athenna --version
