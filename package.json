@@ -1,7 +1,7 @@
 {
   "name": "@athenna/athenna",
   "version": "4.0.0",
-  "description": "The Athenna scaffold project used by 'athenna new project' command to create your project.",
+  "description": "Your project description.",
   "license": "MIT",
   "author": "Your Name <your@email.com>",
   "bugs": "https://github.com/AthennaIO/AthennaIO/issues",
@@ -16,13 +16,6 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "scripts": {
-    "build": "node node_modules/@athenna/tsconfig/src/build.js",
-    "lint:fix": "eslint \"{bin,src,configurer,tests}/**/*.ts\" --fix",
-    "test": "npm run --silent lint:fix && node --enable-source-maps --import=@athenna/tsconfig bin/test.ts",
-    "test:debug": "cross-env NODE_DEBUG=athenna:* node --inspect --enable-source-maps --import=@athenna/tsconfig bin/test.ts",
-    "test:coverage": "c8 npm run --silent test"
-  },
   "files": [
     "src/*.js",
     "src/*.d.ts",
@@ -31,6 +24,13 @@
     "templates",
     "configurer"
   ],
+  "scripts": {
+    "build": "node node_modules/@athenna/tsconfig/src/build.js",
+    "lint:fix": "eslint \"{bin,src,configurer,tests}/**/*.ts\" --fix",
+    "test": "npm run --silent lint:fix && node --enable-source-maps --import=@athenna/tsconfig bin/test.ts",
+    "test:debug": "cross-env NODE_DEBUG=athenna:* node --inspect --enable-source-maps --import=@athenna/tsconfig bin/test.ts",
+    "test:coverage": "c8 npm run --silent test"
+  },
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@athenna/artisan": "^4.15.2",
-    "@athenna/common": "^4.18.1",
+    "@athenna/common": "^4.19.0",
     "@athenna/config": "^4.7.0",
     "@athenna/ioc": "^4.8.0",
     "@athenna/logger": "^4.8.0",
