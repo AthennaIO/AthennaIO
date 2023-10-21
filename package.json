@@ -8,6 +8,17 @@
   "engines": {
     "node": ">=16.0.0"
   },
+  "files": [
+    "app",
+    "bootstrap",
+    "config",
+    "database",
+    "lang",
+    "providers",
+    "resources",
+    "routes",
+    "storage"
+  ],
   "scripts": {
     "start": "node artisan serve",
     "start:dev": "node artisan serve --watch",
