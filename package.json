@@ -1,35 +1,14 @@
 {
   "name": "@athenna/athenna",
   "version": "1.0.0",
-  "description": "The Athenna scaffold project used by 'athenna new project' command to create your project.",
-  "license": "MIT",
-  "author": "João Lenon <lenon@athenna.io>",
-  "bugs": "https://github.com/AthennaIO/AthennaIO/issues",
-  "repository": "https://github.com/AthennaIO/AthennaIO.git",
-  "homepage": "https://github.com/AthennaIO/AthennaIO#readme",
-  "keywords": [
-    "esm",
-    "athenna",
-    "typescript"
-  ],
-  "files": [
-    "bin/.bin",
-    "bin/*.js",
-    "bin/*.d.ts",
-    "bin/**/*.js",
-    "bin/**/*.d.ts",
-    "bin/.athennarc.prod.json",
-    "src/*.js",
-    "src/*.d.ts",
-    "src/**/*.js",
-    "src/**/*.d.ts"
-  ],
+  "license": "UNLICENSED",
   "bin": {
     "athenna": "./bin/main.js"
   },
   "engines": {
     "node": ">=16.0.0"
   },
+  "files": ["bin", "src", ".athennarc.json"],
   "scripts": {
     "start": "node artisan serve",
     "start:dev": "node artisan serve --watch",
@@ -50,9 +29,9 @@
   },
   "dependencies": {
     "@athenna/artisan": "^4.15.2",
-    "@athenna/common": "^4.18.1",
+    "@athenna/common": "^4.19.0",
     "@athenna/config": "^4.7.0",
-    "@athenna/core": "^4.12.0",
+    "@athenna/core": "^4.13.0",
     "@athenna/ioc": "^4.8.0",
     "@athenna/logger": "^4.8.0",
     "@athenna/view": "^4.6.0",
