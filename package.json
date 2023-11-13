@@ -45,7 +45,7 @@
     "@athenna/config": "^4.7.0",
     "@athenna/core": "^4.13.0",
     "@athenna/http": "^4.12.2",
-    "@athenna/ioc": "^4.8.0",
+    "@athenna/ioc": "^4.8.1",
     "@athenna/logger": "^4.8.0",
     "@athenna/view": "^4.6.0",
     "@fastify/cors": "^8.4.0",
