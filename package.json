@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@athenna/artisan": "^4.15.2",
-    "@athenna/common": "^4.19.0",
+    "@athenna/common": "^4.20.0",
     "@athenna/config": "^4.7.0",
     "@athenna/core": "^4.13.0",
     "@athenna/http": "^4.12.2",
