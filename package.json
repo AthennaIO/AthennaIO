@@ -185,6 +185,7 @@
       "exceptions": "src/exceptions",
       "providers": "src/providers",
       "facades": "src/providers/facades",
+      "models": "src/models",
       "services": "src/services",
       "commands": "src/commands",
       "repositories": "src/repositories",
