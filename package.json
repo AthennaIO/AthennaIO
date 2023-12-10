@@ -193,6 +193,7 @@
       "bootstrap": "bin",
       "config": "src/config",
       "routes": "src/routes",
+      "models": "src/models",
       "exceptions": "src/exceptions",
       "providers": "src/providers",
       "facades": "src/providers/facades",
