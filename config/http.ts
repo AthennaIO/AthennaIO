@@ -25,18 +25,6 @@ export default {
 
   /*
   |--------------------------------------------------------------------------
-  | Trace requests
-  |--------------------------------------------------------------------------
-  |
-  | This value will add a custom trace uuid to all new requests to your
-  | application.
-  |
-  */
-
-  trace: true,
-
-  /*
-  |--------------------------------------------------------------------------
   | Application domain
   |--------------------------------------------------------------------------
   |
@@ -74,6 +62,7 @@ export default {
   */
 
   cors: {
+    enabled: true,
     origin: ['*'],
     methods: ['*'],
     allowedHeaders: ['*'],
@@ -95,6 +84,7 @@ export default {
   */
 
   rTracer: {
+    enabled: true,
     echoHeader: false,
     useHeader: false,
     headerName: 'X-Request-Id',
@@ -114,6 +104,7 @@ export default {
   */
 
   helmet: {
+    enabled: true,
     global: true
   },
 
@@ -131,6 +122,7 @@ export default {
   */
 
   swagger: {
+    enabled: true,
     ui: {
       staticCSP: true,
       routePrefix: '/documentation'
@@ -167,6 +159,7 @@ export default {
   */
 
   rateLimit: {
+    enabled: true,
     global: true,
     max: 1000,
     ban: null,
