@@ -1,7 +1,6 @@
 export default {
   host: Env('HOST', '0.0.0.0'),
   port: Env('PORT', 3000),
-  trace: true,
   domain: Env('APP_DOMAIN', 'http://localhost:3000'),
 
   logger: {
@@ -9,6 +8,7 @@ export default {
   },
 
   cors: {
+    enabled: true,
     origin: ['*'],
     methods: ['*'],
     allowedHeaders: ['*'],
@@ -18,6 +18,7 @@ export default {
   },
 
   rTracer: {
+    enabled: true,
     echoHeader: false,
     useHeader: false,
     headerName: 'X-Request-Id',
@@ -25,10 +26,12 @@ export default {
   },
 
   helmet: {
+    enabled: true,
     global: true
   },
 
   swagger: {
+    enabled: true,
     ui: {
       staticCSP: true,
       routePrefix: '/documentation'
@@ -53,6 +56,7 @@ export default {
   },
 
   rateLimit: {
+    enabled: true,
     global: true,
     max: 1000,
     ban: null,
