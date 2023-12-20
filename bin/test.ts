@@ -1,12 +1,11 @@
+import { Runner } from '@athenna/test'
 import { request } from '@athenna/http/testing/plugins'
 import { command } from '@athenna/artisan/testing/plugins'
-import { Runner, assert, specReporter } from '@athenna/test'
 
 await Runner.setTsEnv()
-  .addPlugin(assert())
+  .addAssertPlugin()
   .addPlugin(request())
   .addPlugin(command())
-  .addReporter(specReporter())
   .addPath('tests/e2e/**/*.ts')
   .addPath('tests/unit/**/*.ts')
   .setCliArgs(process.argv.slice(2))
