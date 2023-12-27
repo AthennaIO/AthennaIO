@@ -4,6 +4,8 @@ export default {
   domain: Env('APP_DOMAIN', 'http://localhost:3000'),
 
   logger: {
+    ignoreCodes: [],
+    ignoreStatuses: [],
     enabled: Env('LOG_HTTP', true)
   },
 
