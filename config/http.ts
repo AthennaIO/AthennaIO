@@ -46,6 +46,8 @@ export default {
   */
 
   logger: {
+    ignoreCodes: [],
+    ignoreStatuses: [],
     enabled: Env('LOG_HTTP', true)
   },
 
