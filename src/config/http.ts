@@ -4,9 +4,9 @@ export default {
   domain: Env('APP_DOMAIN', 'http://localhost:3000'),
 
   logger: {
+    enabled: Env('LOG_HTTP', true),
     ignoreCodes: [],
-    ignoreStatuses: [],
-    enabled: Env('LOG_HTTP', true)
+    ignoreStatuses: []
   },
 
   cors: {
@@ -36,7 +36,7 @@ export default {
     enabled: true,
     ui: {
       staticCSP: true,
-      routePrefix: '/documentation'
+      routePrefix: '/docs'
     },
     configurations: {
       mode: 'dynamic',
