@@ -1,5 +1,5 @@
 export default {
-  environment: process.env.NODE_ENV || 'production',
+  environment: process.env.APP_ENV || 'production',
   debug: Env('APP_DEBUG', true),
   name: Env('APP_NAME', '@athenna/athenna'),
   version: Env('APP_VERSION', '1.0.0'),
