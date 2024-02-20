@@ -160,6 +160,7 @@
       },
       "test": {
         "path": "@athenna/core/commands/TestCommand",
+        "loadApp": true,
         "stayAlive": true
       },
       "repl": {
