@@ -31,6 +31,7 @@
     },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
+      "env": "test",
       "loadApp": true,
       "stayAlive": true
     },
