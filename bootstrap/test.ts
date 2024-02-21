@@ -3,7 +3,6 @@ import { request } from '@athenna/http/testing/plugins'
 import { command } from '@athenna/artisan/testing/plugins'
 
 await Runner.setTsEnv()
-  .setAppEnv('test')
   .addAssertPlugin()
   .addPlugin(request())
   .addPlugin(command())
