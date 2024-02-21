@@ -2,7 +2,6 @@ import { Runner } from '@athenna/test'
 import { command } from '@athenna/artisan/testing/plugins'
 
 await Runner.setTsEnv()
-  .setAppEnv('test')
   .addAssertPlugin()
   .addPlugin(command())
   .addPath('tests/e2e/**/*.ts')
