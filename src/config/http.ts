@@ -67,5 +67,11 @@ export default {
     allowList: [],
     continueExceeding: false,
     enableDraftSpec: false
+  },
+
+  static: {
+    enabled: true,
+    root: Path.public(),
+    prefix: '/public/'
   }
 }
