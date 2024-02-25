@@ -170,5 +170,22 @@ export default {
     allowList: [],
     continueExceeding: false,
     enableDraftSpec: false
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | Configurations for @fastify/static plugin.
+  |--------------------------------------------------------------------------
+  |
+  | This values defines all the configurations for @fastify/static plugin.
+  | Check the documentation for more information:
+  |
+  | https://github.com/fastify/fastify-static
+  |
+  */
+  static: {
+    enabled: true,
+    root: Path.public(),
+    prefix: '/public/'
   }
 }
