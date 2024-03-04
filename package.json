@@ -157,10 +157,6 @@
           "bin/.athennarc.prod.json"
         ]
       },
-      "install": {
-        "path": "@athenna/core/commands/InstallCommand",
-        "registry": "npm"
-      },
       "test": {
         "path": "@athenna/core/commands/TestCommand",
         "env": "test",
@@ -170,6 +166,10 @@
       "repl": {
         "path": "@athenna/core/commands/ReplCommand",
         "stayAlive": true
+      },
+      "install": {
+        "path": "@athenna/core/commands/InstallCommand",
+        "registry": "npm"
       },
       "app": {
         "path": "#src/commands/app.command",
