@@ -39,6 +39,10 @@
       "path": "@athenna/core/commands/ReplCommand",
       "stayAlive": true
     },
+    "install": {
+      "path": "@athenna/core/commands/InstallCommand",
+      "registry": "npm"
+    },
     "app": {
       "path": "#app/console/commands/AppCommand",
       "loadApp": true
