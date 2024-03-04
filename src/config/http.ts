@@ -1,3 +1,5 @@
+import { Path } from '@athenna/common'
+
 export default {
   host: Env('HOST', '0.0.0.0'),
   port: Env('PORT', 3000),
