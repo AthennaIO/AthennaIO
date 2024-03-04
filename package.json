@@ -96,7 +96,6 @@
     "globals": {
       "ioc": true,
       "Env": true,
-      "Path": true,
       "Config": true
     },
     "plugins": [
