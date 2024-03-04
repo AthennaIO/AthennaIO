@@ -1,12 +1,7 @@
+import { Test, type Context } from '@athenna/test'
 import { AppService } from '#app/services/AppService'
-import { Test, BeforeAll, type Context } from '@athenna/test'
 
 export default class AppServiceTest {
-  @BeforeAll()
-  public async beforeAll() {
-    await Config.loadAll(Path.config())
-  }
-
   @Test()
   public async shouldReturnThePayloadFromFindOneMethod({ assert }: Context) {
     const appService = new AppService()
