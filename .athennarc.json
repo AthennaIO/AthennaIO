@@ -47,6 +47,10 @@
     "repl": {
       "path": "@athenna/core/commands/ReplCommand",
       "stayAlive": true
+    },
+    "install": {
+      "path": "@athenna/core/commands/InstallCommand",
+      "registry": "npm"
     }
   },
   "templates": {
