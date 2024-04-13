@@ -43,7 +43,7 @@
     "@athenna/artisan": "^4.41.0",
     "@athenna/common": "^4.36.0",
     "@athenna/config": "^4.20.0",
-    "@athenna/core": "^4.35.0",
+    "@athenna/core": "^4.36.0",
     "@athenna/http": "^4.28.0",
     "@athenna/ioc": "^4.19.0",
     "@athenna/logger": "^4.19.0",
