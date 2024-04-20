@@ -37,7 +37,7 @@
     "@athenna/config": "^4.20.0",
     "@athenna/core": "^4.36.0",
     "@athenna/ioc": "^4.19.0",
-    "@athenna/logger": "^4.19.0",
+    "@athenna/logger": "^4.20.0",
     "@athenna/view": "^4.21.0",
     "reflect-metadata": "^0.2.1",
     "source-map-support": "^0.5.21"
