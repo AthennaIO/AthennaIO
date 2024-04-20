@@ -30,7 +30,7 @@
     "@athenna/core": "^4.36.0",
     "@athenna/http": "^4.30.0",
     "@athenna/ioc": "^4.19.0",
-    "@athenna/logger": "^4.19.0",
+    "@athenna/logger": "^4.20.0",
     "@athenna/view": "^4.21.0",
     "@fastify/cors": "^8.5.0",
     "@fastify/helmet": "^11.1.1",
