@@ -41,6 +41,13 @@ export default {
       formatter: 'simple'
     },
 
+    exception: {
+      level: 'trace',
+      formatter: 'none',
+      driver: 'console',
+      streamType: 'stderr'
+    },
+
     discard: {
       driver: 'null'
     },
