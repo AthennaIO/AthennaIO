@@ -20,6 +20,13 @@ export default {
       driver: 'null'
     },
 
+    exception: {
+      level: 'trace',
+      formatter: 'none',
+      driver: 'console',
+      streamType: 'stderr'
+    },
+
     file: {
       driver: 'file',
       level: 'trace',
