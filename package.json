@@ -132,6 +132,7 @@
     ],
     "providers": [
       "@athenna/core/providers/CoreProvider",
+      "@athenna/view/providers/ViewProvider",
       "@athenna/http/providers/HttpRouteProvider",
       "@athenna/http/providers/HttpServerProvider"
     ],
@@ -152,6 +153,7 @@
       "make:middleware": "@athenna/http/commands/MakeMiddlewareCommand",
       "make:interceptor": "@athenna/http/commands/MakeInterceptorCommand",
       "make:terminator": "@athenna/http/commands/MakeTerminatorCommand",
+      "make:view": "@athenna/view/commands/MakeViewCommand",
       "serve": {
         "path": "@athenna/core/commands/ServeCommand",
         "stayAlive": true
@@ -193,7 +195,8 @@
       "controller": "node_modules/@athenna/http/templates/controller.edge",
       "middleware": "node_modules/@athenna/http/templates/middleware.edge",
       "interceptor": "node_modules/@athenna/http/templates/interceptor.edge",
-      "terminator": "node_modules/@athenna/http/templates/terminator.edge"
+      "terminator": "node_modules/@athenna/http/templates/terminator.edge",
+      "view": "node_modules/@athenna/view/templates/view.edge"
     },
     "directories": {
       "bootstrap": "bin",
