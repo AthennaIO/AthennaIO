@@ -132,7 +132,8 @@
       "#src/services/app.service"
     ],
     "providers": [
-      "@athenna/core/providers/CoreProvider"
+      "@athenna/core/providers/CoreProvider",
+      "@athenna/view/providers/ViewProvider"
     ],
     "commands": {
       "configure": "@athenna/artisan/commands/ConfigureCommand",
@@ -143,6 +144,7 @@
       "make:service": "@athenna/core/commands/MakeServiceCommand",
       "make:test": "@athenna/core/commands/MakeTestCommand",
       "make:command": "@athenna/artisan/commands/MakeCommandCommand",
+      "make:view": "@athenna/view/commands/MakeViewCommand",
       "serve": {
         "path": "@athenna/core/commands/ServeCommand",
         "stayAlive": true
@@ -185,7 +187,8 @@
       "test-fn": "node_modules/@athenna/core/templates/test-fn.edge",
       "test-console": "node_modules/@athenna/core/templates/test-console.edge",
       "test-http": "node_modules/@athenna/core/templates/test-http.edge",
-      "command": "node_modules/@athenna/artisan/templates/command.edge"
+      "command": "node_modules/@athenna/artisan/templates/command.edge",
+      "view": "node_modules/@athenna/artisan/templates/view.edge"
     },
     "directories": {
       "bootstrap": "bin",
