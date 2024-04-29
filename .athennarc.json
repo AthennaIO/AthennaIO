@@ -1,15 +1,12 @@
 {
-  "services": [
-    "#app/services/AppService"
-  ],
+  "services": ["#app/services/AppService"],
   "providers": [
     "@athenna/core/providers/CoreProvider",
+    "@athenna/view/providers/ViewProvider",
     "@athenna/http/providers/HttpRouteProvider",
     "@athenna/http/providers/HttpServerProvider"
   ],
-  "controllers": [
-    "#app/http/controllers/AppController"
-  ],
+  "controllers": ["#app/http/controllers/AppController"],
   "commands": {
     "make:exception": "@athenna/core/commands/MakeExceptionCommand",
     "make:facade": "@athenna/core/commands/MakeFacadeCommand",
@@ -21,6 +18,7 @@
     "make:middleware": "@athenna/http/commands/MakeMiddlewareCommand",
     "make:interceptor": "@athenna/http/commands/MakeInterceptorCommand",
     "make:terminator": "@athenna/http/commands/MakeTerminatorCommand",
+    "make:view": "@athenna/view/commands/MakeViewCommand",
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "route:list": "@athenna/http/commands/RouteListCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
@@ -32,11 +30,7 @@
       "path": "@athenna/core/commands/BuildCommand",
       "outDir": "build",
       "tsconfig": "node_modules/@athenna/tsconfig/tsconfig.app-build.json",
-      "include": [
-        "package.json",
-        "package-lock.json",
-        ".athennarc.json"
-      ]
+      "include": ["package.json", "package-lock.json", ".athennarc.json"]
     },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
@@ -66,6 +60,7 @@
     "controller": "node_modules/@athenna/http/templates/controller.edge",
     "middleware": "node_modules/@athenna/http/templates/middleware.edge",
     "interceptor": "node_modules/@athenna/http/templates/interceptor.edge",
-    "terminator": "node_modules/@athenna/http/templates/terminator.edge"
+    "terminator": "node_modules/@athenna/http/templates/terminator.edge",
+    "view": "node_modules/@athenna/view/templates/view.edge"
   }
 }
