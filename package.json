@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@athenna/artisan": "^4.42.0",
-    "@athenna/common": "^4.38.0",
+    "@athenna/common": "^4.39.0",
     "@athenna/config": "^4.21.0",
     "@athenna/core": "^4.38.0",
     "@athenna/http": "^4.32.0",
@@ -207,6 +207,7 @@
       "providers": "src/providers",
       "facades": "src/providers/facades",
       "services": "src/services",
+      "validators": "src/validators",
       "commands": "src/commands",
       "controllers": "src/controllers",
       "middlewares": "src/middlewares",
