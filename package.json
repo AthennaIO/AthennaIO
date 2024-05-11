@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@athenna/artisan": "^4.42.0",
-    "@athenna/common": "^4.38.0",
+    "@athenna/common": "^4.39.0",
     "@athenna/config": "^4.21.0",
     "@athenna/core": "^4.38.0",
     "@athenna/ioc": "^4.20.0",
@@ -199,6 +199,7 @@
       "facades": "src/providers/facades",
       "models": "src/models",
       "services": "src/services",
+      "validators": "src/validators",
       "commands": "src/commands",
       "repositories": "src/repositories",
       "resources": "src/resources",
