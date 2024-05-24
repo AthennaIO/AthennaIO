@@ -128,6 +128,7 @@
     }
   },
   "athenna": {
+    "isSlim": true,
     "services": [
       "#src/services/app.service"
     ],

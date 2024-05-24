@@ -1,4 +1,5 @@
 {
+  "isSlim": true,
   "services": ["#src/services/app.service"],
   "providers": [
     "@athenna/core/providers/CoreProvider"
@@ -13,14 +14,17 @@
     "bootstrap": "bin",
     "config": "src/config",
     "routes": "src/routes",
-    "models": "src/models",
     "exceptions": "src/exceptions",
     "providers": "src/providers",
     "facades": "src/providers/facades",
+    "models": "src/models",
     "services": "src/services",
+    "jobs": "src/jobs",
+    "workers": "src/workers",
+    "guards": "src/guards",
+    "validators": "src/validators",
     "commands": "src/commands",
     "repositories": "src/repositories",
-    "tests": "tests",
     "resources": "src/resources",
     "views": "src/resources/views",
     "locales": "src/resources/locales",
