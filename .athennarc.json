@@ -27,7 +27,8 @@
       "include": [
         "package.json",
         "package-lock.json",
-        "bin/.athennarc.prod.json"
+        ".athennarc.json",
+        ".athennarc.prod.json"
       ]
     },
     "test": {
