@@ -11,6 +11,6 @@ export class AppScheduler {
   public async handler(ctx: Context) {
     const appInfo = this.appService.findOne()
 
-    Log.info(`running ${ctx.pattern} class scheduler %o`, appInfo)
+    Log.info(`running ${ctx.pattern} scheduler %o`, appInfo)
   }
 }
