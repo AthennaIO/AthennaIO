@@ -9,27 +9,5 @@
       "path": "#src/commands/app.command",
       "loadApp": true
     }
-  },
-  "directories": {
-    "bootstrap": "bin",
-    "config": "src/config",
-    "routes": "src/routes",
-    "exceptions": "src/exceptions",
-    "providers": "src/providers",
-    "facades": "src/providers/facades",
-    "models": "src/models",
-    "services": "src/services",
-    "jobs": "src/jobs",
-    "workers": "src/workers",
-    "guards": "src/guards",
-    "validators": "src/validators",
-    "commands": "src/commands",
-    "repositories": "src/repositories",
-    "resources": "src/resources",
-    "views": "src/resources/views",
-    "locales": "src/resources/locales",
-    "database": "src/database",
-    "seeders": "src/database/seeders",
-    "migrations": "src/database/migrations"
   }
 }
