@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - http-slim
+      - http
   pull_request:
     branches:
-      - http-slim
+      - http
 
 jobs:
   linux:
