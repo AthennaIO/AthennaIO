@@ -46,7 +46,7 @@
       "registry": "npm"
     },
     "app": {
-      "path": "#src/commands/app.command",
+      "path": "#src/console/commands/app.command",
       "loadApp": true
     }
   },
