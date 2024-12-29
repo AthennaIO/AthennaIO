@@ -28,7 +28,10 @@
         "package.json",
         "package-lock.json",
         ".athennarc.json",
-        ".athennarc.prod.json"
+        ".athennarc.prod.json",
+        "public/**/*",
+        "storage/**/*",
+        "src/resources/**/*"
       ]
     },
     "test": {
