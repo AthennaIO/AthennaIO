@@ -34,7 +34,14 @@
       "path": "@athenna/core/commands/BuildCommand",
       "outDir": "build",
       "tsconfig": "node_modules/@athenna/tsconfig/tsconfig.app-build.json",
-      "include": ["package.json", "package-lock.json", ".athennarc.json"]
+      "include": [
+        "package.json",
+        "package-lock.json",
+        ".athennarc.json",
+        "public/**/*",
+        "storage/**/*",
+        "src/resources/**/*"
+      ]
     },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
