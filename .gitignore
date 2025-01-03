@@ -140,3 +140,10 @@ build
 
 # MacOS folder mapper file
 .DS_Store
+
+# Configurations and static files
+!public/**/*.js
+!src/resources/**/*.js
+!vite.config.js
+!tailwind.config.js
+!postcss.config.js

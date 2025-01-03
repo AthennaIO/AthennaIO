@@ -1,6 +1,6 @@
 import { Route } from '@athenna/http'
 
-Route.get('/', 'AppController.show')
+Route.get('/', 'HomeController.index')
 
 Route.group(() => {
   Route.get('/', 'AppController.show')

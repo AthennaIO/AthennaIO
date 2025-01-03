@@ -9,4 +9,6 @@ if (!process.execArgv.includes('--enable-source-maps')) {
 
 const ignite = await new Ignite().load(import.meta.url)
 
-await ignite.httpServer()
+await ignite.httpServer({
+  exceptionHandlerPath: '#src/http/exceptions/handler'
+})

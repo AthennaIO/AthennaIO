@@ -9,7 +9,8 @@
     "@athenna/http/providers/HttpServerProvider"
   ],
   "controllers": [
-    "#src/http/controllers/app.controller"
+    "#src/http/controllers/app.controller",
+    "#src/http/controllers/home.controller"
   ],
   "commands": {
     "configure": "@athenna/artisan/commands/ConfigureCommand",
