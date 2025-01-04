@@ -9,7 +9,7 @@ export class Handler extends HttpExceptionHandler {
      * not found.
      */
     if (this.notFoundErrorCodes.includes(ctx.error.code)) {
-      await ctx.response.view('pages/not-found')
+      await ctx.response.view('not-found')
 
       return
     }

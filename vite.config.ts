@@ -1,3 +1,5 @@
+import react from '@vitejs/plugin-react'
+
 import { defineConfig } from 'vite'
 import { athenna } from '@athenna/vite/plugins/client'
 
@@ -8,12 +10,13 @@ export default defineConfig({
        * Entrypoints of your application. Each entrypoint will
        * result in a separate bundle.
        */
-      entrypoints: ['src/resources/css/app.scss', 'src/resources/js/app.js'],
+      entrypoints: ['src/resources/js/app.tsx'],
 
       /**
        * Paths to watch and reload the browser on file change.
        */
-      reload: ['src/resources/views/**/*.edge']
-    })
+      reload: ['src/resources/views/**/*.edge', 'src/resources/js/**/*.tsx']
+    }),
+    react()
   ]
 })
