@@ -1,7 +1,7 @@
-import react from '@vitejs/plugin-react'
-
 import { defineConfig } from 'vite'
-import { athenna } from '@athenna/vite/plugins/client'
+
+import react from '@vitejs/plugin-react'
+import athenna from '@athenna/vite/plugins/client'
 
 export default defineConfig({
   plugins: [
