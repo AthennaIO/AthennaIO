@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
-import { athenna } from '@athenna/vite/plugins/client'
+
+import athenna from '@athenna/vite/plugins/client'
 
 export default defineConfig({
   plugins: [
