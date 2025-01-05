@@ -41,6 +41,7 @@
         ".athennarc.json",
         "public/**/*",
         "storage/**/*",
+        "public/**/.vite/*",
         "src/resources/**/*"
       ]
     },
