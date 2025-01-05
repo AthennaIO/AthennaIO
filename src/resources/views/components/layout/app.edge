@@ -8,7 +8,7 @@
   @if ($slots.meta)
     {{{ await $slots.meta() }}}
   @endif
-  @vite(['src/resources/js/app.js'])
+  @vite(['src/resources/js/app.ts'])
 </head>
 <body>
   {{{ await $slots.main() }}}
