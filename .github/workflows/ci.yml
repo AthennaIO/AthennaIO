@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - http
+      - web-edge
   pull_request:
     branches:
-      - http
+      - web-edge
 
 jobs:
   linux:
