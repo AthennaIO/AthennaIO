@@ -186,7 +186,7 @@ export default {
   |
   */
   static: {
-    enabled: true,
+    enabled: false,
     root: Path.public(),
     prefix: '/public/'
   }
