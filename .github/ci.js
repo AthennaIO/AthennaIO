@@ -14,4 +14,6 @@ setTimeout(() => process.exit(0), 5000)
 
 const ignite = await new Ignite().load(import.meta.url)
 
-await ignite.httpServer()
+await ignite.httpServer({
+  exceptionHandlerPath: '#src/http/exceptions/handler'
+})
