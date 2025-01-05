@@ -110,7 +110,23 @@ export default {
 
   helmet: {
     enabled: true,
-    global: true
+    global: true,
+    contentSecurityPolicy: {
+      useDefaults: false,
+      directives: {
+        defaultSrc: [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          'data:',
+          'localhost',
+          '*.googletagmanager.com',
+          '*.google-analytics.com',
+          '*.googleapis.com',
+          '*.gstatic.com'
+        ]
+      }
+    }
   },
 
   /*
