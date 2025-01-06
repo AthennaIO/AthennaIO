@@ -1,18 +1,21 @@
 import '#app/app.scss'
 
-import { hydrateRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { Route, Routes, BrowserRouter } from 'react-router'
 
 import { Home } from '#app/pages/home'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </StrictMode>
   )
 }
 
-hydrateRoot(document.getElementById('root'), <App />)
+createRoot(document.getElementById('root')).render(<App />)
