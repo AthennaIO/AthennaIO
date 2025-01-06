@@ -38,8 +38,27 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  @apply text-6xl
+}
+
+h2 {
+  @apply text-5xl
+}
+
+h3 {
+  @apply text-4xl
+}
+
+h4 {
+  @apply text-3xl
+}
+
+h5 {
+  @apply text-2xl
+}
+
+h6 {
+  @apply text-xl
 }
 
 button {
@@ -87,13 +106,4 @@ button:focus, button:focus-visible {
   }
 }
 
-.minerva {
-  height: 20em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
 
-.minerva:hover {
-  filter: drop-shadow(0 0 2em #db64ffaa);
-}

@@ -2,7 +2,14 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": ["DOM"],
-    "jsx": "preserve"
-  }
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "module": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "types": ["node", "vite/client"],
+    "paths": {
+      "#app/*": ["app/*"]
+    }
+  },
+  "exclude": []
 }

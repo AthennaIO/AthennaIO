@@ -1,6 +1,8 @@
+import '#app/pages/home/styles.scss'
+
 import { useState } from 'react'
 
-import minervaPng from '../../img/minerva.png'
+import minervaPng from '#app/img/minerva.png'
 
 export function Home() {
   const [count, setCount] = useState(0)
@@ -18,7 +20,8 @@ export function Home() {
           count is {count}
         </button>
         <p className="m-2 font-medium">
-          Edit <code>src/resources/js/pages/home.tsx</code> and save to reload.
+          Edit <code>src/resources/app/pages/home/index.tsx</code> and save to
+          reload.
         </p>
       </div>
     </div>

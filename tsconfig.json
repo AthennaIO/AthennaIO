@@ -1,4 +1,5 @@
 {
   "extends": "@athenna/tsconfig/tsconfig.app-slim.json",
-  "compilerOptions": {}
+  "compilerOptions": {},
+  "exclude": ["src/resources"]
 }
