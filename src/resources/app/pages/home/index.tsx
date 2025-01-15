@@ -2,7 +2,7 @@ import '#app/pages/home/styles.scss'
 
 import { useState } from 'react'
 
-import minervaPng from '#app/img/minerva.png'
+import minervaPng from '#app/assets/img/minerva.png'
 
 export function Home() {
   const [count, setCount] = useState(0)
