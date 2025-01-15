@@ -1,21 +1,22 @@
 import '#app/app.scss'
 
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { Route, Routes, BrowserRouter } from 'react-router'
+import { Route, Routes, StaticRouter } from 'react-router'
 
 import { Home } from '#app/pages/home'
 
-function App() {
+export function App(props?: { url?: string }) {
   return (
     <StrictMode>
-      <BrowserRouter>
+      <StaticRouter location={props.url}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-      </BrowserRouter>
+      </StaticRouter>
     </StrictMode>
   )
 }
 
-createRoot(document.getElementById('root')).render(<App />)
+export function createApp(url?: string) {
+  return <App url={url} />
+}

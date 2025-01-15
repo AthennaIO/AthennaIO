@@ -5,20 +5,6 @@ import react from '@vitejs/plugin-react'
 import athenna from '@athenna/vite/plugins/client'
 
 export default defineConfig({
-  build: {
-    lib: {
-      name: 'jao',
-      entry: Path.resources('app/app.tsx'),
-      fileName: (ext, fileName) => {
-        return `${fileName}.${ext}`
-      },
-      formats: ['cjs', 'es']
-    },
-    rollupOptions: {
-      input: Path.resources('app/app.tsx'),
-      output: { preserveModules: true }
-    }
-  },
   resolve: {
     alias: {
       /**
@@ -29,12 +15,11 @@ export default defineConfig({
   },
   plugins: [
     athenna({
-      buildDirectory: 'src/resources/build',
       /**
        * Entrypoints of your application. Each entrypoint will
        * result in a separate bundle.
        */
-      entrypoints: [],
+      entrypoints: ['src/resources/app/root.tsx'],
 
       /**
        * Paths to watch and reload the browser on file change.
