@@ -72,5 +72,8 @@
     "interceptor": "node_modules/@athenna/http/templates/interceptor.edge",
     "terminator": "node_modules/@athenna/http/templates/terminator.edge",
     "view": "node_modules/@athenna/view/templates/view.edge"
-  }
+  },
+  "services": [
+    "#src/services/app.service"
+  ]
 }
