@@ -231,7 +231,6 @@ export default {
     },
 
     ssrEntrypoint: 'src/resources/app/app.tsx',
-    ssrBuildDirectory: Path.public('assets/server'),
-    ssrManifestFile: Path.public('assets/server/.vite/manifest.json')
+    ssrBuildDirectory: Path.public('assets/server')
   }
 }

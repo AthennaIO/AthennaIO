@@ -1,7 +1,4 @@
 {
-  "services": [
-    "#src/services/app.service"
-  ],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/view/providers/ViewProvider",
@@ -9,8 +6,7 @@
     "@athenna/http/providers/HttpServerProvider"
   ],
   "controllers": [
-    "#src/http/controllers/app.controller",
-    "#src/http/controllers/home.controller"
+    "#src/http/controllers/app.controller"
   ],
   "commands": {
     "configure": "@athenna/artisan/commands/ConfigureCommand",

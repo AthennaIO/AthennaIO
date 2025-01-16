@@ -1,7 +1,9 @@
 import { Route } from '@athenna/http'
 
-Route.get('/', 'HomeController.index')
+Route.get('*', 'AppController.index')
 
 Route.group(() => {
-  Route.get('/', 'AppController.show')
+  Route.get('/', ({ response }) => {
+    response.status(200).send({ message: 'Hello World!' })
+  })
 }).prefix('/api/v1')

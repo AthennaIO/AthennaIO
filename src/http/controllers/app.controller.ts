@@ -1,15 +1,13 @@
-import { Inject } from '@athenna/ioc'
-import { AppService } from '#src/services/app.service'
+import { React } from '@athenna/vite'
 import { Controller, type Context } from '@athenna/http'
 
 @Controller()
 export class AppController {
-  @Inject()
-  private readonly appService: AppService
+  public async index({ request, response }: Context) {
+    const { createApp } = await React.loadEntrypoint()
 
-  public async show({ response }: Context) {
-    const data = this.appService.findOne()
+    const element = await React.renderComponent(createApp(request.baseUrl))
 
-    return response.status(200).send(data)
+    return response.view('index', { element })
   }
 }
