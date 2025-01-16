@@ -4,7 +4,7 @@ import { BaseHttpTest } from '@athenna/core/testing/BaseHttpTest'
 export default class AppControllerTest extends BaseHttpTest {
   @Test()
   public async shouldBeAbleToGetTheHelloPayloadFromApi({ request }: Context) {
-    const response = await request.get('/')
+    const response = await request.get('/api/v1')
 
     response.assertStatusCode(200)
     response.assertBodyContains({

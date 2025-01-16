@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
-  <link rel="icon" type="image/x-icon" href="{{ asset("src/resources/img/favicon.ico") }}">
+  <link rel="icon" type="image/x-icon" href="{{ asset("src/resources/assets/img/favicon.ico") }}">
   @if ($slots.meta)
     {{{ await $slots.meta() }}}
   @endif
-  @vite(['src/resources/js/app.ts'])
+  @vite(['src/resources/assets/js/app.ts'])
 </head>
 <body>
   {{{ await $slots.main() }}}
