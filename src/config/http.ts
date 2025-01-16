@@ -223,7 +223,7 @@ export default {
     enabled: true,
     root: Path.pwd(),
     dev: Config.isNot('app.environment', 'production'),
-    buildDirectory: 'public/assets',
+    buildDirectory: Path.public('assets'),
     manifestFile: Path.public('assets/.vite/manifest.json'),
     assetsUrl: '/public/assets',
     scriptAttributes: {
