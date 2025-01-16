@@ -1,4 +1,7 @@
 {
+  "services": [
+    "#src/services/app.service"
+  ],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/view/providers/ViewProvider",
