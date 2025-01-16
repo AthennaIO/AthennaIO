@@ -189,5 +189,28 @@ export default {
     enabled: false,
     root: Path.public(),
     prefix: '/public/'
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | Configurations for @athenna/vite plugin.
+  |--------------------------------------------------------------------------
+  |
+  | This values defines all the configurations for @athenna/vite plugin.
+  | Check the documentation for more information:
+  |
+  | https://athenna.io/docs/the-basics/vite
+  |
+  */
+  vite: {
+    enabled: false,
+    root: Path.pwd(),
+    dev: Config.isNot('app.environment', 'production'),
+    buildDirectory: Path.public('assets'),
+    manifestFile: Path.public('assets/.vite/manifest.json'),
+    assetsUrl: '/public/assets',
+    scriptAttributes: {
+      defer: true
+    }
   }
 }
