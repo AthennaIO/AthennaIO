@@ -96,5 +96,18 @@ export default {
   |
   */
 
-  locale: Env('APP_LOCALE', 'en')
+  locale: Env('APP_LOCALE', 'en'),
+
+  /*
+  |--------------------------------------------------------------------------
+  | Encryption Key
+  |--------------------------------------------------------------------------
+  |
+  | This key is used by the Athenna encrypter service and should be set
+  | to a random, 32 character string, otherwise these encrypted strings
+  | will not be safe. Please do this before deploying an application!
+  |
+  */
+
+  key: Env('APP_KEY', '')
 }
