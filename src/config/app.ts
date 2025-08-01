@@ -108,5 +108,17 @@ export default {
   | will not be safe. Please do this before deploying an application!
   |
   */
-  key: Env('APP_KEY', '')
+  key: Env('APP_KEY', ''),
+
+  /*
+  |--------------------------------------------------------------------------
+  | Logger configuration
+  |--------------------------------------------------------------------------
+  |
+  | Define some options on how the application will handle logging.
+  |
+  */
+  logger: {
+    prettifyException: Env('LOG_PRETTY', true)
+  }
 }
