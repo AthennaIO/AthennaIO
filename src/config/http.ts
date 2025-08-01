@@ -50,6 +50,7 @@ export default {
 
   logger: {
     enabled: Env('LOG_HTTP', true),
+    prettifyException: Env('LOG__PRETTY', true),
     ignoreCodes: [],
     ignoreStatuses: []
   },
