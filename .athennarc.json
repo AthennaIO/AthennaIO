@@ -5,9 +5,7 @@
     "@athenna/http/providers/HttpRouteProvider",
     "@athenna/http/providers/HttpServerProvider"
   ],
-  "controllers": [
-    "#src/http/controllers/app.controller"
-  ],
+  "controllers": ["#src/http/controllers/app.controller"],
   "commands": {
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "route:list": "@athenna/http/commands/RouteListCommand",
@@ -39,7 +37,7 @@
         "public/**/*",
         "storage/**/*",
         "public/**/.vite/*",
-        "src/resources/**/*"
+        "resources/**/*"
       ]
     },
     "test": {
@@ -73,7 +71,5 @@
     "terminator": "node_modules/@athenna/http/templates/terminator.edge",
     "view": "node_modules/@athenna/view/templates/view.edge"
   },
-  "services": [
-    "#src/services/app.service"
-  ]
+  "services": ["#src/services/app.service"]
 }
