@@ -1,7 +1,5 @@
 {
-  "services": [
-    "#src/services/app.service"
-  ],
+  "services": ["#src/services/app.service"],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/view/providers/ViewProvider"
@@ -31,7 +29,7 @@
         ".athennarc.prod.json",
         "public/**/*",
         "storage/**/*",
-        "src/resources/**/*"
+        "resources/**/*"
       ]
     },
     "test": {
