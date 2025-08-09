@@ -1,15 +1,11 @@
 {
-  "services": [
-    "#src/services/app.service"
-  ],
+  "services": ["#src/services/app.service"],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/view/providers/ViewProvider",
     "@athenna/cron/providers/CronProvider"
   ],
-  "schedulers": [
-    "#src/cron/schedulers/app.scheduler"
-  ],
+  "schedulers": ["#src/cron/schedulers/app.scheduler"],
   "commands": {
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "template:customize": "@athenna/artisan/commands/TemplateCustomizeCommand",
@@ -35,7 +31,7 @@
         ".athennarc.json",
         "public/**/*",
         "storage/**/*",
-        "src/resources/**/*"
+        "resources/**/*"
       ]
     },
     "test": {
