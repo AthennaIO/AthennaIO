@@ -1,16 +1,12 @@
 {
-  "services": [
-    "#src/services/app.service"
-  ],
+  "services": ["#src/services/app.service"],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/view/providers/ViewProvider",
     "@athenna/http/providers/HttpRouteProvider",
     "@athenna/http/providers/HttpServerProvider"
   ],
-  "controllers": [
-    "#src/http/controllers/app.controller"
-  ],
+  "controllers": ["#src/http/controllers/app.controller"],
   "commands": {
     "configure": "@athenna/artisan/commands/ConfigureCommand",
     "route:list": "@athenna/http/commands/RouteListCommand",
@@ -40,7 +36,7 @@
         ".athennarc.json",
         "public/**/*",
         "storage/**/*",
-        "src/resources/**/*"
+        "resources/**/*"
       ]
     },
     "test": {
