@@ -1,7 +1,5 @@
 {
-  "services": [
-    "#src/services/app.service"
-  ],
+  "services": ["#src/services/app.service"],
   "providers": [
     "@athenna/core/providers/CoreProvider",
     "@athenna/view/providers/ViewProvider",
@@ -42,7 +40,7 @@
         "public/**/*",
         "storage/**/*",
         "public/**/.vite/*",
-        "src/resources/**/*"
+        "resources/**/*"
       ]
     },
     "test": {
