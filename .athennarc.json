@@ -42,7 +42,8 @@
     "lint": {
       "stayAlive": true,
       "path": "@athenna/core/commands/LintCommand",
-      "files": ["{bin,src,tests}/**/*.{ts,tsx}"]
+      "files": ["{bin,src,resources,tests}/**/*.{ts,tsx}"],
+      "loadApp": false
     },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
