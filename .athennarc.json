@@ -41,7 +41,8 @@
     },
     "lint": {
       "stayAlive": true,
-      "path": "@athenna/core/commands/LintCommand"
+      "path": "@athenna/core/commands/LintCommand",
+      "files": ["{bin,src,tests}/**/*.{ts,tsx}"]
     },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
