@@ -40,6 +40,10 @@
         "resources/**/*"
       ]
     },
+    "lint": {
+      "stayAlive": true,
+      "path": "@athenna/core/commands/LintCommand"
+    },
     "test": {
       "path": "@athenna/core/commands/TestCommand",
       "env": "test",
